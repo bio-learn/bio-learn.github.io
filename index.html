@@ -7,10 +7,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bio-learn.github.io/index.html" />
 <meta property="og:site_name" content="Biolearn" />
-<meta property="og:description" content="Biolearn enables approachable and versatile analyses of brain volumes. It provides statistical and machine-learning tools, with instructive documentation & open community. It supports general linea..." />
-<meta property="og:image" content="https://bio-learn.github.io/_images/sphx_glr_plot_python_101_thumb.png" />
+<meta property="og:description" content="Biolearn enables easy and versatile analyses of biomarkers of aging data. It provides statistics and machine-learning tools, with instructive documentation and an open science approach. It supports..." />
+<meta property="og:image" content="https://bio-learn.github.io/_images/sphx_glr_plot_nhanes_005.png" />
 <meta property="og:image:alt" content="Biolearn" />
-<meta name="description" content="Biolearn enables approachable and versatile analyses of brain volumes. It provides statistical and machine-learning tools, with instructive documentation & open community. It supports general linea..." />
+<meta name="description" content="Biolearn enables easy and versatile analyses of biomarkers of aging data. It provides statistics and machine-learning tools, with instructive documentation and an open science approach. It supports..." />
 <link rel="search" title="Search" href="search.html" /><link rel="next" title="Quickstart" href="quickstart.html" />
 
     <link rel="shortcut icon" href="_static/favicon.ico"/><!-- Generated with Sphinx 6.2.1 and Furo 2023.05.20 -->
@@ -140,7 +140,7 @@
 
 <div class="announcement">
   <aside class="announcement-content">
-     <p>This is the development documentation of biolearn (0.1.dev2+gea6c7c9.d20230615) <a class="sd-sphinx-override sd-badge sd-text-wrap sd-btn-outline-dark reference external" href="https://biolearn.github.io"><span>Switch to stable version (0.0.0)</span></a></p> 
+     <p>This is the development documentation of biolearn (0.1.dev12+gcb86478.d20230622) <a class="sd-sphinx-override sd-badge sd-text-wrap sd-btn-outline-dark reference external" href="https://biolearn.github.io"><span>Switch to stable version (0.0.0)</span></a></p> 
   </aside>
 </div>
 
@@ -190,8 +190,8 @@
   <ul>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="auto_examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="auto_examples/00_tutorials/index.html">Basic tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Basic tutorials</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="auto_examples/00_tutorials/plot_python_101.html">Basic numerics and plotting with Python</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="auto_examples/00_nhanes/index.html">NHANES Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of NHANES Tutorial</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="auto_examples/00_nhanes/plot_nhanes.html">Plotting survival curves with NHANES data</a></li>
 </ul>
 </li>
 </ul>
@@ -208,8 +208,15 @@
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="modules/index.html">API References</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of API References</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="modules/stuff.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.stuff</span></code>: Stuff</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of biolearn.stuff: Stuff</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="modules/generated/biolearn.stuff.Stuff.html">biolearn.stuff.Stuff</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="modules/load.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.load</span></code>: Data Loading Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of biolearn.load: Data Loading Utilities</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="modules/generated/biolearn.load.load_nhanes.html">biolearn.load.load_nhanes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/generated/biolearn.load.load_fhs.html">biolearn.load.load_fhs</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="modules/clock.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.clock</span></code>: Function to run existing clocks that predice biological age</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of biolearn.clock: Function to run existing clocks that predice biological age</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="modules/generated/biolearn.clock.horvath_clock.html">biolearn.clock.horvath_clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/generated/biolearn.clock.hannum_clock.html">biolearn.clock.hannum_clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules/generated/biolearn.clock.phenoage_clock.html">biolearn.clock.phenoage_clock</a></li>
 </ul>
 </li>
 </ul>
@@ -256,13 +263,14 @@
           <section id="biolearn">
 <h1>Biolearn<a class="headerlink" href="#biolearn" title="Permalink to this heading">#</a></h1>
 <div class="index-paragraph docutils container">
-<p>Biolearn enables <strong>approachable and versatile analyses of brain
-volumes</strong>. It provides statistical and machine-learning tools, with
-<strong>instructive documentation &amp; open community</strong>.</p>
-<p>It supports general linear model (GLM) based analysis and leverages
-the <a class="reference external" href="https://scikit-learn.org/stable/">scikit-learn</a> Python toolbox
-for multivariate statistics with applications such as predictive modelling,
-classification, decoding, or connectivity analysis.</p>
+<p>Biolearn enables <strong>easy and versatile analyses of biomarkers of aging</strong> data.
+It provides statistics and machine-learning tools, with <strong>instructive
+documentation and an open science approach</strong>.</p>
+<p>It supports loading public and private clinical and omic data and demonstrates
+how to use machine learning models (e.g. <a class="reference external" href="https://scikit-learn.org/stable/">scikit-learn</a>) for quantitative and
+qualitative analysis.</p>
+<p>Biolearn is scientifically and fiscally supported by <a class="reference external" href="https://www.agingconsortium.org/">Biomarkers of Aging Consortium</a>
+and <a class="reference external" href="https://www.mfoundation.org/">Methuselah Foundation</a> respectively</p>
 </div>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row docutils">
@@ -305,18 +313,18 @@ classification, decoding, or connectivity analysis.</p>
 <div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
 <div class="sd-row sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
 <div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
-<img alt="_images/sphx_glr_plot_python_101_thumb.png" src="_images/sphx_glr_plot_python_101_thumb.png" />
+<img alt="_images/sphx_glr_plot_nhanes_005.png" src="_images/sphx_glr_plot_nhanes_005.png" />
 </div>
 <div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-8 sd-col-md-8 sd-col-lg-8 docutils">
 <div class="sd-font-weight-bold docutils">
-<p class="sd-card-text">Basic numerics and plotting with Python</p>
+<p class="sd-card-text">NHANES survival plotting with biological age</p>
 </div>
-<p class="sd-card-text">Look at a trivial example of numpy and matplotlib usage</p>
-</div>
-</div>
+<p class="sd-card-text">Using NHANES data shows relationship between various data points and survival</p>
 </div>
 </div>
-<a class="sd-stretched-link reference external" href="auto_examples/00_tutorials/plot_python_101.html"></a></div>
+</div>
+</div>
+<a class="sd-stretched-link reference external" href="auto_examples/00_nhanes/plot_nhanes.html"></a></div>
 </div>
 </div>
 </div>

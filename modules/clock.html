@@ -3,18 +3,18 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<meta property="og:title" content="biolearn.stuff: Stuff" />
+<meta property="og:title" content="biolearn.clock: Function to run existing clocks that predice biological age" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://bio-learn.github.io/modules/stuff.html" />
+<meta property="og:url" content="https://bio-learn.github.io/modules/clock.html" />
 <meta property="og:site_name" content="Biolearn" />
-<meta property="og:description" content="Classes:" />
+<meta property="og:description" content="Functions:" />
 <meta property="og:image" content="https://bio-learn.github.io/_static/biolearn-logo.png" />
 <meta property="og:image:alt" content="Biolearn" />
-<meta name="description" content="Classes:" />
-<link rel="search" title="Search" href="../search.html" /><link rel="next" title="biolearn.stuff.Stuff" href="generated/biolearn.stuff.Stuff.html" /><link rel="prev" title="API References" href="index.html" />
+<meta name="description" content="Functions:" />
+<link rel="search" title="Search" href="../search.html" /><link rel="next" title="biolearn.clock.horvath_clock" href="generated/biolearn.clock.horvath_clock.html" /><link rel="prev" title="biolearn.load.load_fhs" href="generated/biolearn.load.load_fhs.html" />
 
     <link rel="shortcut icon" href="../_static/favicon.ico"/><!-- Generated with Sphinx 6.2.1 and Furo 2023.05.20 -->
-        <title>biolearn.stuff: Stuff - Biolearn</title>
+        <title>biolearn.clock: Function to run existing clocks that predice biological age - Biolearn</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=e6660623a769aa55fea372102b9bf3151b292993" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
@@ -140,7 +140,7 @@
 
 <div class="announcement">
   <aside class="announcement-content">
-     <p>This is the development documentation of biolearn (0.1.dev2+gea6c7c9.d20230615) <a class="sd-sphinx-override sd-badge sd-text-wrap sd-btn-outline-dark reference external" href="https://biolearn.github.io"><span>Switch to stable version (0.0.0)</span></a></p> 
+     <p>This is the development documentation of biolearn (0.1.dev12+gcb86478.d20230622) <a class="sd-sphinx-override sd-badge sd-text-wrap sd-btn-outline-dark reference external" href="https://biolearn.github.io"><span>Switch to stable version (0.0.0)</span></a></p> 
   </aside>
 </div>
 
@@ -190,8 +190,8 @@
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../auto_examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../auto_examples/00_tutorials/index.html">Basic tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Basic tutorials</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../auto_examples/00_tutorials/plot_python_101.html">Basic numerics and plotting with Python</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../auto_examples/00_nhanes/index.html">NHANES Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of NHANES Tutorial</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../auto_examples/00_nhanes/plot_nhanes.html">Plotting survival curves with NHANES data</a></li>
 </ul>
 </li>
 </ul>
@@ -208,8 +208,15 @@
 </ul>
 </li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">API References</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of API References</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current has-children current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.stuff</span></code>: Stuff</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of biolearn.stuff: Stuff</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="generated/biolearn.stuff.Stuff.html">biolearn.stuff.Stuff</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="load.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.load</span></code>: Data Loading Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of biolearn.load: Data Loading Utilities</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/biolearn.load.load_nhanes.html">biolearn.load.load_nhanes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/biolearn.load.load_fhs.html">biolearn.load.load_fhs</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.clock</span></code>: Function to run existing clocks that predice biological age</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of biolearn.clock: Function to run existing clocks that predice biological age</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/biolearn.clock.horvath_clock.html">biolearn.clock.horvath_clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/biolearn.clock.hannum_clock.html">biolearn.clock.hannum_clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/biolearn.clock.phenoage_clock.html">biolearn.clock.phenoage_clock</a></li>
 </ul>
 </li>
 </ul>
@@ -253,14 +260,20 @@
           </label>
         </div>
         <article role="main">
-          <section id="module-biolearn.stuff">
-<span id="biolearn-stuff-stuff"></span><span id="stuff-ref"></span><h1><a class="reference internal" href="#module-biolearn.stuff" title="biolearn.stuff"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.stuff</span></code></a>: Stuff<a class="headerlink" href="#module-biolearn.stuff" title="Permalink to this heading">#</a></h1>
-<p><strong>Classes</strong>:</p>
+          <section id="module-biolearn.clock">
+<span id="biolearn-clock-function-to-run-existing-clocks-that-predice-biological-age"></span><span id="clock-ref"></span><h1><a class="reference internal" href="#module-biolearn.clock" title="biolearn.clock"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.clock</span></code></a>: Function to run existing clocks that predice biological age<a class="headerlink" href="#module-biolearn.clock" title="Permalink to this heading">#</a></h1>
+<p><strong>Functions</strong>:</p>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/biolearn.stuff.Stuff.html#biolearn.stuff.Stuff" title="biolearn.stuff.Stuff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Stuff</span></code></a>(number)</p></td>
-<td><p>Implement stuff</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/biolearn.clock.horvath_clock.html#biolearn.clock.horvath_clock" title="biolearn.clock.horvath_clock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">horvath_clock</span></code></a>(dataframe)</p></td>
+<td><p>Runs the Horvath DNA methylation clock on each individual in the dataset to predict a biological age</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/biolearn.clock.hannum_clock.html#biolearn.clock.hannum_clock" title="biolearn.clock.hannum_clock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hannum_clock</span></code></a>(dataframe)</p></td>
+<td><p>Runs the Hannum DNA methylation clock on each individual in the dataset to predict a biological age</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/biolearn.clock.phenoage_clock.html#biolearn.clock.phenoage_clock" title="biolearn.clock.phenoage_clock"><code class="xref py py-obj docutils literal notranslate"><span class="pre">phenoage_clock</span></code></a>(dataframe)</p></td>
+<td><p>Runs the PhenoAge DNA methylation clock on each individual in the dataset to predict a biological age</p></td>
 </tr>
 </tbody>
 </table>
@@ -272,23 +285,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="generated/biolearn.stuff.Stuff.html">
+          <a class="next-page" href="generated/biolearn.clock.horvath_clock.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">biolearn.stuff.Stuff</div>
+                <div class="title">biolearn.clock.horvath_clock</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="index.html">
+          <a class="prev-page" href="generated/biolearn.load.load_fhs.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">API References</div>
+                <div class="title">biolearn.load.load_fhs</div>
                 
               </div>
             </a>

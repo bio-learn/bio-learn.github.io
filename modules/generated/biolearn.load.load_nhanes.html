@@ -3,18 +3,18 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<meta property="og:title" content="Basic tutorials" />
+<meta property="og:title" content="biolearn.load.load_nhanes" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://bio-learn.github.io/auto_examples/00_tutorials/index.html" />
+<meta property="og:url" content="https://bio-learn.github.io/modules/generated/biolearn.load.load_nhanes.html" />
 <meta property="og:site_name" content="Biolearn" />
-<meta property="og:description" content="Introductory examples that teach how to use omicslearn. Basic numerics and plotting with Python" />
-<meta property="og:image" content="https://bio-learn.github.io/_images/sphx_glr_plot_python_101_thumb.png" />
+<meta property="og:description" content="Examples using biolearn.load.load_nhanes: Plotting survival curves with NHANES data" />
+<meta property="og:image" content="https://bio-learn.github.io/_images/sphx_glr_plot_nhanes_thumb.png" />
 <meta property="og:image:alt" content="" />
-<meta name="description" content="Introductory examples that teach how to use omicslearn. Basic numerics and plotting with Python" />
-<link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Basic numerics and plotting with Python" href="plot_python_101.html" /><link rel="prev" title="Examples" href="../index.html" />
+<meta name="description" content="Examples using biolearn.load.load_nhanes: Plotting survival curves with NHANES data" />
+<link rel="search" title="Search" href="../../search.html" /><link rel="next" title="biolearn.load.load_fhs" href="biolearn.load.load_fhs.html" /><link rel="prev" title="biolearn.load: Data Loading Utilities" href="../load.html" />
 
     <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 6.2.1 and Furo 2023.05.20 -->
-        <title>Basic tutorials - Biolearn</title>
+        <title>biolearn.load.load_nhanes - Biolearn</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=e6660623a769aa55fea372102b9bf3151b292993" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
@@ -140,7 +140,7 @@
 
 <div class="announcement">
   <aside class="announcement-content">
-     <p>This is the development documentation of biolearn (0.1.dev2+gea6c7c9.d20230615) <a class="sd-sphinx-override sd-badge sd-text-wrap sd-btn-outline-dark reference external" href="https://biolearn.github.io"><span>Switch to stable version (0.0.0)</span></a></p> 
+     <p>This is the development documentation of biolearn (0.1.dev12+gcb86478.d20230622) <a class="sd-sphinx-override sd-badge sd-text-wrap sd-btn-outline-dark reference external" href="https://biolearn.github.io"><span>Switch to stable version (0.0.0)</span></a></p> 
   </aside>
 </div>
 
@@ -164,7 +164,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -189,9 +189,9 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Quickstart</a></li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current has-children current-page"><a class="current reference internal" href="#">Basic tutorials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Basic tutorials</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="plot_python_101.html">Basic numerics and plotting with Python</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../auto_examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/00_nhanes/index.html">NHANES Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of NHANES Tutorial</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/00_nhanes/plot_nhanes.html">Plotting survival curves with NHANES data</a></li>
 </ul>
 </li>
 </ul>
@@ -207,9 +207,16 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../modules/index.html">API References</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of API References</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../modules/stuff.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.stuff</span></code>: Stuff</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of biolearn.stuff: Stuff</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.stuff.Stuff.html">biolearn.stuff.Stuff</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">API References</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of API References</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../load.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.load</span></code>: Data Loading Utilities</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of biolearn.load: Data Loading Utilities</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">biolearn.load.load_nhanes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="biolearn.load.load_fhs.html">biolearn.load.load_fhs</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../clock.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.clock</span></code>: Function to run existing clocks that predice biological age</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of biolearn.clock: Function to run existing clocks that predice biological age</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="biolearn.clock.horvath_clock.html">biolearn.clock.horvath_clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="biolearn.clock.hannum_clock.html">biolearn.clock.hannum_clock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="biolearn.clock.phenoage_clock.html">biolearn.clock.phenoage_clock</a></li>
 </ul>
 </li>
 </ul>
@@ -247,20 +254,47 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="basic-tutorials">
-<span id="tutorial-examples"></span><span id="sphx-glr-auto-examples-00-tutorials"></span><h1>Basic tutorials<a class="headerlink" href="#basic-tutorials" title="Permalink to this heading">#</a></h1>
-<p>Introductory examples that teach how to use omicslearn.</p>
-<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="A simple example of basic Python numerics and how to plot it."><img alt="" src="../../_images/sphx_glr_plot_python_101_thumb.png" />
-<p><a class="reference internal" href="plot_python_101.html#sphx-glr-auto-examples-00-tutorials-plot-python-101-py"><span class="std std-ref">Basic numerics and plotting with Python</span></a></p>
-  <div class="sphx-glr-thumbnail-title">Basic numerics and plotting with Python</div>
-</div></div><div class="toctree-wrapper compound">
+          <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This page is a reference documentation. It only explains the
+function signature, and not how to use it. Please refer to the
+<a class="reference internal" href="../../user_guide.html#user-guide"><span class="std std-ref">user guide</span></a> for the big picture.</p>
 </div>
+<section id="biolearn-load-load-nhanes">
+<h1>biolearn.load.load_nhanes<a class="headerlink" href="#biolearn-load-load-nhanes" title="Permalink to this heading">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="biolearn.load.load_nhanes">
+<span class="sig-prename descclassname"><span class="pre">biolearn.load.</span></span><span class="sig-name descname"><span class="pre">load_nhanes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">year</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/c1a373b/biolearn/load.py#L88"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#biolearn.load.load_nhanes" title="Permalink to this definition">#</a></dt>
+<dd><p>Loads data from the National Health and Nutrition Examination Survey</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>year</strong><span class="classifier">number</span></dt><dd><p>A year number for which to load data. Not that NHANES data comes in two year groupings and the year passed in should be the later year.
+Supported inputs are 2010 and 2012</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>df: Pandas.Dataframe</dt><dd><p>A pandas dataframe where each row represents an individual and each column represents a measurement about that individual</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<section id="examples-using-biolearn-load-load-nhanes">
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">biolearn.load.load_nhanes</span></code><a class="headerlink" href="#examples-using-biolearn-load-load-nhanes" title="Permalink to this heading">#</a></h2>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This example loads up data from NHANES and demonstrates plotting survival curves  including wit..."><img alt="" src="../../_images/sphx_glr_plot_nhanes_thumb.png" />
+<p><a class="reference internal" href="../../auto_examples/00_nhanes/plot_nhanes.html#sphx-glr-auto-examples-00-nhanes-plot-nhanes-py"><span class="std std-ref">Plotting survival curves with NHANES data</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Plotting survival curves with NHANES data</div>
+</div></div><div style='clear:both'></div></section>
 </section>
 
         </article>
@@ -268,23 +302,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="plot_python_101.html">
+          <a class="next-page" href="biolearn.load.load_fhs.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Basic numerics and plotting with Python</div>
+                <div class="title">biolearn.load.load_fhs</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../index.html">
+          <a class="prev-page" href="../load.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Examples</div>
+                <div class="title"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.load</span></code>: Data Loading Utilities</div>
                 
               </div>
             </a>
@@ -306,8 +340,28 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">biolearn.load.load_nhanes</a><ul>
+<li><a class="reference internal" href="#biolearn.load.load_nhanes"><code class="docutils literal notranslate"><span class="pre">load_nhanes</span></code></a></li>
+<li><a class="reference internal" href="#examples-using-biolearn-load-load-nhanes">Examples using <code class="docutils literal notranslate"><span class="pre">biolearn.load.load_nhanes</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

@@ -1,0 +1,13 @@
+
+:orphan:
+
+.. _sphx_glr_auto_examples_00_nhanes_sg_execution_times:
+
+
+Computation times
+=================
+**00:01.911** total execution time for **auto_examples_00_nhanes** files:
+
++-----------------------------------------------------------------------------+-----------+---------+
+| :ref:`sphx_glr_auto_examples_00_nhanes_plot_nhanes.py` (``plot_nhanes.py``) | 00:01.911 | 93.6 MB |
++-----------------------------------------------------------------------------+-----------+---------+
