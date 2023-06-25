@@ -38,7 +38,7 @@ Plot survival graphs using nhanes data
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example loads up data from NHANES and demonstrates plotting survival curves  including wit...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example loads blood data from NHANES 2010 and performs survival analyses by sex, glucose l...">
 
 .. only:: html
 
@@ -49,7 +49,7 @@ Plot survival graphs using nhanes data
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Plotting survival curves with NHANES data</div>
+      <div class="sphx-glr-thumbnail-title">Survival analyses using NHANES data</div>
     </div>
 
 

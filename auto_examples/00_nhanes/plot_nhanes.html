@@ -3,18 +3,18 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<meta property="og:title" content="Plotting survival curves with NHANES data" />
+<meta property="og:title" content="Survival analyses using NHANES data" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bio-learn.github.io/auto_examples/00_nhanes/plot_nhanes.html" />
 <meta property="og:site_name" content="Biolearn" />
-<meta property="og:description" content="This example loads up data from NHANES and demonstrates plotting survival curves including with a PhenoAge clock Needed imports: Load up data from NHANES: Basic survival plot: Plot survival by sex:..." />
+<meta property="og:description" content="This example loads blood data from NHANES 2010 and performs survival analyses by sex, glucose level, and “biological age”. Importing libraries: Loading NHANES data: Basic survival plot: Plotting su..." />
 <meta property="og:image" content="https://bio-learn.github.io/_static/biolearn-logo.png" />
 <meta property="og:image:alt" content="Biolearn" />
-<meta name="description" content="This example loads up data from NHANES and demonstrates plotting survival curves including with a PhenoAge clock Needed imports: Load up data from NHANES: Basic survival plot: Plot survival by sex:..." />
-<link rel="search" title="Search" href="../../search.html" /><link rel="next" title="User guide" href="../../user_guide.html" /><link rel="prev" title="NHANES Tutorial" href="index.html" />
+<meta name="description" content="This example loads blood data from NHANES 2010 and performs survival analyses by sex, glucose level, and “biological age”. Importing libraries: Loading NHANES data: Basic survival plot: Plotting su..." />
+<link rel="search" title="Search" href="../../search.html" /><link rel="next" title="API References" href="../../modules/index.html" /><link rel="prev" title="NHANES Tutorial" href="index.html" />
 
     <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 6.2.1 and Furo 2023.05.20 -->
-        <title>Plotting survival curves with NHANES data - Biolearn</title>
+        <title>Survival analyses using NHANES data - Biolearn</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=e6660623a769aa55fea372102b9bf3151b292993" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
@@ -140,7 +140,7 @@
 
 <div class="announcement">
   <aside class="announcement-content">
-     <p>This is the development documentation of biolearn (0.1.dev12+gcb86478.d20230622) <a class="sd-sphinx-override sd-badge sd-text-wrap sd-btn-outline-dark reference external" href="https://biolearn.github.io"><span>Switch to stable version (0.0.0)</span></a></p> 
+     <p>This is the development documentation of biolearn (0.1.dev17+g78f281c) <a class="sd-sphinx-override sd-badge sd-text-wrap sd-btn-outline-dark reference external" href="https://biolearn.github.io"><span>Switch to stable version (0.0.0)</span></a></p> 
   </aside>
 </div>
 
@@ -191,29 +191,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Quickstart</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">NHANES Tutorial</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of NHANES Tutorial</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Plotting survival curves with NHANES data</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Survival analyses using NHANES data</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../user_guide.html">User guide</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of User guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#what-is-biolearn">2. What is <code class="docutils literal notranslate"><span class="pre">biolearn</span></code>?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#using-biolearn-for-the-first-time">3. Using <code class="docutils literal notranslate"><span class="pre">biolearn</span></code> for the first time</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../introduction.html#machine-learning-applications-to-biomarkers-analysis">4. Machine learning applications to Biomarkers analysis</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../stuff/index.html">5. Stuff: stuff we do</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of 5. Stuff: stuff we do</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../stuff/stuff_intro.html">5.1. Searchlight : finding voxels containing information</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../modules/index.html">API References</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of API References</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../modules/load.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.load</span></code>: Data Loading Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of biolearn.load: Data Loading Utilities</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../modules/index.html">API References</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of API References</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../modules/load.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.load</span></code>: Data Loading Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of biolearn.load: Data Loading Utilities</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.load.load_nhanes.html">biolearn.load.load_nhanes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.load.load_fhs.html">biolearn.load.load_fhs</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../modules/clock.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.clock</span></code>: Function to run existing clocks that predice biological age</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of biolearn.clock: Function to run existing clocks that predice biological age</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../modules/clock.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.clock</span></code>: Function to run existing clocks that predice biological age</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of biolearn.clock: Function to run existing clocks that predice biological age</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.clock.horvath_clock.html">biolearn.clock.horvath_clock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.clock.hannum_clock.html">biolearn.clock.hannum_clock</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.clock.phenoage_clock.html">biolearn.clock.phenoage_clock</a></li>
@@ -265,12 +254,11 @@
 <p><a class="reference internal" href="#sphx-glr-download-auto-examples-00-nhanes-plot-nhanes-py"><span class="std std-ref">Go to the end</span></a>
 to download the full example code or to run this example in your browser via Binder</p>
 </div>
-<section class="sphx-glr-example-title" id="plotting-survival-curves-with-nhanes-data">
-<span id="sphx-glr-auto-examples-00-nhanes-plot-nhanes-py"></span><h1>Plotting survival curves with NHANES data<a class="headerlink" href="#plotting-survival-curves-with-nhanes-data" title="Permalink to this heading">#</a></h1>
-<p>This example loads up data from NHANES and demonstrates plotting survival curves
-including with a PhenoAge clock</p>
-<section id="needed-imports">
-<h2>Needed imports<a class="headerlink" href="#needed-imports" title="Permalink to this heading">#</a></h2>
+<section class="sphx-glr-example-title" id="survival-analyses-using-nhanes-data">
+<span id="sphx-glr-auto-examples-00-nhanes-plot-nhanes-py"></span><h1>Survival analyses using NHANES data<a class="headerlink" href="#survival-analyses-using-nhanes-data" title="Permalink to this heading">#</a></h1>
+<p>This example loads blood data from NHANES 2010 and performs survival analyses by sex, glucose level, and “biological age”.</p>
+<section id="importing-libraries">
+<h2>Importing libraries<a class="headerlink" href="#importing-libraries" title="Permalink to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">warnings</span> <span class="kn">import</span> <a href="https://docs.python.org/3.10/library/warnings.html#warnings.simplefilter" title="warnings.simplefilter" class="sphx-glr-backref-module-warnings sphx-glr-backref-type-py-function"><span class="n">simplefilter</span></a>
@@ -283,11 +271,10 @@ including with a PhenoAge clock</p>
 </pre></div>
 </div>
 </section>
-<section id="load-up-data-from-nhanes">
-<h2>Load up data from NHANES<a class="headerlink" href="#load-up-data-from-nhanes" title="Permalink to this heading">#</a></h2>
+<section id="loading-nhanes-data">
+<h2>Loading NHANES data<a class="headerlink" href="#loading-nhanes-data" title="Permalink to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3.10/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">year</span></a> <span class="o">=</span> <span class="mi">2010</span>
 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a> <span class="o">=</span> <a href="../../modules/generated/biolearn.load.load_nhanes.html#biolearn.load.load_nhanes" title="biolearn.load.load_nhanes" class="sphx-glr-backref-module-biolearn-load sphx-glr-backref-type-py-function"><span class="n">load_nhanes</span></a><span class="p">(</span><a href="https://docs.python.org/3.10/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">year</span></a><span class="p">)</span>
-<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[</span><span class="s2">&quot;LBXCRP&quot;</span><span class="p">]</span> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.ufunc.html#numpy.ufunc" title="numpy.ufunc" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np</span><span class="o">.</span><span class="n">log</span></a><span class="p">(</span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[</span><span class="s2">&quot;LBXCRP&quot;</span><span class="p">])</span>
 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[</span><span class="s2">&quot;years_until_death&quot;</span><span class="p">]</span> <span class="o">=</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[</span><span class="s2">&quot;months_until_death&quot;</span><span class="p">]</span> <span class="o">/</span> <span class="mi">12</span>
 </pre></div>
 </div>
@@ -307,8 +294,8 @@ including with a PhenoAge clock</p>
 </pre></div>
 </div>
 </section>
-<section id="plot-survival-by-sex">
-<h2>Plot survival by sex<a class="headerlink" href="#plot-survival-by-sex" title="Permalink to this heading">#</a></h2>
+<section id="plotting-survival-by-follow-up-time">
+<h2>Plotting survival by follow up time<a class="headerlink" href="#plotting-survival-by-follow-up-time" title="Permalink to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a> <span class="o">=</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot" title="matplotlib.pyplot.subplot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">()</span>
 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="pandas.core.series.Series" class="sphx-glr-backref-module-pandas-core-series sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">groups</span></a> <span class="o">=</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[</span><span class="s2">&quot;sex&quot;</span><span class="p">]</span>
 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="pandas.core.series.Series" class="sphx-glr-backref-module-pandas-core-series sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ix</span></a> <span class="o">=</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="pandas.core.series.Series" class="sphx-glr-backref-module-pandas-core-series sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">groups</span></a> <span class="o">==</span> <span class="mi">2</span>
@@ -341,9 +328,9 @@ including with a PhenoAge clock</p>
 </pre></div>
 </div>
 </section>
-<section id="calculate-biological-age-using-the-phenoage-clock">
-<h2>Calculate “biological age” using the phenoage clock<a class="headerlink" href="#calculate-biological-age-using-the-phenoage-clock" title="Permalink to this heading">#</a></h2>
-<p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5940111/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5940111/</a></p>
+<section id="calculate-biological-age-based-on-phenotypicage">
+<h2>Calculate “biological age” based on PhenotypicAge<a class="headerlink" href="#calculate-biological-age-based-on-phenotypicage" title="Permalink to this heading">#</a></h2>
+<p>Biomarker parameters from the paper <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5940111/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5940111/</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3.10/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pheno_coefs</span></a> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mf">0.0804</span><span class="p">,</span>
     <span class="s2">&quot;LBDSALSI&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.034</span><span class="p">,</span>
@@ -360,6 +347,7 @@ including with a PhenoAge clock</p>
 <a href="https://docs.python.org/3.10/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">constant</span></a> <span class="o">=</span> <span class="o">-</span><span class="mf">19.9067</span>
 <a href="https://docs.python.org/3.10/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">gamma</span></a> <span class="o">=</span> <span class="mf">0.0077</span>
 <a href="https://docs.python.org/3.10/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cs</span></a> <span class="o">=</span> <span class="p">[</span><span class="mf">141.50225</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.00553</span><span class="p">,</span> <span class="mf">0.090165</span><span class="p">]</span>
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[</span><span class="s2">&quot;LBXCRP&quot;</span><span class="p">]</span> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.ufunc.html#numpy.ufunc" title="numpy.ufunc" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np</span><span class="o">.</span><span class="n">log</span></a><span class="p">(</span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[</span><span class="s2">&quot;LBXCRP&quot;</span><span class="p">])</span>
 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[</span><span class="s2">&quot;pheno&quot;</span><span class="p">]</span> <span class="o">=</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.apply.html#pandas.DataFrame.apply" title="pandas.DataFrame.apply" class="sphx-glr-backref-module-pandas sphx-glr-backref-type-py-method"><span class="n">df</span><span class="o">.</span><span class="n">apply</span></a><span class="p">(</span>
     <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">sum</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">*</span> <a href="https://docs.python.org/3.10/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pheno_coefs</span></a><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <a href="https://docs.python.org/3.10/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pheno_coefs</span></a><span class="o">.</span><span class="n">keys</span><span class="p">()]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span>
 <span class="p">)</span>
@@ -372,8 +360,8 @@ including with a PhenoAge clock</p>
 </pre></div>
 </div>
 </section>
-<section id="show-relation-between-biological-and-chronological-age">
-<h2>Show relation between biological and chronological age<a class="headerlink" href="#show-relation-between-biological-and-chronological-age" title="Permalink to this heading">#</a></h2>
+<section id="show-relation-between-biological-age-and-chronological-age">
+<h2>Show relation between biological age and chronological age<a class="headerlink" href="#show-relation-between-biological-age-and-chronological-age" title="Permalink to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="s2">&quot;phenotypic_age&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -381,8 +369,8 @@ including with a PhenoAge clock</p>
 </pre></div>
 </div>
 </section>
-<section id="plot-survival-curve-for-people-with-a-biological-age-younger-vs-older-than-chronological">
-<h2>Plot survival curve for people with a biological age younger vs older than chronological<a class="headerlink" href="#plot-survival-curve-for-people-with-a-biological-age-younger-vs-older-than-chronological" title="Permalink to this heading">#</a></h2>
+<section id="plot-survival-curve-for-people-with-a-accelerated-aging-biological-age-younger-vs-decelerated-aging-older-than-chronological">
+<h2>Plot survival curve for people with a accelerated aging (biological age younger) vs decelerated aging (older than chronological)<a class="headerlink" href="#plot-survival-curve-for-people-with-a-accelerated-aging-biological-age-younger-vs-decelerated-aging-older-than-chronological" title="Permalink to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[</span><span class="s2">&quot;biologically_older&quot;</span><span class="p">]</span> <span class="o">=</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[</span><span class="s2">&quot;phenotypic_age&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a> <span class="o">=</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html#matplotlib.pyplot.subplot" title="matplotlib.pyplot.subplot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">()</span>
 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="pandas.core.series.Series" class="sphx-glr-backref-module-pandas-core-series sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">groups</span></a> <span class="o">=</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[</span><span class="s2">&quot;biologically_older&quot;</span><span class="p">]</span>
@@ -398,8 +386,8 @@ including with a PhenoAge clock</p>
 <img src="../../_images/sphx_glr_plot_nhanes_005.png" srcset="../../_images/sphx_glr_plot_nhanes_005.png" alt="plot nhanes" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Text(0.5, 23.52222222222222, &#39;Years&#39;)
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.911 seconds)</p>
-<p><strong>Estimated memory usage:</strong>  94 MB</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.090 seconds)</p>
+<p><strong>Estimated memory usage:</strong>  108 MB</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-00-nhanes-plot-nhanes-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/bio-learn/biolearn/main?urlpath=lab/tree/notebooks/auto_examples/00_nhanes/plot_nhanes.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo.svg" width="150px" /></a>
@@ -420,12 +408,12 @@ including with a PhenoAge clock</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../../user_guide.html">
+          <a class="next-page" href="../../modules/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">User guide</div>
+                <div class="title">API References</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -470,15 +458,15 @@ including with a PhenoAge clock</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Plotting survival curves with NHANES data</a><ul>
-<li><a class="reference internal" href="#needed-imports">Needed imports</a></li>
-<li><a class="reference internal" href="#load-up-data-from-nhanes">Load up data from NHANES</a></li>
+<li><a class="reference internal" href="#">Survival analyses using NHANES data</a><ul>
+<li><a class="reference internal" href="#importing-libraries">Importing libraries</a></li>
+<li><a class="reference internal" href="#loading-nhanes-data">Loading NHANES data</a></li>
 <li><a class="reference internal" href="#basic-survival-plot">Basic survival plot</a></li>
-<li><a class="reference internal" href="#plot-survival-by-sex">Plot survival by sex</a></li>
+<li><a class="reference internal" href="#plotting-survival-by-follow-up-time">Plotting survival by follow up time</a></li>
 <li><a class="reference internal" href="#plot-survival-by-glucose-level">Plot survival by glucose level</a></li>
-<li><a class="reference internal" href="#calculate-biological-age-using-the-phenoage-clock">Calculate “biological age” using the phenoage clock</a></li>
-<li><a class="reference internal" href="#show-relation-between-biological-and-chronological-age">Show relation between biological and chronological age</a></li>
-<li><a class="reference internal" href="#plot-survival-curve-for-people-with-a-biological-age-younger-vs-older-than-chronological">Plot survival curve for people with a biological age younger vs older than chronological</a></li>
+<li><a class="reference internal" href="#calculate-biological-age-based-on-phenotypicage">Calculate “biological age” based on PhenotypicAge</a></li>
+<li><a class="reference internal" href="#show-relation-between-biological-age-and-chronological-age">Show relation between biological age and chronological age</a></li>
+<li><a class="reference internal" href="#plot-survival-curve-for-people-with-a-accelerated-aging-biological-age-younger-vs-decelerated-aging-older-than-chronological">Plot survival curve for people with a accelerated aging (biological age younger) vs decelerated aging (older than chronological)</a></li>
 </ul>
 </li>
 </ul>
