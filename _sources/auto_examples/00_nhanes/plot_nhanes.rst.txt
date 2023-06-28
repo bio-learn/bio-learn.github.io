@@ -18,46 +18,21 @@
 .. _sphx_glr_auto_examples_00_nhanes_plot_nhanes.py:
 
 
-Survival analyses using NHANES data
+"Phenotypic Ages" in NHANES Data
 =============================================================
 
-This example loads blood data from NHANES 2010 and performs survival analyses by sex, glucose level, and “biological age”. 
+This example loads blood exam data from NHANES 2010, calculates "Phenotypic Ages," and performs survival analyses by phenotypic age. 
 
 .. GENERATED FROM PYTHON SOURCE LINES 9-11
 
-Importing libraries
+Loading NHANES 2010 data
 ---------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 11-21
+.. GENERATED FROM PYTHON SOURCE LINES 11-16
 
 .. code-block:: default
 
-    import pandas as pd
-    import numpy as np
-    from warnings import simplefilter
-
-    simplefilter(action="ignore", category=pd.errors.PerformanceWarning)
-    import matplotlib.pyplot as plt
-    from lifelines import KaplanMeierFitter
-
-    from biolearn.load import load_nhanes
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 22-24
-
-Loading NHANES data
----------------------------------------
-
-.. GENERATED FROM PYTHON SOURCE LINES 24-28
-
-.. code-block:: default
-
+    from biolearn.load import load_nhanes 
     year = 2010
     df = load_nhanes(year)
     df["years_until_death"] = df["months_until_death"] / 12
@@ -69,22 +44,36 @@ Loading NHANES data
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 29-31
+.. GENERATED FROM PYTHON SOURCE LINES 17-19
 
-Basic survival plot
----------------------------------------
+Calculate "biological age" based on PhenotypicAge
+------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-39
+.. GENERATED FROM PYTHON SOURCE LINES 19-22
 
 .. code-block:: default
 
-    T = df.years_until_death
-    E = df.is_dead
-    kmf = KaplanMeierFitter()
-    kmf.fit(T, E)
-    kmf.plot()
-    plt.ylabel("Survival")
-    plt.xlabel("Years")
+    from biolearn.hematology import phenotypic_age
+    df["phenotypic_age"]=phenotypic_age(df)
+
+
+
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 23-25
+
+Show relation between biological age and chronological age
+---------------------------------------------------------------
+
+.. GENERATED FROM PYTHON SOURCE LINES 25-28
+
+.. code-block:: default
+
+    import seaborn as sn
+    sn.scatterplot(data=df,x="age", y="phenotypic_age",s=2);
 
 
 
@@ -100,30 +89,34 @@ Basic survival plot
  .. code-block:: none
 
 
-    Text(0.5, 23.52222222222222, 'Years')
+    <Axes: xlabel='age', ylabel='phenotypic_age'>
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 40-42
+.. GENERATED FROM PYTHON SOURCE LINES 29-31
 
-Plotting survival by follow up time 
----------------------------------------
+Plot survival curve for people with accelerated aging (older biological age) vs decelerated aging (younger biological age)
+--------------------------------------------------------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 42-52
+.. GENERATED FROM PYTHON SOURCE LINES 31-45
 
 .. code-block:: default
 
+    import matplotlib.pyplot as plt
+    from lifelines import KaplanMeierFitter
+    df["biologically_older"] = df["phenotypic_age"] > df["age"]
     ax = plt.subplot()
-    groups = df["sex"]
-    ix = groups == 2
-    kmf.fit(T[ix], E[ix], label="Female")
+    groups = df["biologically_older"]
+    ix = groups == 0
+    T = df.years_until_death
+    E = df.is_dead
+    kmf = KaplanMeierFitter()
+    kmf.fit(T[ix], E[ix], label="Biologically younger")
     ax = kmf.plot_survival_function(ax=ax)
-    kmf.fit(T[~ix], E[~ix], label="Male")
+    kmf.fit(T[~ix], E[~ix], label="Biologically older")
     ax = kmf.plot_survival_function()
     plt.ylabel("Survival")
-    plt.xlabel("Years")
-
-
+    plt.xlabel("Years");
 
 
 .. image-sg:: /auto_examples/00_nhanes/images/sphx_glr_plot_nhanes_002.png
@@ -141,159 +134,12 @@ Plotting survival by follow up time
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 53-55
-
-Plot survival by glucose level
----------------------------------------
-
-.. GENERATED FROM PYTHON SOURCE LINES 55-65
-
-.. code-block:: default
-
-    ax = plt.subplot()
-    groups = df["glucose"]
-    ix = groups < 5.5
-    kmf.fit(T[ix], E[ix], label="glucose")
-    ax = kmf.plot_survival_function(ax=ax)
-    kmf.fit(T[~ix], E[~ix], label="glucose")
-    ax = kmf.plot_survival_function()
-    plt.ylabel("Survival")
-    plt.xlabel("Years")
-
-
-
-
-.. image-sg:: /auto_examples/00_nhanes/images/sphx_glr_plot_nhanes_003.png
-   :alt: plot nhanes
-   :srcset: /auto_examples/00_nhanes/images/sphx_glr_plot_nhanes_003.png
-   :class: sphx-glr-single-img
-
-
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-
-    Text(0.5, 23.52222222222222, 'Years')
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 66-69
-
-Calculate "biological age" based on PhenotypicAge
-------------------------------------------------------
-Biomarker parameters from the paper https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5940111/
-
-.. GENERATED FROM PYTHON SOURCE LINES 69-96
-
-.. code-block:: default
-
-    pheno_coefs = {
-        "age": 0.0804,
-        "LBDSALSI": -0.034,
-        "LBDSCRSI": 0.0095,
-        "glucose": 0.1953,
-        "LBXCRP": 0.0954,
-        "LBXLYPCT": -0.012,
-        "LBXMCVSI": 0.0268,
-        "LBXRDW": 0.3356,
-        "LBXSAPSI": 0.00188,
-        "LBXWBCSI": 0.0554,
-    }
-
-    constant = -19.9067
-    gamma = 0.0077
-    cs = [141.50225, -0.00553, 0.090165]
-    df["LBXCRP"] = np.log(df["LBXCRP"])
-    df["pheno"] = df.apply(
-        lambda x: sum([x[c] * pheno_coefs[c] for c in pheno_coefs.keys()]), axis=1
-    )
-    df["mortality_score"] = 1 - np.exp(
-        (-np.exp(constant + df["pheno"]) * ((np.exp(120 * gamma) - 1) / gamma))
-    )
-    df["phenotypic_age"] = (
-        cs[0] + np.log(cs[1] * np.log(1 - df["mortality_score"])) / cs[2]
-    )
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 97-99
-
-Show relation between biological age and chronological age
----------------------------------------------------------------
-
-.. GENERATED FROM PYTHON SOURCE LINES 99-101
-
-.. code-block:: default
-
-    df.plot.scatter("age", "phenotypic_age")
-
-
-
-
-.. image-sg:: /auto_examples/00_nhanes/images/sphx_glr_plot_nhanes_004.png
-   :alt: plot nhanes
-   :srcset: /auto_examples/00_nhanes/images/sphx_glr_plot_nhanes_004.png
-   :class: sphx-glr-single-img
-
-
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-
-    <Axes: xlabel='age', ylabel='phenotypic_age'>
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 102-104
-
-Plot survival curve for people with a accelerated aging (biological age younger) vs decelerated aging (older than chronological)
-----------------------------------------------------------------------------------------------------------------------------------
-
-.. GENERATED FROM PYTHON SOURCE LINES 104-114
-
-.. code-block:: default
-
-    df["biologically_older"] = df["phenotypic_age"] > df["age"]
-    ax = plt.subplot()
-    groups = df["biologically_older"]
-    ix = groups == 0
-    kmf.fit(T[ix], E[ix], label="Biologically younger")
-    ax = kmf.plot_survival_function(ax=ax)
-    kmf.fit(T[~ix], E[~ix], label="Biologically older")
-    ax = kmf.plot_survival_function()
-    plt.ylabel("Survival")
-    plt.xlabel("Years")
-
-
-
-.. image-sg:: /auto_examples/00_nhanes/images/sphx_glr_plot_nhanes_005.png
-   :alt: plot nhanes
-   :srcset: /auto_examples/00_nhanes/images/sphx_glr_plot_nhanes_005.png
-   :class: sphx-glr-single-img
-
-
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-
-    Text(0.5, 23.52222222222222, 'Years')
-
-
-
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  5.069 seconds)
+   **Total running time of the script:** ( 0 minutes  2.200 seconds)
 
-**Estimated memory usage:**  108 MB
+**Estimated memory usage:**  13 MB
 
 
 .. _sphx_glr_download_auto_examples_00_nhanes_plot_nhanes.py:

@@ -3,18 +3,18 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<meta property="og:title" content="NHANES Tutorial" />
+<meta property="og:title" content="“Epigenetic Clocks” in GEO Data" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://bio-learn.github.io/auto_examples/00_nhanes/index.html" />
+<meta property="og:url" content="https://bio-learn.github.io/auto_examples/00_nhanes/plot_epigenetic_clocks_on_geo.html" />
 <meta property="og:site_name" content="Biolearn" />
-<meta property="og:description" content="Plot survival graphs using nhanes data “Epigenetic Clocks” in GEO Data “Phenotypic Ages” in NHANES Data" />
-<meta property="og:image" content="https://bio-learn.github.io/_images/sphx_glr_plot_epigenetic_clocks_on_geo_thumb.png" />
-<meta property="og:image:alt" content="" />
-<meta name="description" content="Plot survival graphs using nhanes data “Epigenetic Clocks” in GEO Data “Phenotypic Ages” in NHANES Data" />
-<link rel="search" title="Search" href="../../search.html" /><link rel="next" title="“Epigenetic Clocks” in GEO Data" href="plot_epigenetic_clocks_on_geo.html" /><link rel="prev" title="Examples" href="../index.html" />
+<meta property="og:description" content="This example loads a DNA Methylation data from GEO, calculates multiple epigenetic clocks, and plot them against chronological age. Loading a DNAm GEO data: Calculate “biological age” based on Horv..." />
+<meta property="og:image" content="https://bio-learn.github.io/_static/biolearn-logo.png" />
+<meta property="og:image:alt" content="Biolearn" />
+<meta name="description" content="This example loads a DNA Methylation data from GEO, calculates multiple epigenetic clocks, and plot them against chronological age. Loading a DNAm GEO data: Calculate “biological age” based on Horv..." />
+<link rel="search" title="Search" href="../../search.html" /><link rel="next" title="“Phenotypic Ages” in NHANES Data" href="plot_nhanes.html" /><link rel="prev" title="NHANES Tutorial" href="index.html" />
 
     <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 6.2.1 and Furo 2023.05.20 -->
-        <title>NHANES Tutorial - Biolearn</title>
+        <title>“Epigenetic Clocks” in GEO Data - Biolearn</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=e6660623a769aa55fea372102b9bf3151b292993" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
@@ -164,7 +164,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -190,8 +190,8 @@
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Quickstart</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 current has-children current-page"><a class="current reference internal" href="#">NHANES Tutorial</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of NHANES Tutorial</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="plot_epigenetic_clocks_on_geo.html">“Epigenetic Clocks” in GEO Data</a></li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">NHANES Tutorial</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of NHANES Tutorial</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">“Epigenetic Clocks” in GEO Data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot_nhanes.html">“Phenotypic Ages” in NHANES Data</a></li>
 </ul>
 </li>
@@ -244,23 +244,63 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="nhanes-tutorial">
-<span id="tutorial-examples"></span><span id="sphx-glr-auto-examples-00-nhanes"></span><h1>NHANES Tutorial<a class="headerlink" href="#nhanes-tutorial" title="Permalink to this heading">#</a></h1>
-<p>Plot survival graphs using nhanes data</p>
-<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This example loads a DNA Methylation data from GEO, calculates multiple epigenetic clocks, and ..."><img alt="" src="../../_images/sphx_glr_plot_epigenetic_clocks_on_geo_thumb.png" />
-<p><a class="reference internal" href="plot_epigenetic_clocks_on_geo.html#sphx-glr-auto-examples-00-nhanes-plot-epigenetic-clocks-on-geo-py"><span class="std std-ref">“Epigenetic Clocks” in GEO Data</span></a></p>
-  <div class="sphx-glr-thumbnail-title">"Epigenetic Clocks" in GEO Data</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="This example loads blood exam data from NHANES 2010, calculates &quot;Phenotypic Ages,&quot; and performs..."><img alt="" src="../../_images/sphx_glr_plot_nhanes_thumb.png" />
-<p><a class="reference internal" href="plot_nhanes.html#sphx-glr-auto-examples-00-nhanes-plot-nhanes-py"><span class="std std-ref">“Phenotypic Ages” in NHANES Data</span></a></p>
-  <div class="sphx-glr-thumbnail-title">"Phenotypic Ages" in NHANES Data</div>
-</div></div><div class="toctree-wrapper compound">
+          <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#sphx-glr-download-auto-examples-00-nhanes-plot-epigenetic-clocks-on-geo-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code or to run this example in your browser via Binder</p>
 </div>
+<section class="sphx-glr-example-title" id="epigenetic-clocks-in-geo-data">
+<span id="sphx-glr-auto-examples-00-nhanes-plot-epigenetic-clocks-on-geo-py"></span><h1>“Epigenetic Clocks” in GEO Data<a class="headerlink" href="#epigenetic-clocks-in-geo-data" title="Permalink to this heading">#</a></h1>
+<p>This example loads a DNA Methylation data from GEO, calculates multiple epigenetic clocks, and plot them against chronological age.</p>
+<section id="loading-a-dnam-geo-data">
+<h2>Loading a DNAm GEO data<a class="headerlink" href="#loading-a-dnam-geo-data" title="Permalink to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.load</span> <span class="kn">import</span> <span class="n">load_dnam</span>
+<span class="c1">#GSE41169 blood DNAm data</span>
+<a href="https://docs.python.org/3.10/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">url</span></a><span class="o">=</span><span class="s1">&#39;https://ftp.ncbi.nlm.nih.gov/geo/series/GSE41nnn/GSE41169/matrix/GSE41169_series_matrix.txt.gz&#39;</span>
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="o">=</span><span class="n">load_dnam</span><span class="p">(</span><span class="n">dnam_file</span><span class="o">=</span><a href="https://docs.python.org/3.10/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">url</span></a><span class="p">,</span><span class="n">id_row</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span><span class="n">age_row</span><span class="o">=</span><span class="mi">46</span><span class="p">,</span><span class="n">skiprows</span><span class="o">=</span><span class="mi">72</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="calculate-biological-age-based-on-horvath-hannum-and-phenoage-epigenetic-clocks">
+<h2>Calculate “biological age” based on Horvath, Hannum, and PhenoAge epigenetic clocks<a class="headerlink" href="#calculate-biological-age-based-on-horvath-hannum-and-phenoage-epigenetic-clocks" title="Permalink to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.clock</span> <span class="kn">import</span> <a href="../../modules/generated/biolearn.clock.horvath_clock.html#biolearn.clock.horvath_clock" title="biolearn.clock.horvath_clock" class="sphx-glr-backref-module-biolearn-clock sphx-glr-backref-type-py-function"><span class="n">horvath_clock</span></a><span class="p">,</span> <a href="../../modules/generated/biolearn.clock.hannum_clock.html#biolearn.clock.hannum_clock" title="biolearn.clock.hannum_clock" class="sphx-glr-backref-module-biolearn-clock sphx-glr-backref-type-py-function"><span class="n">hannum_clock</span></a><span class="p">,</span> <a href="../../modules/generated/biolearn.clock.phenoage_clock.html#biolearn.clock.phenoage_clock" title="biolearn.clock.phenoage_clock" class="sphx-glr-backref-module-biolearn-clock sphx-glr-backref-type-py-function"><span class="n">phenoage_clock</span></a>
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[</span><span class="s1">&#39;horvath&#39;</span><span class="p">]</span> <span class="o">=</span> <a href="../../modules/generated/biolearn.clock.horvath_clock.html#biolearn.clock.horvath_clock" title="biolearn.clock.horvath_clock" class="sphx-glr-backref-module-biolearn-clock sphx-glr-backref-type-py-function"><span class="n">horvath_clock</span></a><span class="p">(</span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">)</span>
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[</span><span class="s1">&#39;hannum&#39;</span><span class="p">]</span> <span class="o">=</span> <a href="../../modules/generated/biolearn.clock.hannum_clock.html#biolearn.clock.hannum_clock" title="biolearn.clock.hannum_clock" class="sphx-glr-backref-module-biolearn-clock sphx-glr-backref-type-py-function"><span class="n">hannum_clock</span></a><span class="p">(</span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">)</span>
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[</span><span class="s1">&#39;phenoage&#39;</span><span class="p">]</span> <span class="o">=</span> <a href="../../modules/generated/biolearn.clock.phenoage_clock.html#biolearn.clock.phenoage_clock" title="biolearn.clock.phenoage_clock" class="sphx-glr-backref-module-biolearn-clock sphx-glr-backref-type-py-function"><span class="n">phenoage_clock</span></a><span class="p">(</span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="plot-biological-ages-against-chronological-age">
+<h2>Plot biological ages against chronological age<a class="headerlink" href="#plot-biological-ages-against-chronological-age" title="Permalink to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sn</span>
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Index.html#pandas.Index" title="pandas.core.indexes.base.Index" class="sphx-glr-backref-module-pandas-core-indexes-base sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span><span class="o">.</span><span class="n">index</span></a><span class="o">=</span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+<span class="n">sn</span><span class="o">.</span><span class="n">relplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[[</span><span class="s1">&#39;horvath&#39;</span><span class="p">,</span><span class="s1">&#39;hannum&#39;</span><span class="p">,</span><span class="s1">&#39;phenoage&#39;</span><span class="p">]],</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scatter&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<img src="../../_images/sphx_glr_plot_epigenetic_clocks_on_geo_001.png" srcset="../../_images/sphx_glr_plot_epigenetic_clocks_on_geo_001.png" alt="plot epigenetic clocks on geo" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid object at 0x7f69f6479fc0&gt;
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  16.447 seconds)</p>
+<p><strong>Estimated memory usage:</strong>  836 MB</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-00-nhanes-plot-epigenetic-clocks-on-geo-py">
+<div class="binder-badge docutils container">
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/bio-learn/biolearn/main?urlpath=lab/tree/notebooks/auto_examples/00_nhanes/plot_epigenetic_clocks_on_geo.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo.svg" width="150px" /></a>
+</div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/92c885a04952a3d5f2de6b084f37868b/plot_epigenetic_clocks_on_geo.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_epigenetic_clocks_on_geo.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/c28af2e737890e3b001c7de292fe1a51/plot_epigenetic_clocks_on_geo.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_epigenetic_clocks_on_geo.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</section>
 </section>
 
         </article>
@@ -268,23 +308,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="plot_epigenetic_clocks_on_geo.html">
+          <a class="next-page" href="plot_nhanes.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">“Epigenetic Clocks” in GEO Data</div>
+                <div class="title">“Phenotypic Ages” in NHANES Data</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../index.html">
+          <a class="prev-page" href="index.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Examples</div>
+                <div class="title">NHANES Tutorial</div>
                 
               </div>
             </a>
@@ -306,8 +346,29 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">“Epigenetic Clocks” in GEO Data</a><ul>
+<li><a class="reference internal" href="#loading-a-dnam-geo-data">Loading a DNAm GEO data</a></li>
+<li><a class="reference internal" href="#calculate-biological-age-based-on-horvath-hannum-and-phenoage-epigenetic-clocks">Calculate “biological age” based on Horvath, Hannum, and PhenoAge epigenetic clocks</a></li>
+<li><a class="reference internal" href="#plot-biological-ages-against-chronological-age">Plot biological ages against chronological age</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
