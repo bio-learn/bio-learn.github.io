@@ -5,14 +5,14 @@
    :ref:`user guide <user_guide>` for the big picture.
 
 
-biolearn.clock.horvath_clock
-============================
+biolearn.clock.horvathv1
+========================
 
 .. currentmodule:: biolearn.clock
 
-.. autofunction:: horvath_clock
+.. autofunction:: horvathv1
 
-.. include:: biolearn.clock.horvath_clock.examples
+.. include:: biolearn.clock.horvathv1.examples
 
 .. raw:: html
 

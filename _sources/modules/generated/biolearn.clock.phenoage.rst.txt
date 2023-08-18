@@ -5,14 +5,14 @@
    :ref:`user guide <user_guide>` for the big picture.
 
 
-biolearn.clock.phenoage_clock
-=============================
+biolearn.clock.phenoage
+=======================
 
 .. currentmodule:: biolearn.clock
 
-.. autofunction:: phenoage_clock
+.. autofunction:: phenoage
 
-.. include:: biolearn.clock.phenoage_clock.examples
+.. include:: biolearn.clock.phenoage.examples
 
 .. raw:: html
 

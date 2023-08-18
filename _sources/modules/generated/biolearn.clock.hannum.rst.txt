@@ -5,14 +5,14 @@
    :ref:`user guide <user_guide>` for the big picture.
 
 
-biolearn.clock.hannum_clock
-===========================
+biolearn.clock.hannum
+=====================
 
 .. currentmodule:: biolearn.clock
 
-.. autofunction:: hannum_clock
+.. autofunction:: hannum
 
-.. include:: biolearn.clock.hannum_clock.examples
+.. include:: biolearn.clock.hannum.examples
 
 .. raw:: html
 

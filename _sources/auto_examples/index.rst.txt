@@ -23,11 +23,11 @@ Examples
     </div>
 
 
-===============
-NHANES Tutorial
-===============
+=========================
+Epigenetic Clock Examples
+=========================
 
-Plot survival graphs using nhanes data
+Plots results of running epigenetic clock functions
 
 
 
@@ -42,10 +42,10 @@ Plot survival graphs using nhanes data
 
 .. only:: html
 
-  .. image:: /auto_examples/00_nhanes/images/thumb/sphx_glr_plot_epigenetic_clocks_on_geo_thumb.png
+  .. image:: /auto_examples/00_epigenetic_biomarkers/images/thumb/sphx_glr_plot_epigenetic_clocks_on_geo_thumb.png
     :alt:
 
-  :ref:`sphx_glr_auto_examples_00_nhanes_plot_epigenetic_clocks_on_geo.py`
+  :ref:`sphx_glr_auto_examples_00_epigenetic_biomarkers_plot_epigenetic_clocks_on_geo.py`
 
 .. raw:: html
 
@@ -55,14 +55,31 @@ Plot survival graphs using nhanes data
 
 .. raw:: html
 
+    </div>
+
+
+=============================
+Composite Biomarkers Examples
+=============================
+
+Plot survival curves based on clocks using data from standard blood tests
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="This example loads blood exam data from NHANES 2010, calculates &quot;Phenotypic Ages,&quot; and performs...">
 
 .. only:: html
 
-  .. image:: /auto_examples/00_nhanes/images/thumb/sphx_glr_plot_nhanes_thumb.png
+  .. image:: /auto_examples/01_composite_biomarkers/images/thumb/sphx_glr_plot_nhanes_thumb.png
     :alt:
 
-  :ref:`sphx_glr_auto_examples_00_nhanes_plot_nhanes.py`
+  :ref:`sphx_glr_auto_examples_01_composite_biomarkers_plot_nhanes.py`
 
 .. raw:: html
 
@@ -80,7 +97,8 @@ Plot survival graphs using nhanes data
    :includehidden:
 
 
-   /auto_examples/00_nhanes/index.rst
+   /auto_examples/00_epigenetic_biomarkers/index.rst
+   /auto_examples/01_composite_biomarkers/index.rst
 
 
 .. only:: html

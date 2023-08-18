@@ -1,0 +1,46 @@
+
+
+.. _sphx_glr_auto_examples_00_epigenetic_biomarkers:
+
+.. _epigenetic_examples:
+
+=========================
+Epigenetic Clock Examples
+=========================
+
+Plots results of running epigenetic clock functions
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example loads a DNA Methylation data from GEO, calculates multiple epigenetic clocks, and ...">
+
+.. only:: html
+
+  .. image:: /auto_examples/00_epigenetic_biomarkers/images/thumb/sphx_glr_plot_epigenetic_clocks_on_geo_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_00_epigenetic_biomarkers_plot_epigenetic_clocks_on_geo.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">"Epigenetic Clocks" in GEO Data</div>
+    </div>
+
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo
+
