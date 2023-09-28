@@ -1,8 +1,8 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" data-content_root="../../">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="“Phenotypic Ages” in NHANES Data" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bio-learn.github.io/auto_examples/01_composite_biomarkers/plot_nhanes.html" />
@@ -13,18 +13,18 @@
 <meta name="description" content="This example loads blood exam data from NHANES 2010, calculates “Phenotypic Ages,” and performs survival analyses by phenotypic age. Loading NHANES 2010 data: Calculate “biological age” based on Ph..." />
 <link rel="search" title="Search" href="../../search.html" /><link rel="next" title="API References" href="../../modules/index.html" /><link rel="prev" title="Composite Biomarkers Examples" href="index.html" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 6.2.1 and Furo 2023.05.20 -->
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
         <title>“Phenotypic Ages” in NHANES Data - Biolearn</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=e6660623a769aa55fea372102b9bf3151b292993" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=045299b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=b603f989" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     
     
@@ -140,7 +140,7 @@
 
 <div class="announcement">
   <aside class="announcement-content">
-     <p>This is the development documentation of biolearn (0.1.dev47+gd06f122.d20230817)  
+     <p>This is the development documentation of biolearn (0.1.dev56+g340cc14)  
   </aside>
 </div>
 
@@ -259,10 +259,10 @@
 to download the full example code or to run this example in your browser via Binder</p>
 </div>
 <section class="sphx-glr-example-title" id="phenotypic-ages-in-nhanes-data">
-<span id="sphx-glr-auto-examples-01-composite-biomarkers-plot-nhanes-py"></span><h1>“Phenotypic Ages” in NHANES Data<a class="headerlink" href="#phenotypic-ages-in-nhanes-data" title="Permalink to this heading">#</a></h1>
+<span id="sphx-glr-auto-examples-01-composite-biomarkers-plot-nhanes-py"></span><h1>“Phenotypic Ages” in NHANES Data<a class="headerlink" href="#phenotypic-ages-in-nhanes-data" title="Link to this heading">#</a></h1>
 <p>This example loads blood exam data from NHANES 2010, calculates “Phenotypic Ages,” and performs survival analyses by phenotypic age.</p>
 <section id="loading-nhanes-2010-data">
-<h2>Loading NHANES 2010 data<a class="headerlink" href="#loading-nhanes-2010-data" title="Permalink to this heading">#</a></h2>
+<h2>Loading NHANES 2010 data<a class="headerlink" href="#loading-nhanes-2010-data" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.load</span> <span class="kn">import</span> <a href="../../modules/generated/biolearn.load.load_nhanes.html#biolearn.load.load_nhanes" title="biolearn.load.load_nhanes" class="sphx-glr-backref-module-biolearn-load sphx-glr-backref-type-py-function"><span class="n">load_nhanes</span></a>
 <a href="https://docs.python.org/3.10/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">year</span></a> <span class="o">=</span> <span class="mi">2010</span>
 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a> <span class="o">=</span> <a href="../../modules/generated/biolearn.load.load_nhanes.html#biolearn.load.load_nhanes" title="biolearn.load.load_nhanes" class="sphx-glr-backref-module-biolearn-load sphx-glr-backref-type-py-function"><span class="n">load_nhanes</span></a><span class="p">(</span><a href="https://docs.python.org/3.10/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">year</span></a><span class="p">)</span>
@@ -271,24 +271,29 @@ to download the full example code or to run this example in your browser via Bin
 </div>
 </section>
 <section id="calculate-biological-age-based-on-phenotypicage">
-<h2>Calculate “biological age” based on PhenotypicAge<a class="headerlink" href="#calculate-biological-age-based-on-phenotypicage" title="Permalink to this heading">#</a></h2>
+<h2>Calculate “biological age” based on PhenotypicAge<a class="headerlink" href="#calculate-biological-age-based-on-phenotypicage" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.hematology</span> <span class="kn">import</span> <span class="n">phenotypic_age</span>
 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[</span><span class="s2">&quot;phenotypic_age&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">phenotypic_age</span><span class="p">(</span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="show-relation-between-biological-age-and-chronological-age">
-<h2>Show relation between biological age and chronological age<a class="headerlink" href="#show-relation-between-biological-age-and-chronological-age" title="Permalink to this heading">#</a></h2>
+<h2>Show relation between biological age and chronological age<a class="headerlink" href="#show-relation-between-biological-age-and-chronological-age" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sn</span>
 <span class="n">sn</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;age&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;phenotypic_age&quot;</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="mi">2</span><span class="p">);</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_plot_nhanes_001.png" srcset="../../_images/sphx_glr_plot_nhanes_001.png" alt="plot nhanes" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;age&#39;, ylabel=&#39;phenotypic_age&#39;&gt;
+<img src="../../_images/sphx_glr_plot_nhanes_001.png" srcset="../../_images/sphx_glr_plot_nhanes_001.png" alt="plot nhanes" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+
+&lt;Axes: xlabel=&#39;age&#39;, ylabel=&#39;phenotypic_age&#39;&gt;
 </pre></div>
 </div>
 </section>
 <section id="plot-survival-curve-for-people-with-accelerated-aging-older-biological-age-vs-decelerated-aging-younger-biological-age">
-<h2>Plot survival curve for people with accelerated aging (older biological age) vs decelerated aging (younger biological age)<a class="headerlink" href="#plot-survival-curve-for-people-with-accelerated-aging-older-biological-age-vs-decelerated-aging-younger-biological-age" title="Permalink to this heading">#</a></h2>
+<h2>Plot survival curve for people with accelerated aging (older biological age) vs decelerated aging (younger biological age)<a class="headerlink" href="#plot-survival-curve-for-people-with-accelerated-aging-older-biological-age-vs-decelerated-aging-younger-biological-age" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">lifelines</span> <span class="kn">import</span> <span class="n">KaplanMeierFitter</span>
 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[</span><span class="s2">&quot;biologically_older&quot;</span><span class="p">]</span> <span class="o">=</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[</span><span class="s2">&quot;phenotypic_age&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span>
@@ -309,7 +314,7 @@ to download the full example code or to run this example in your browser via Bin
 <img src="../../_images/sphx_glr_plot_nhanes_002.png" srcset="../../_images/sphx_glr_plot_nhanes_002.png" alt="plot nhanes" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Text(0.5, 23.52222222222222, &#39;Years&#39;)
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.451 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.511 seconds)</p>
 <p><strong>Estimated memory usage:</strong>  10 MB</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-01-composite-biomarkers-plot-nhanes-py">
 <div class="binder-badge docutils container">
@@ -397,12 +402,12 @@ to download the full example code or to run this example in your browser via Bin
       
     </aside>
   </div>
-</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/scripts/furo.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/design-tabs.js"></script>
+</div><script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=4ea706d9"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     </body>
 </html>

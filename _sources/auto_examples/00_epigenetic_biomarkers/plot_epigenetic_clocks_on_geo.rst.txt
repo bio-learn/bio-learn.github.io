@@ -28,14 +28,17 @@ This example loads a DNA Methylation data from GEO, calculates multiple epigenet
 Loading a DNAm GEO data
 ---------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 11-16
+.. GENERATED FROM PYTHON SOURCE LINES 11-19
 
 .. code-block:: default
 
-    from biolearn.load import load_dnam
-    #GSE41169 blood DNAm data
-    url='https://ftp.ncbi.nlm.nih.gov/geo/series/GSE41nnn/GSE41169/matrix/GSE41169_series_matrix.txt.gz'
-    df=load_dnam(dnam_file=url,id_row=32,age_row=46,skiprows=72)
+    from biolearn.data_library import DataLibrary
+    #Load up GSE41169 blood DNAm data
+    data_source = DataLibrary().get("GSE41169")
+    data=data_source.load()
+
+    #The data has the methylation data as well as metadata for each subject
+    df = data.dnam
 
 
 
@@ -44,19 +47,21 @@ Loading a DNAm GEO data
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 17-19
+.. GENERATED FROM PYTHON SOURCE LINES 20-22
 
 Calculate "biological age" based on Horvath, Hannum, and PhenoAge epigenetic clocks
 -------------------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 19-24
+.. GENERATED FROM PYTHON SOURCE LINES 22-29
 
 .. code-block:: default
 
     from biolearn.clock import horvathv1, hannum, phenoage
-    df['horvath'] = horvathv1(df)
-    df['hannum'] = hannum(df)
-    df['phenoage'] = phenoage(df)
+    horvath_results = horvathv1(df)
+    hannum_results = hannum(df)
+    phenoage_results = phenoage(df)
+
+    actual_age = data.metadata['age']
 
 
 
@@ -65,18 +70,26 @@ Calculate "biological age" based on Horvath, Hannum, and PhenoAge epigenetic clo
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 25-27
+.. GENERATED FROM PYTHON SOURCE LINES 30-32
 
 Plot biological ages against chronological age
 --------------------------------------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 27-29
+.. GENERATED FROM PYTHON SOURCE LINES 32-42
 
 .. code-block:: default
 
     import seaborn as sn
-    df.index=df['age']
-    sn.relplot(data=df[['horvath','hannum','phenoage']], kind="scatter");
+    import pandas as pd
+    plot_data = pd.DataFrame({
+        'Horvath': horvath_results,
+        'Hannum': hannum_results,
+        'PhenoAge': phenoage_results,
+        "Age": actual_age
+    })
+    plot_data.index=plot_data['Age']
+
+    sn.relplot(data=plot_data, kind="scatter");
 
 
 .. image-sg:: /auto_examples/00_epigenetic_biomarkers/images/sphx_glr_plot_epigenetic_clocks_on_geo_001.png
@@ -89,19 +102,79 @@ Plot biological ages against chronological age
 
  .. code-block:: none
 
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
+    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+      if pd.api.types.is_categorical_dtype(vector):
     /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/axisgrid.py:118: UserWarning: The figure layout has changed to tight
       self._figure.tight_layout(*args, **kwargs)
 
-    <seaborn.axisgrid.FacetGrid object at 0x7fa53e82fd30>
+    <seaborn.axisgrid.FacetGrid object at 0x7f66b5d52c20>
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  7.235 seconds)
+   **Total running time of the script:** (0 minutes 6.499 seconds)
 
-**Estimated memory usage:**  858 MB
+**Estimated memory usage:**  799 MB
 
 
 .. _sphx_glr_download_auto_examples_00_epigenetic_biomarkers_plot_epigenetic_clocks_on_geo.py:
