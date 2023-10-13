@@ -138,11 +138,7 @@
   <div class="visually-hidden">Hide table of contents sidebar</div>
 </label>
 
-<div class="announcement">
-  <aside class="announcement-content">
-     <p>This is the development documentation of biolearn (0.1.dev56+g340cc14)  
-  </aside>
-</div>
+
 
 <div class="page">
   <header class="mobile-header">
@@ -263,19 +259,20 @@ function signature, and not how to use it. Please refer to the
 <h1>biolearn.clock.horvathv1<a class="headerlink" href="#biolearn-clock-horvathv1" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="biolearn.clock.horvathv1">
-<span class="sig-prename descclassname"><span class="pre">biolearn.clock.</span></span><span class="sig-name descname"><span class="pre">horvathv1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/e483e51/biolearn/clock.py#L38"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#biolearn.clock.horvathv1" title="Link to this definition">#</a></dt>
-<dd><p>Runs the Horvath DNA methylation clock on each individual in the dataset to predict a biological age</p>
+<span class="sig-prename descclassname"><span class="pre">biolearn.clock.</span></span><span class="sig-name descname"><span class="pre">horvathv1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/0cf5ad1/biolearn/clock.py#L38"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#biolearn.clock.horvathv1" title="Link to this definition">#</a></dt>
+<dd><p>Runs the Horvath DNA methylation clock on each individual in the dataset to predict their age.</p>
+<p>Paper: <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4015143/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4015143/</a></p>
+<p>Model Coefficients: <a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Horvath1.csv">https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Horvath1.csv</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>dataframe</strong><span class="classifier">Pandas.Dataframe</span></dt><dd><p>A pandas dataframe where each row represents an individual and each column represents a measurement about that individual.
-Needs to have DNA methylation measurements for the clock to work</p>
+<dt><strong>dataframe</strong><span class="classifier">Pandas.Dataframe</span></dt><dd><p>A pandas dataframe where each column represents a sample and each row represents a methylations site.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
-<dt>df: Pandas.Dataframe</dt><dd><p>A pandas dataframe where each row represents an individual with a single column for predicted biological age</p>
+<dt>df: Pandas.Series</dt><dd><p>A pandas series where each item represents the predicted age for one of the samples.</p>
 </dd>
 </dl>
 </dd>
