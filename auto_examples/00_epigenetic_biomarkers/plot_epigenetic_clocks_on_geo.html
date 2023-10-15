@@ -7,10 +7,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bio-learn.github.io/auto_examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.html" />
 <meta property="og:site_name" content="Biolearn" />
-<meta property="og:description" content="This example loads a DNA Methylation data from GEO, calculates multiple epigenetic clocks, and plot them against chronological age. Loading a DNAm GEO data: Calculate “biological age” based on Horv..." />
+<meta property="og:description" content="This example loads a DNA Methylation data from GEO, calculates multiple epigenetic clocks, and plots them against chronological age. First load up some methylation data from GEO using the data libr..." />
 <meta property="og:image" content="https://bio-learn.github.io/_static/biolearn-logo.png" />
 <meta property="og:image:alt" content="Biolearn" />
-<meta name="description" content="This example loads a DNA Methylation data from GEO, calculates multiple epigenetic clocks, and plot them against chronological age. Loading a DNAm GEO data: Calculate “biological age” based on Horv..." />
+<meta name="description" content="This example loads a DNA Methylation data from GEO, calculates multiple epigenetic clocks, and plots them against chronological age. First load up some methylation data from GEO using the data libr..." />
 <link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Composite Biomarkers Examples" href="../01_composite_biomarkers/index.html" /><link rel="prev" title="Epigenetic Clock Examples" href="index.html" />
 
     <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
@@ -256,34 +256,41 @@ to download the full example code or to run this example in your browser via Bin
 </div>
 <section class="sphx-glr-example-title" id="epigenetic-clocks-in-geo-data">
 <span id="sphx-glr-auto-examples-00-epigenetic-biomarkers-plot-epigenetic-clocks-on-geo-py"></span><h1>“Epigenetic Clocks” in GEO Data<a class="headerlink" href="#epigenetic-clocks-in-geo-data" title="Link to this heading">#</a></h1>
-<p>This example loads a DNA Methylation data from GEO, calculates multiple epigenetic clocks, and plot them against chronological age.</p>
-<section id="loading-a-dnam-geo-data">
-<h2>Loading a DNAm GEO data<a class="headerlink" href="#loading-a-dnam-geo-data" title="Link to this heading">#</a></h2>
+<p>This example loads a DNA Methylation data from GEO, calculates multiple epigenetic clocks, and plots them against chronological age.</p>
+<section id="first-load-up-some-methylation-data-from-geo-using-the-data-library">
+<h2>First load up some methylation data from GEO using the data library<a class="headerlink" href="#first-load-up-some-methylation-data-from-geo-using-the-data-library" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.data_library</span> <span class="kn">import</span> <span class="n">DataLibrary</span>
 <span class="c1">#Load up GSE41169 blood DNAm data</span>
 <span class="n">data_source</span> <span class="o">=</span> <span class="n">DataLibrary</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;GSE41169&quot;</span><span class="p">)</span>
 <span class="n">data</span><span class="o">=</span><span class="n">data_source</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
 
 <span class="c1">#The data has the methylation data as well as metadata for each subject</span>
-<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a> <span class="o">=</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data</span><span class="o">.</span><span class="n">dnam</span></a>
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">methylation_data</span></a> <span class="o">=</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data</span><span class="o">.</span><span class="n">dnam</span></a>
 </pre></div>
 </div>
 </section>
-<section id="calculate-biological-age-based-on-horvath-hannum-and-phenoage-epigenetic-clocks">
-<h2>Calculate “biological age” based on Horvath, Hannum, and PhenoAge epigenetic clocks<a class="headerlink" href="#calculate-biological-age-based-on-horvath-hannum-and-phenoage-epigenetic-clocks" title="Link to this heading">#</a></h2>
+<section id="run-a-simple-imputation-to-replace-missing-data-using-the-avearges-of-measured-values">
+<h2>Run a simple imputation to replace missing data using the avearges of measured values<a class="headerlink" href="#run-a-simple-imputation-to-replace-missing-data-using-the-avearges-of-measured-values" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.imputation</span> <span class="kn">import</span> <span class="n">impute_from_average</span>
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">prepared_data</span></a> <span class="o">=</span> <span class="n">impute_from_average</span><span class="p">(</span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">methylation_data</span></a><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="now-run-three-different-clocks-on-the-dataset-to-produce-epigenetic-clock-ages">
+<h2>Now run three different clocks on the dataset to produce epigenetic clock ages<a class="headerlink" href="#now-run-three-different-clocks-on-the-dataset-to-produce-epigenetic-clock-ages" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.clock</span> <span class="kn">import</span> <a href="../../modules/generated/biolearn.clock.horvathv1.html#biolearn.clock.horvathv1" title="biolearn.clock.horvathv1" class="sphx-glr-backref-module-biolearn-clock sphx-glr-backref-type-py-function"><span class="n">horvathv1</span></a><span class="p">,</span> <a href="../../modules/generated/biolearn.clock.hannum.html#biolearn.clock.hannum" title="biolearn.clock.hannum" class="sphx-glr-backref-module-biolearn-clock sphx-glr-backref-type-py-function"><span class="n">hannum</span></a><span class="p">,</span> <a href="../../modules/generated/biolearn.clock.phenoage.html#biolearn.clock.phenoage" title="biolearn.clock.phenoage" class="sphx-glr-backref-module-biolearn-clock sphx-glr-backref-type-py-function"><span class="n">phenoage</span></a>
-<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="pandas.core.series.Series" class="sphx-glr-backref-module-pandas-core-series sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">horvath_results</span></a> <span class="o">=</span> <a href="../../modules/generated/biolearn.clock.horvathv1.html#biolearn.clock.horvathv1" title="biolearn.clock.horvathv1" class="sphx-glr-backref-module-biolearn-clock sphx-glr-backref-type-py-function"><span class="n">horvathv1</span></a><span class="p">(</span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">)</span>
-<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="pandas.core.series.Series" class="sphx-glr-backref-module-pandas-core-series sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">hannum_results</span></a> <span class="o">=</span> <a href="../../modules/generated/biolearn.clock.hannum.html#biolearn.clock.hannum" title="biolearn.clock.hannum" class="sphx-glr-backref-module-biolearn-clock sphx-glr-backref-type-py-function"><span class="n">hannum</span></a><span class="p">(</span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">)</span>
-<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="pandas.core.series.Series" class="sphx-glr-backref-module-pandas-core-series sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">phenoage_results</span></a> <span class="o">=</span> <a href="../../modules/generated/biolearn.clock.phenoage.html#biolearn.clock.phenoage" title="biolearn.clock.phenoage" class="sphx-glr-backref-module-biolearn-clock sphx-glr-backref-type-py-function"><span class="n">phenoage</span></a><span class="p">(</span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">df</span></a><span class="p">)</span>
-
-<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="pandas.core.series.Series" class="sphx-glr-backref-module-pandas-core-series sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">actual_age</span></a> <span class="o">=</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data</span><span class="o">.</span><span class="n">metadata</span></a><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="pandas.core.series.Series" class="sphx-glr-backref-module-pandas-core-series sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">horvath_results</span></a> <span class="o">=</span> <a href="../../modules/generated/biolearn.clock.horvathv1.html#biolearn.clock.horvathv1" title="biolearn.clock.horvathv1" class="sphx-glr-backref-module-biolearn-clock sphx-glr-backref-type-py-function"><span class="n">horvathv1</span></a><span class="p">(</span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">prepared_data</span></a><span class="p">)</span>
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="pandas.core.series.Series" class="sphx-glr-backref-module-pandas-core-series sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">hannum_results</span></a> <span class="o">=</span> <a href="../../modules/generated/biolearn.clock.hannum.html#biolearn.clock.hannum" title="biolearn.clock.hannum" class="sphx-glr-backref-module-biolearn-clock sphx-glr-backref-type-py-function"><span class="n">hannum</span></a><span class="p">(</span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">prepared_data</span></a><span class="p">)</span>
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="pandas.core.series.Series" class="sphx-glr-backref-module-pandas-core-series sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">phenoage_results</span></a> <span class="o">=</span> <a href="../../modules/generated/biolearn.clock.phenoage.html#biolearn.clock.phenoage" title="biolearn.clock.phenoage" class="sphx-glr-backref-module-biolearn-clock sphx-glr-backref-type-py-function"><span class="n">phenoage</span></a><span class="p">(</span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">prepared_data</span></a><span class="p">)</span>
 </pre></div>
 </div>
 </section>
-<section id="plot-biological-ages-against-chronological-age">
-<h2>Plot biological ages against chronological age<a class="headerlink" href="#plot-biological-ages-against-chronological-age" title="Link to this heading">#</a></h2>
+<section id="finally-exctract-the-age-data-from-the-metadata-from-geo-and-plot-the-results-using-seaborn">
+<h2>Finally exctract the age data from the metadata from GEO and plot the results using seaborn<a class="headerlink" href="#finally-exctract-the-age-data-from-the-metadata-from-geo-and-plot-the-results-using-seaborn" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sn</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="pandas.core.series.Series" class="sphx-glr-backref-module-pandas-core-series sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">actual_age</span></a> <span class="o">=</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data</span><span class="o">.</span><span class="n">metadata</span></a><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">plot_data</span></a> <span class="o">=</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class"><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span></a><span class="p">({</span>
     <span class="s1">&#39;Horvath&#39;</span><span class="p">:</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="pandas.core.series.Series" class="sphx-glr-backref-module-pandas-core-series sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">horvath_results</span></a><span class="p">,</span>
     <span class="s1">&#39;Hannum&#39;</span><span class="p">:</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="pandas.core.series.Series" class="sphx-glr-backref-module-pandas-core-series sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">hannum_results</span></a><span class="p">,</span>
@@ -295,77 +302,17 @@ to download the full example code or to run this example in your browser via Bin
 <span class="n">sn</span><span class="o">.</span><span class="n">relplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">plot_data</span></a><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scatter&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_plot_epigenetic_clocks_on_geo_001.png" srcset="../../_images/sphx_glr_plot_epigenetic_clocks_on_geo_001.png" alt="plot epigenetic clocks on geo" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-  if pd.api.types.is_categorical_dtype(vector):
-/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/axisgrid.py:118: UserWarning: The figure layout has changed to tight
+<img src="../../_images/sphx_glr_plot_epigenetic_clocks_on_geo_001.png" srcset="../../_images/sphx_glr_plot_epigenetic_clocks_on_geo_001.png" alt="plot epigenetic clocks on geo" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/axisgrid.py:123: UserWarning: The figure layout has changed to tight
   self._figure.tight_layout(*args, **kwargs)
 
-&lt;seaborn.axisgrid.FacetGrid object at 0x7f1f14b94d60&gt;
+&lt;seaborn.axisgrid.FacetGrid object at 0x7f0e571af400&gt;
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 6.670 seconds)</p>
-<p><strong>Estimated memory usage:</strong>  841 MB</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 26.156 seconds)</p>
+<p><strong>Estimated memory usage:</strong>  2216 MB</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-00-epigenetic-biomarkers-plot-epigenetic-clocks-on-geo-py">
 <div class="binder-badge docutils container">
-<a class="reference external image-reference" href="https://mybinder.org/v2/gh/bio-learn/biolearn/0.2.0?urlpath=lab/tree/notebooks/auto_examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo.svg" width="150px" /></a>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/bio-learn/biolearn/0.2.1?urlpath=lab/tree/notebooks/auto_examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo.svg" width="150px" /></a>
 </div>
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/b819306bf1233fd1d3d9217f72f2fd0d/plot_epigenetic_clocks_on_geo.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_epigenetic_clocks_on_geo.py</span></code></a></p>
@@ -434,9 +381,10 @@ to download the full example code or to run this example in your browser via Bin
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">“Epigenetic Clocks” in GEO Data</a><ul>
-<li><a class="reference internal" href="#loading-a-dnam-geo-data">Loading a DNAm GEO data</a></li>
-<li><a class="reference internal" href="#calculate-biological-age-based-on-horvath-hannum-and-phenoage-epigenetic-clocks">Calculate “biological age” based on Horvath, Hannum, and PhenoAge epigenetic clocks</a></li>
-<li><a class="reference internal" href="#plot-biological-ages-against-chronological-age">Plot biological ages against chronological age</a></li>
+<li><a class="reference internal" href="#first-load-up-some-methylation-data-from-geo-using-the-data-library">First load up some methylation data from GEO using the data library</a></li>
+<li><a class="reference internal" href="#run-a-simple-imputation-to-replace-missing-data-using-the-avearges-of-measured-values">Run a simple imputation to replace missing data using the avearges of measured values</a></li>
+<li><a class="reference internal" href="#now-run-three-different-clocks-on-the-dataset-to-produce-epigenetic-clock-ages">Now run three different clocks on the dataset to produce epigenetic clock ages</a></li>
+<li><a class="reference internal" href="#finally-exctract-the-age-data-from-the-metadata-from-geo-and-plot-the-results-using-seaborn">Finally exctract the age data from the metadata from GEO and plot the results using seaborn</a></li>
 </ul>
 </li>
 </ul>

@@ -7,10 +7,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bio-learn.github.io/quickstart.html" />
 <meta property="og:site_name" content="Biolearn" />
-<meta property="og:description" content="Biolearn: Biolearn enables easy and versatile analyses of biomarkers of aging data. It provides statistics and machine-learning tools, with instructive documentation and an open science approach. I..." />
+<meta property="og:description" content="Biolearn: Biolearn enables easy and versatile analyses of biomarkers of aging data. It provides tools to easily load data from publicly available sources like the Gene Expression Omnibus, National ..." />
 <meta property="og:image" content="https://bio-learn.github.io/_static/biolearn-logo.png" />
 <meta property="og:image:alt" content="Biolearn" />
-<meta name="description" content="Biolearn: Biolearn enables easy and versatile analyses of biomarkers of aging data. It provides statistics and machine-learning tools, with instructive documentation and an open science approach. I..." />
+<meta name="description" content="Biolearn: Biolearn enables easy and versatile analyses of biomarkers of aging data. It provides tools to easily load data from publicly available sources like the Gene Expression Omnibus, National ..." />
 <link rel="search" title="Search" href="search.html" /><link rel="next" title="Examples" href="auto_examples/index.html" /><link rel="prev" title="Biolearn" href="index.html" />
 
     <link rel="shortcut icon" href="_static/favicon.ico"/><!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
@@ -253,64 +253,45 @@
 <span id="id1"></span><h1>Quickstart<a class="headerlink" href="#quickstart" title="Link to this heading">#</a></h1>
 <section id="biolearn">
 <h2>Biolearn<a class="headerlink" href="#biolearn" title="Link to this heading">#</a></h2>
-<p>Biolearn enables easy and versatile analyses of biomarkers of aging data. It provides statistics and machine-learning tools, with instructive documentation and an open science approach.</p>
+<p>Biolearn enables easy and versatile analyses of biomarkers of aging data. It provides tools to easily load data from publicly available sources like the
+<a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/">Gene Expression Omnibus</a>, <a class="reference external" href="https://www.cdc.gov/nchs/nhanes/index.htm">National Health and Nutrition Examimation Survey</a>,
+and the <cite>Framingham Heart Study &lt;https://www.framinghamheartstudy.org/&gt;</cite>. Biolearn also contains reference implemenations for common aging clock such at the
+Horvath clock, DunedinPACE and many others that can easily be run in only a few lines of code.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>At the moment we do not have a stable release, only a <strong>unstable developer version</strong>.
-So you have to download the repo from github and install locally with <strong>“pip install .[dev]”</strong></p>
+<p>This is a prerelease version of the biolearn library. There may be bugs and interfaces are subject to change.</p>
 </div>
 </section>
 <section id="important-links">
 <h2>Important links<a class="headerlink" href="#important-links" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Official source code repo: <a class="reference external" href="https://github.com/bio-learn/biolearn/">https://github.com/bio-learn/biolearn/</a></p></li>
-<li><p>HTML documentation (<strong>only development release for the moment</strong>): <a class="reference external" href="https://bio-learn.github.io/">https://bio-learn.github.io/</a></p></li>
+<li><p>Source code: <a class="reference external" href="https://github.com/bio-learn/biolearn/">https://github.com/bio-learn/biolearn/</a></p></li>
+<li><p>Documentation Homepage: <a class="reference external" href="https://bio-learn.github.io/">https://bio-learn.github.io/</a></p></li>
 </ul>
+</section>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h2>
+<p>Python 3.10+</p>
 </section>
 <section id="install">
 <h2>Install<a class="headerlink" href="#install" title="Link to this heading">#</a></h2>
-<section id="latest-release">
-<h3>Latest release<a class="headerlink" href="#latest-release" title="Link to this heading">#</a></h3>
-<p><strong>0. Install the right Python version</strong></p>
-<p>Biolearn supports Python 3.10, please verify that you have the right Python 3 version before proceeding with the developer setup.</p>
-<p><strong>1. Setup a virtual environment</strong></p>
-<p>At the moment we do not have a stable release, only a unstable developer version.
-This means that you should not install the package directly from pypi but always get the source code from github and do a local pip install.</p>
-<p>In the following steps we show an installation path we have tested with venv and pip. Other package managers have not been tested and are not supported at the moment.</p>
-<p>In linux from inside the repo directory run the following to setup a virtual environment and install dependencies</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3.10<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
-make<span class="w"> </span>install
+<p>Install biolearn using pip.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>biolearn
 </pre></div>
 </div>
-<p>Remember we do not support a pypi version at the moment, as in (pip install biolearn), the command will work but you will just get a dummy package.</p>
-</section>
-<section id="check-installation">
-<h3>Check installation<a class="headerlink" href="#check-installation" title="Link to this heading">#</a></h3>
-<p>You can verify that your setup is working by running the tests</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span><span class="nb">test</span>
+<p>To verify the library was installed correctly open python or a jupyter notebook and run:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.data_library</span> <span class="kn">import</span> <span class="n">DataLibrary</span>
 </pre></div>
 </div>
-<p>If no error is raised, you have installed biolearn correctly.</p>
-<p>You can also run the following to start jupyter lab with the library available</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>jupyter
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">biolearn</span>
-</pre></div>
-</div>
-</section>
+<p>If it executes with no errors then the library is installed. To get started check out <a class="reference external" href="https://bio-learn.github.io/auto_examples/index.html">some code examples</a></p>
 </section>
 <section id="discord-server">
 <h2>Discord server<a class="headerlink" href="#discord-server" title="Link to this heading">#</a></h2>
-<p>The biolearn team has a discord server to answer questions,
+<p>The biolearn team has a <a class="reference external" href="https://discord.gg/345kHcsJy">discord server</a> to answer questions,
 discuss feature requests, or have any biolearn related discussions.</p>
 </section>
-<section id="dependencies">
-<h2>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading">#</a></h2>
-<p>The required dependencies to use the software are listed in the file <a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/pyproject.toml">pyproject.toml</a>.</p>
-</section>
-<section id="development">
-<h2>Development<a class="headerlink" href="#development" title="Link to this heading">#</a></h2>
+<section id="contributing">
+<h2>Contributing<a class="headerlink" href="#contributing" title="Link to this heading">#</a></h2>
 <p>Detailed instructions on developer setup and how to contribute are available <a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/DEVELOPMENT.md">in the repo</a></p>
 </section>
 </section>
@@ -373,14 +354,10 @@ discuss feature requests, or have any biolearn related discussions.</p>
 <li><a class="reference internal" href="#">Quickstart</a><ul>
 <li><a class="reference internal" href="#biolearn">Biolearn</a></li>
 <li><a class="reference internal" href="#important-links">Important links</a></li>
-<li><a class="reference internal" href="#install">Install</a><ul>
-<li><a class="reference internal" href="#latest-release">Latest release</a></li>
-<li><a class="reference internal" href="#check-installation">Check installation</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#install">Install</a></li>
 <li><a class="reference internal" href="#discord-server">Discord server</a></li>
-<li><a class="reference internal" href="#dependencies">Dependencies</a></li>
-<li><a class="reference internal" href="#development">Development</a></li>
+<li><a class="reference internal" href="#contributing">Contributing</a></li>
 </ul>
 </li>
 </ul>

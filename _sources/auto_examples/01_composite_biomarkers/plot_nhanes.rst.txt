@@ -88,10 +88,6 @@ Show relation between biological age and chronological age
 
  .. code-block:: none
 
-    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-      if pd.api.types.is_categorical_dtype(vector):
-    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
-      if pd.api.types.is_categorical_dtype(vector):
 
     <Axes: xlabel='age', ylabel='phenotypic_age'>
 
@@ -141,9 +137,9 @@ Plot survival curve for people with accelerated aging (older biological age) vs 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.438 seconds)
+   **Total running time of the script:** (0 minutes 0.748 seconds)
 
-**Estimated memory usage:**  11 MB
+**Estimated memory usage:**  10 MB
 
 
 .. _sphx_glr_download_auto_examples_01_composite_biomarkers_plot_nhanes.py:
@@ -156,7 +152,7 @@ Plot survival curve for people with accelerated aging (older biological age) vs 
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.2.0?urlpath=lab/tree/notebooks/auto_examples/01_composite_biomarkers/plot_nhanes.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.2.1?urlpath=lab/tree/notebooks/auto_examples/01_composite_biomarkers/plot_nhanes.ipynb
         :alt: Launch binder
         :width: 150 px
 
