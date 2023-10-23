@@ -6,8 +6,8 @@
 
 Computation times
 =================
-**00:26.156** total execution time for **auto_examples_00_epigenetic_biomarkers** files:
+**01:03.859** total execution time for **auto_examples_00_epigenetic_biomarkers** files:
 
 +--------------------------------------------------------------------------------------------------------------------------------+-----------+-----------+
-| :ref:`sphx_glr_auto_examples_00_epigenetic_biomarkers_plot_epigenetic_clocks_on_geo.py` (``plot_epigenetic_clocks_on_geo.py``) | 00:26.156 | 2215.5 MB |
+| :ref:`sphx_glr_auto_examples_00_epigenetic_biomarkers_plot_epigenetic_clocks_on_geo.py` (``plot_epigenetic_clocks_on_geo.py``) | 01:03.859 | 2669.0 MB |
 +--------------------------------------------------------------------------------------------------------------------------------+-----------+-----------+

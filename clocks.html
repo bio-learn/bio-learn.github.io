@@ -3,18 +3,18 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="Biolearn" />
+<meta property="og:title" content="Clocks" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://bio-learn.github.io/index.html" />
+<meta property="og:url" content="https://bio-learn.github.io/clocks.html" />
 <meta property="og:site_name" content="Biolearn" />
-<meta property="og:description" content="Biolearn enables easy and versatile analyses of biomarkers of aging data. It provides tools to easy load data from publicly available sources like the Gene Expression Omnibus, National Health and N..." />
-<meta property="og:image" content="https://bio-learn.github.io/_images/sphx_glr_plot_epigenetic_clocks_on_geo_001.png" />
+<meta property="og:description" content="Biolearn supports a number of clock models that can be easily run from the clock gallery.,,,,,, Name, Year, Species, Tissue, Source, Coefficients,,, Horvathv1, 2013, Human, Multi-tissue, paper, coe..." />
+<meta property="og:image" content="https://bio-learn.github.io/_static/biolearn-logo.png" />
 <meta property="og:image:alt" content="Biolearn" />
-<meta name="description" content="Biolearn enables easy and versatile analyses of biomarkers of aging data. It provides tools to easy load data from publicly available sources like the Gene Expression Omnibus, National Health and N..." />
-<link rel="search" title="Search" href="search.html" /><link rel="next" title="Quickstart" href="quickstart.html" />
+<meta name="description" content="Biolearn supports a number of clock models that can be easily run from the clock gallery.,,,,,, Name, Year, Species, Tissue, Source, Coefficients,,, Horvathv1, 2013, Human, Multi-tissue, paper, coe..." />
+<link rel="search" title="Search" href="search.html" /><link rel="next" title="Examples" href="auto_examples/index.html" /><link rel="prev" title="Quickstart" href="quickstart.html" />
 
     <link rel="shortcut icon" href="_static/favicon.ico"/><!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
-        <title>Biolearn</title>
+        <title>Clocks - Biolearn</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=045299b1" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -149,7 +149,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="#"><div class="brand">Biolearn</div></a>
+      <a href="index.html"><div class="brand">Biolearn</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -160,7 +160,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -169,7 +169,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="#">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   <div class="sidebar-logo-container">
     <img class="sidebar-logo" src="_static/biolearn-transparent.png" alt="Logo"/>
@@ -183,9 +183,9 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul>
+  <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
-<li class="toctree-l1"><a class="reference internal" href="clocks.html">Clocks</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Clocks</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="auto_examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="auto_examples/00_epigenetic_biomarkers/index.html">Epigenetic Clock Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Epigenetic Clock Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="auto_examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.html">“Epigenetic Clocks” in GEO Data</a></li>
@@ -238,91 +238,156 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="biolearn">
-<h1>Biolearn<a class="headerlink" href="#biolearn" title="Link to this heading">#</a></h1>
-<p>Biolearn enables easy and versatile analyses of biomarkers of aging data. It provides tools to easy load data from publicly available sources like the
-<a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/">Gene Expression Omnibus</a>, <a class="reference external" href="https://www.cdc.gov/nchs/nhanes/index.htm">National Health and Nutrition Examimation Survey</a>,
-and the <a class="reference external" href="https://www.framinghamheartstudy.org/">Framingham Heart Study</a>. Biolearns also contains reference implemenations for common aging clock such at the
-Horvath clock, DunedinPACE and many others that can easily be run in only a few lines of code.</p>
-<p>Biolearn is scientifically and financially supported by <a class="reference external" href="https://www.agingconsortium.org/">Biomarkers of Aging Consortium</a>
-and <a class="reference external" href="https://www.mfoundation.org/">Methuselah Foundation</a> respectively</p>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row docutils">
-<div class="sd-col sd-d-flex-row sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-4 sd-col-lg-4 sd-mt-2 sd-mb-2 sd-ml-0 sd-mr-0 docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-shadow-md docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold sd-text-primary docutils">
-<span class="fas fa-rocket"></span> Quickstart</div>
-<p class="sd-card-text">Get started with Biolearn</p>
+          <section id="clocks">
+<h1>Clocks<a class="headerlink" href="#clocks" title="Link to this heading">#</a></h1>
+<p>Biolearn supports a number of clock models that can be easily run from the clock gallery.</p>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Year</p></th>
+<th class="head"><p>Species</p></th>
+<th class="head"><p>Tissue</p></th>
+<th class="head"><p>Source</p></th>
+<th class="head"><p>Coefficients</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Horvathv1</p></td>
+<td><p>2013</p></td>
+<td><p>Human</p></td>
+<td><p>Multi-tissue</p></td>
+<td><p><a class="reference external" href="https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-10-r115">paper</a></p></td>
+<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Horvath1.csv">coefficients file</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Hannum</p></td>
+<td><p>2013</p></td>
+<td><p>Human</p></td>
+<td><p>Blood</p></td>
+<td><p><a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S1097276512008933">paper</a></p></td>
+<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Hannum.csv">coefficients file</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Lin</p></td>
+<td><p>2016</p></td>
+<td><p>Human</p></td>
+<td><p>Blood</p></td>
+<td><p><a class="reference external" href="https://www.aging-us.com/article/100908/text">paper</a></p></td>
+<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Lin.csv">coefficients file</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>PhenoAge</p></td>
+<td><p>2018</p></td>
+<td><p>Human</p></td>
+<td><p>Blood</p></td>
+<td><p><a class="reference external" href="https://www.aging-us.com/article/101414/text">paper</a></p></td>
+<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/PhenoAge.csv">coefficients file</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Horvathv2</p></td>
+<td><p>2018</p></td>
+<td><p>Human</p></td>
+<td><p>Skin + blood</p></td>
+<td><p><a class="reference external" href="https://www.aging-us.com/article/101508/text">paper</a></p></td>
+<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Horvath2.csv">coefficients file</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>PEDBE</p></td>
+<td><p>2019</p></td>
+<td><p>Human</p></td>
+<td><p>Buccal</p></td>
+<td><p><a class="reference external" href="https://www.pnas.org/doi/10.1073/pnas.1820843116">paper</a></p></td>
+<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/PEDBE.csv">coefficients file</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Zhang_10</p></td>
+<td><p>2019</p></td>
+<td><p>Human</p></td>
+<td><p>Blood</p></td>
+<td><p><a class="reference external" href="https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-019-0667-1">paper</a></p></td>
+<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Zhang_10.csv">coefficients file</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>DunedinPoAm38</p></td>
+<td><p>2020</p></td>
+<td><p>Human</p></td>
+<td><p>Blood</p></td>
+<td><p><a class="reference external" href="https://elifesciences.org/articles/54870#s2">paper</a></p></td>
+<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/DunedinPoAm38.csv">coefficients file</a></p></td>
+</tr>
+<tr class="row-even"><td><p>DunedinPACE</p></td>
+<td><p>2022</p></td>
+<td><p>Human</p></td>
+<td><p>Unknown</p></td>
+<td><p><a class="reference external" href="https://www.proquest.com/docview/2634411178">paper</a></p></td>
+<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/DunedinPACE.csv">coefficients file</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>AlcoholMcCartney</p></td>
+<td><p>unknown</p></td>
+<td><p>Human</p></td>
+<td><p>unknown</p></td>
+<td><p>unknown</p></td>
+<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Alcohol.csv">coefficients file</a></p></td>
+</tr>
+<tr class="row-even"><td><p>BMI_McCartney</p></td>
+<td><p>unknown</p></td>
+<td><p>Human</p></td>
+<td><p>unknown</p></td>
+<td><p>unknown</p></td>
+<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/BMI.csv">coefficients file</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>DNAmTL</p></td>
+<td><p>unknown</p></td>
+<td><p>Human</p></td>
+<td><p>unknown</p></td>
+<td><p>unknown</p></td>
+<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/DNAmTL.csv">coefficients file</a></p></td>
+</tr>
+<tr class="row-even"><td><p>HRSInCHPhenoAge</p></td>
+<td><p>unknown</p></td>
+<td><p>Human</p></td>
+<td><p>unknown</p></td>
+<td><p>unknown</p></td>
+<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/HRSInCHPhenoAge.csv">coefficients file</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Knight</p></td>
+<td><p>unknown</p></td>
+<td><p>Human</p></td>
+<td><p>unknown</p></td>
+<td><p>unknown</p></td>
+<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Knight.csv">coefficients file</a></p></td>
+</tr>
+<tr class="row-even"><td><p>LeeControl</p></td>
+<td><p>unknown</p></td>
+<td><p>Human</p></td>
+<td><p>unknown</p></td>
+<td><p>unknown</p></td>
+<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/LeeControl.csv">coefficients file</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>LeeRefinedRobust</p></td>
+<td><p>unknown</p></td>
+<td><p>Human</p></td>
+<td><p>unknown</p></td>
+<td><p>unknown</p></td>
+<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/LeeRefinedRobust.csv">coefficients file</a></p></td>
+</tr>
+<tr class="row-even"><td><p>LeeRobust</p></td>
+<td><p>unknown</p></td>
+<td><p>Human</p></td>
+<td><p>unknown</p></td>
+<td><p>unknown</p></td>
+<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/LeeRobust.csv">coefficients file</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>SmokingMcCartney</p></td>
+<td><p>unknown</p></td>
+<td><p>Human</p></td>
+<td><p>unknown</p></td>
+<td><p>unknown</p></td>
+<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Smoking.csv">coefficients file</a></p></td>
+</tr>
+</tbody>
+</table>
 </div>
-<a class="sd-stretched-link reference internal" href="quickstart.html#quickstart"><span class="std std-ref"></span></a></div>
-</div>
-<div class="sd-col sd-d-flex-row sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-4 sd-col-lg-4 sd-mt-2 sd-mb-2 sd-ml-0 sd-mr-0 docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-shadow-md docutils">
-<div class="sd-card-body docutils">
-<div class="sd-card-title sd-font-weight-bold sd-text-primary docutils">
-<span class="fas fa-th"></span> Examples</div>
-<p class="sd-card-text">Discover functionalities by reading examples</p>
-</div>
-<a class="sd-stretched-link reference external" href="auto_examples/index.html"></a></div>
-</div>
-</div>
-</div>
-<section id="featured-examples">
-<h2>Featured examples<a class="headerlink" href="#featured-examples" title="Link to this heading">#</a></h2>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row docutils">
-<div class="sd-col sd-d-flex-row sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-12 sd-mt-2 sd-mb-2 sd-ml-auto sd-mr-auto docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
-<div class="sd-card-body docutils">
-<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
-<div class="sd-row sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
-<div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
-<img alt="_images/sphx_glr_plot_epigenetic_clocks_on_geo_001.png" src="_images/sphx_glr_plot_epigenetic_clocks_on_geo_001.png" />
-</div>
-<div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-8 sd-col-md-8 sd-col-lg-8 docutils">
-<div class="sd-font-weight-bold docutils">
-<p class="sd-card-text">Demonstrate computation of several epigenetic clocks</p>
-</div>
-<p class="sd-card-text">Show how the clocks compare with chronological age</p>
-</div>
-</div>
-</div>
-</div>
-<a class="sd-stretched-link reference external" href="auto_examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.html"></a></div>
-</div>
-<div class="sd-col sd-d-flex-row sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-12 sd-mt-2 sd-mb-2 sd-ml-auto sd-mr-auto docutils">
-<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
-<div class="sd-card-body docutils">
-<div class="sd-container-fluid sd-sphinx-override sd-m-0 sd-p-0 docutils">
-<div class="sd-row sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
-<div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-4 sd-col-md-4 sd-col-lg-4 docutils">
-<img alt="_images/sphx_glr_plot_nhanes_002.png" src="_images/sphx_glr_plot_nhanes_002.png" />
-</div>
-<div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-8 sd-col-md-8 sd-col-lg-8 docutils">
-<div class="sd-font-weight-bold docutils">
-<p class="sd-card-text">NHANES survival plotting with biological age</p>
-</div>
-<p class="sd-card-text">Using NHANES data shows relationship between various data points and survival</p>
-</div>
-</div>
-</div>
-</div>
-<a class="sd-stretched-link reference external" href="auto_examples/01_composite_biomarkers/plot_nhanes.html"></a></div>
-</div>
-</div>
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-</section>
 </section>
 
         </article>
@@ -330,16 +395,26 @@ and <a class="reference external" href="https://www.mfoundation.org/">Methuselah
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="quickstart.html">
+          <a class="next-page" href="auto_examples/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Quickstart</div>
+                <div class="title">Examples</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          
+          <a class="prev-page" href="quickstart.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Quickstart</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -358,29 +433,8 @@ and <a class="reference external" href="https://www.mfoundation.org/">Methuselah
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Biolearn</a><ul>
-<li><a class="reference internal" href="#featured-examples">Featured examples</a><ul>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>

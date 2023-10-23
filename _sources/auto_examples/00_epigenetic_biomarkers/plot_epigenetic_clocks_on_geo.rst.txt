@@ -28,7 +28,7 @@ This example loads a DNA Methylation data from GEO, calculates multiple epigenet
 First load up some methylation data from GEO using the data library
 ---------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 11-19
+.. GENERATED FROM PYTHON SOURCE LINES 11-20
 
 .. code-block:: default
 
@@ -47,39 +47,24 @@ First load up some methylation data from GEO using the data library
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 20-22
 
-Run a simple imputation to replace missing data using the avearges of measured values
--------------------------------------------------------------------------------------
-
-.. GENERATED FROM PYTHON SOURCE LINES 22-25
-
-.. code-block:: default
-
-    from biolearn.imputation import impute_from_average
-    prepared_data = impute_from_average(methylation_data)
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 26-28
+.. GENERATED FROM PYTHON SOURCE LINES 21-23
 
 Now run three different clocks on the dataset to produce epigenetic clock ages
 ------------------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 28-36
+.. GENERATED FROM PYTHON SOURCE LINES 23-34
 
 .. code-block:: default
 
 
-    from biolearn.clock import horvathv1, hannum, phenoage
-    horvath_results = horvathv1(prepared_data)
-    hannum_results = hannum(prepared_data)
-    phenoage_results = phenoage(prepared_data)
+    from biolearn.clock_gallery import ClockGallery
+    gallery = ClockGallery()
+    #Note that by default clocks will impute missing data.
+    #To change this behavior set the imputation= parameter when getting the clock
+    horvath_results = gallery.get("Horvathv1").predict(methylation_data)
+    hannum_results = gallery.get("Hannum").predict(methylation_data)
+    phenoage_results = gallery.get("PhenoAge").predict(methylation_data)
 
 
 
@@ -90,12 +75,12 @@ Now run three different clocks on the dataset to produce epigenetic clock ages
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-39
+.. GENERATED FROM PYTHON SOURCE LINES 35-37
 
 Finally exctract the age data from the metadata from GEO and plot the results using seaborn
 --------------------------------------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 39-51
+.. GENERATED FROM PYTHON SOURCE LINES 37-49
 
 .. code-block:: default
 
@@ -127,16 +112,16 @@ Finally exctract the age data from the metadata from GEO and plot the results us
     /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/axisgrid.py:123: UserWarning: The figure layout has changed to tight
       self._figure.tight_layout(*args, **kwargs)
 
-    <seaborn.axisgrid.FacetGrid object at 0x7f0e571af400>
+    <seaborn.axisgrid.FacetGrid object at 0x7f687a044970>
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 26.156 seconds)
+   **Total running time of the script:** (1 minutes 3.859 seconds)
 
-**Estimated memory usage:**  2216 MB
+**Estimated memory usage:**  2669 MB
 
 
 .. _sphx_glr_download_auto_examples_00_epigenetic_biomarkers_plot_epigenetic_clocks_on_geo.py:
@@ -149,7 +134,7 @@ Finally exctract the age data from the metadata from GEO and plot the results us
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.2.1?urlpath=lab/tree/notebooks/auto_examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.2.2?urlpath=lab/tree/notebooks/auto_examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.ipynb
         :alt: Launch binder
         :width: 150 px
 
