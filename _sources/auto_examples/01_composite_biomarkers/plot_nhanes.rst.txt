@@ -137,9 +137,9 @@ Plot survival curve for people with accelerated aging (older biological age) vs 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.680 seconds)
+   **Total running time of the script:** (0 minutes 0.461 seconds)
 
-**Estimated memory usage:**  10 MB
+**Estimated memory usage:**  11 MB
 
 
 .. _sphx_glr_download_auto_examples_01_composite_biomarkers_plot_nhanes.py:
@@ -152,7 +152,7 @@ Plot survival curve for people with accelerated aging (older biological age) vs 
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.2.2?urlpath=lab/tree/notebooks/auto_examples/01_composite_biomarkers/plot_nhanes.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.2.3?urlpath=lab/tree/notebooks/auto_examples/01_composite_biomarkers/plot_nhanes.ipynb
         :alt: Launch binder
         :width: 150 px
 

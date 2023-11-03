@@ -3,18 +3,18 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="Examples" />
+<meta property="og:title" content="biolearn.model_gallery: ModelGallery" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://bio-learn.github.io/auto_examples/index.html" />
+<meta property="og:url" content="https://bio-learn.github.io/modules/model_gallery.html" />
 <meta property="og:site_name" content="Biolearn" />
-<meta property="og:description" content="Epigenetic Clock Examples: Plots results of running epigenetic clock functions “Epigenetic Clocks” in GEO Data Composite Biomarkers Examples: Plot survival curves based on clocks using data from st..." />
-<meta property="og:image" content="https://bio-learn.github.io/_images/sphx_glr_plot_epigenetic_clocks_on_geo_thumb.png" />
-<meta property="og:image:alt" content="" />
-<meta name="description" content="Epigenetic Clock Examples: Plots results of running epigenetic clock functions “Epigenetic Clocks” in GEO Data Composite Biomarkers Examples: Plot survival curves based on clocks using data from st..." />
-<link rel="search" title="Search" href="../search.html" /><link rel="next" title="Epigenetic Clock Examples" href="00_epigenetic_biomarkers/index.html" /><link rel="prev" title="GEO Data Sources" href="../data.html" />
+<meta property="og:description" content="Classes:" />
+<meta property="og:image" content="https://bio-learn.github.io/_static/biolearn-logo.png" />
+<meta property="og:image:alt" content="Biolearn" />
+<meta name="description" content="Classes:" />
+<link rel="search" title="Search" href="../search.html" /><link rel="next" title="biolearn.model_gallery.ModelGallery" href="generated/biolearn.model_gallery.ModelGallery.html" /><link rel="prev" title="biolearn.data_library.GeoData" href="generated/biolearn.data_library.GeoData.html" />
 
     <link rel="shortcut icon" href="../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
-        <title>Examples - Biolearn</title>
+        <title>biolearn.model_gallery: ModelGallery - Biolearn</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=045299b1" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -160,7 +160,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -187,31 +187,31 @@
 <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../clocks.html">Clocks and Other Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../data.html">GEO Data Sources</a></li>
-<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="00_epigenetic_biomarkers/index.html">Epigenetic Clock Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Epigenetic Clock Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.html">“Epigenetic Clocks” in GEO Data</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../auto_examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../auto_examples/00_epigenetic_biomarkers/index.html">Epigenetic Clock Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Epigenetic Clock Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../auto_examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.html">“Epigenetic Clocks” in GEO Data</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="01_composite_biomarkers/index.html">Composite Biomarkers Examples</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Composite Biomarkers Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="01_composite_biomarkers/plot_nhanes.html">“Phenotypic Ages” in NHANES Data</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../auto_examples/01_composite_biomarkers/index.html">Composite Biomarkers Examples</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Composite Biomarkers Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../auto_examples/01_composite_biomarkers/plot_nhanes.html">“Phenotypic Ages” in NHANES Data</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../modules/index.html">API References</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of API References</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../modules/load.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.load</span></code>: Data Loading Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of biolearn.load: Data Loading Utilities</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../modules/generated/biolearn.load.load_nhanes.html">biolearn.load.load_nhanes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../modules/generated/biolearn.load.load_fhs.html">biolearn.load.load_fhs</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">API References</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of API References</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="load.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.load</span></code>: Data Loading Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of biolearn.load: Data Loading Utilities</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/biolearn.load.load_nhanes.html">biolearn.load.load_nhanes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/biolearn.load.load_fhs.html">biolearn.load.load_fhs</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../modules/data_library.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.data_library</span></code>: DataLibrary</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of biolearn.data_library: DataLibrary</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../modules/generated/biolearn.data_library.DataLibrary.html">biolearn.data_library.DataLibrary</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../modules/generated/biolearn.data_library.DataSource.html">biolearn.data_library.DataSource</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../modules/generated/biolearn.data_library.GeoData.html">biolearn.data_library.GeoData</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="data_library.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.data_library</span></code>: DataLibrary</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of biolearn.data_library: DataLibrary</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/biolearn.data_library.DataLibrary.html">biolearn.data_library.DataLibrary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/biolearn.data_library.DataSource.html">biolearn.data_library.DataSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/biolearn.data_library.GeoData.html">biolearn.data_library.GeoData</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../modules/model_gallery.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.model_gallery</span></code>: ModelGallery</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of biolearn.model_gallery: ModelGallery</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../modules/generated/biolearn.model_gallery.ModelGallery.html">biolearn.model_gallery.ModelGallery</a></li>
+<li class="toctree-l2 current has-children current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.model_gallery</span></code>: ModelGallery</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of biolearn.model_gallery: ModelGallery</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/biolearn.model_gallery.ModelGallery.html">biolearn.model_gallery.ModelGallery</a></li>
 </ul>
 </li>
 </ul>
@@ -249,46 +249,24 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="examples">
-<h1>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>If you want to run the examples, make sure you execute them in a directory
-where you have write permissions, or you copy the examples into such a
-directory. If you install biolean manually, make sure you have followed
-<a class="reference internal" href="../quickstart.html#quickstart"><span class="std std-ref">the instructions</span></a>.</p>
+          <section id="biolearn-model-gallery-modelgallery">
+<span id="model-gallery-ref"></span><h1><a class="reference internal" href="#module-biolearn.model_gallery" title="biolearn.model_gallery"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.model_gallery</span></code></a>: ModelGallery<a class="headerlink" href="#biolearn-model-gallery-modelgallery" title="Link to this heading">#</a></h1>
+<p id="module-biolearn.model_gallery"><strong>Classes</strong>:</p>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/biolearn.model_gallery.ModelGallery.html#biolearn.model_gallery.ModelGallery" title="biolearn.model_gallery.ModelGallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ModelGallery</span></code></a>([models])</p></td>
+<td><p>ModelGallery manages a collection of Models that can be run on biological data to produce predictions.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="sphx-glr-thumbnails"></div><section id="epigenetic-clock-examples">
-<h2>Epigenetic Clock Examples<a class="headerlink" href="#epigenetic-clock-examples" title="Link to this heading">#</a></h2>
-<p>Plots results of running epigenetic clock functions</p>
-<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This example loads a DNA Methylation data from GEO, calculates multiple epigenetic clocks, and ..."><img alt="" src="../_images/sphx_glr_plot_epigenetic_clocks_on_geo_thumb.png" />
-<p><a class="reference internal" href="00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.html#sphx-glr-auto-examples-00-epigenetic-biomarkers-plot-epigenetic-clocks-on-geo-py"><span class="std std-ref">“Epigenetic Clocks” in GEO Data</span></a></p>
-  <div class="sphx-glr-thumbnail-title">"Epigenetic Clocks" in GEO Data</div>
-</div></div></section>
-<section id="composite-biomarkers-examples">
-<h2>Composite Biomarkers Examples<a class="headerlink" href="#composite-biomarkers-examples" title="Link to this heading">#</a></h2>
-<p>Plot survival curves based on clocks using data from standard blood tests</p>
-<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This example loads blood exam data from NHANES 2010, calculates &quot;Phenotypic Ages,&quot; and performs..."><img alt="" src="../_images/sphx_glr_plot_nhanes_thumb.png" />
-<p><a class="reference internal" href="01_composite_biomarkers/plot_nhanes.html#sphx-glr-auto-examples-01-composite-biomarkers-plot-nhanes-py"><span class="std std-ref">“Phenotypic Ages” in NHANES Data</span></a></p>
-  <div class="sphx-glr-thumbnail-title">"Phenotypic Ages" in NHANES Data</div>
-</div></div><div class="toctree-wrapper compound">
-</div>
-<div class="sphx-glr-footer sphx-glr-footer-gallery docutils container">
-<div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../_downloads/07fcc19ba03226cd3d83d4e40ec44385/auto_examples_python.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">all</span> <span class="pre">examples</span> <span class="pre">in</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">auto_examples_python.zip</span></code></a></p>
-</div>
-<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../_downloads/6f1e7a639e0699d6164445b55e6c116d/auto_examples_jupyter.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">all</span> <span class="pre">examples</span> <span class="pre">in</span> <span class="pre">Jupyter</span> <span class="pre">notebooks:</span> <span class="pre">auto_examples_jupyter.zip</span></code></a></p>
-</div>
-</div>
-<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
-</section>
 </section>
 
         </article>
@@ -296,23 +274,23 @@ directory. If you install biolean manually, make sure you have followed
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="00_epigenetic_biomarkers/index.html">
+          <a class="next-page" href="generated/biolearn.model_gallery.ModelGallery.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Epigenetic Clock Examples</div>
+                <div class="title">biolearn.model_gallery.ModelGallery</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../data.html">
+          <a class="prev-page" href="generated/biolearn.data_library.GeoData.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">GEO Data Sources</div>
+                <div class="title">biolearn.data_library.GeoData</div>
                 
               </div>
             </a>
@@ -334,28 +312,8 @@ directory. If you install biolean manually, make sure you have followed
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Examples</a><ul>
-<li><a class="reference internal" href="#epigenetic-clock-examples">Epigenetic Clock Examples</a></li>
-<li><a class="reference internal" href="#composite-biomarkers-examples">Composite Biomarkers Examples</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>

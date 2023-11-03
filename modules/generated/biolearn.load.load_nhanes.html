@@ -185,7 +185,8 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Quickstart</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../clocks.html">Clocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clocks.html">Clocks and Other Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data.html">GEO Data Sources</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../auto_examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/00_epigenetic_biomarkers/index.html">Epigenetic Clock Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Epigenetic Clock Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../auto_examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.html">“Epigenetic Clocks” in GEO Data</a></li>
@@ -201,6 +202,16 @@
 <li class="toctree-l2 current has-children"><a class="reference internal" href="../load.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.load</span></code>: Data Loading Utilities</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of biolearn.load: Data Loading Utilities</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">biolearn.load.load_nhanes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="biolearn.load.load_fhs.html">biolearn.load.load_fhs</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../data_library.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.data_library</span></code>: DataLibrary</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of biolearn.data_library: DataLibrary</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="biolearn.data_library.DataLibrary.html">biolearn.data_library.DataLibrary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="biolearn.data_library.DataSource.html">biolearn.data_library.DataSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="biolearn.data_library.GeoData.html">biolearn.data_library.GeoData</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../model_gallery.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.model_gallery</span></code>: ModelGallery</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of biolearn.model_gallery: ModelGallery</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="biolearn.model_gallery.ModelGallery.html">biolearn.model_gallery.ModelGallery</a></li>
 </ul>
 </li>
 </ul>
@@ -254,21 +265,18 @@ function signature, and not how to use it. Please refer to the
 <h1>biolearn.load.load_nhanes<a class="headerlink" href="#biolearn-load-load-nhanes" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="biolearn.load.load_nhanes">
-<span class="sig-prename descclassname"><span class="pre">biolearn.load.</span></span><span class="sig-name descname"><span class="pre">load_nhanes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">year</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/61ed7af/biolearn/load.py#L51"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#biolearn.load.load_nhanes" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">biolearn.load.</span></span><span class="sig-name descname"><span class="pre">load_nhanes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">year</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#biolearn.load.load_nhanes" title="Link to this definition">#</a></dt>
 <dd><p>Loads data from the National Health and Nutrition Examination Survey</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>year</strong><span class="classifier">number</span></dt><dd><p>A year number for which to load data. Not that NHANES data comes in two year groupings and the year passed in should be the later year.
+<dd class="field-odd"><p><strong>year</strong> (<em>number</em>) – A year number for which to load data. Not that NHANES data comes in two year groupings and the year passed in should be the later year.
 Supported inputs are 2010 and 2012</p>
 </dd>
-</dl>
-</dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><dl class="simple">
-<dt>df: Pandas.Dataframe</dt><dd><p>A pandas dataframe where each row represents an individual and each column represents a measurement about that individual</p>
+<dd class="field-even"><p><strong>df</strong> – A pandas dataframe where each row represents an individual and each column represents a measurement about that individual</p>
 </dd>
-</dl>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Pandas.Dataframe</p>
 </dd>
 </dl>
 </dd></dl>
