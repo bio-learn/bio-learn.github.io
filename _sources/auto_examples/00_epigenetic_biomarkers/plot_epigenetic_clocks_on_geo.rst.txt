@@ -112,16 +112,16 @@ Finally exctract the age data from the metadata from GEO and plot the results us
     /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/axisgrid.py:123: UserWarning: The figure layout has changed to tight
       self._figure.tight_layout(*args, **kwargs)
 
-    <seaborn.axisgrid.FacetGrid object at 0x7fbb9626b160>
+    <seaborn.axisgrid.FacetGrid object at 0x7f90e49e7910>
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 8.682 seconds)
+   **Total running time of the script:** (0 minutes 8.807 seconds)
 
-**Estimated memory usage:**  1721 MB
+**Estimated memory usage:**  1668 MB
 
 
 .. _sphx_glr_download_auto_examples_00_epigenetic_biomarkers_plot_epigenetic_clocks_on_geo.py:
@@ -134,7 +134,7 @@ Finally exctract the age data from the metadata from GEO and plot the results us
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.2.3?urlpath=lab/tree/notebooks/auto_examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.2.4?urlpath=lab/tree/notebooks/auto_examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.ipynb
         :alt: Launch binder
         :width: 150 px
 

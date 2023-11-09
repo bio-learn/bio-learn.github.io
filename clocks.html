@@ -7,10 +7,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bio-learn.github.io/clocks.html" />
 <meta property="og:site_name" content="Biolearn" />
-<meta property="og:description" content="Biolearn supports a number of clock models that can be easily run from the clock gallery.,,,,,, Name, Year, Species, Tissue, Source, Coefficients,,, Horvathv1, 2013, Human, Multi-tissue, paper, coe..." />
+<meta property="og:description" content="Biolearn supports a number of clock models that can be easily run from the clock gallery.,,,,,,, Name, Year, Species, Tissue, Predicts, Source, Coefficients,,, Horvathv1, 2013, Human, Multi-tissue,..." />
 <meta property="og:image" content="https://bio-learn.github.io/_static/biolearn-logo.png" />
 <meta property="og:image:alt" content="Biolearn" />
-<meta name="description" content="Biolearn supports a number of clock models that can be easily run from the clock gallery.,,,,,, Name, Year, Species, Tissue, Source, Coefficients,,, Horvathv1, 2013, Human, Multi-tissue, paper, coe..." />
+<meta name="description" content="Biolearn supports a number of clock models that can be easily run from the clock gallery.,,,,,,, Name, Year, Species, Tissue, Predicts, Source, Coefficients,,, Horvathv1, 2013, Human, Multi-tissue,..." />
 <link rel="search" title="Search" href="search.html" /><link rel="next" title="GEO Data Sources" href="data.html" /><link rel="prev" title="Quickstart" href="quickstart.html" />
 
     <link rel="shortcut icon" href="_static/favicon.ico"/><!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
@@ -265,6 +265,7 @@
 <th class="head"><p>Year</p></th>
 <th class="head"><p>Species</p></th>
 <th class="head"><p>Tissue</p></th>
+<th class="head"><p>Predicts</p></th>
 <th class="head"><p>Source</p></th>
 <th class="head"><p>Coefficients</p></th>
 </tr>
@@ -274,6 +275,7 @@
 <td><p>2013</p></td>
 <td><p>Human</p></td>
 <td><p>Multi-tissue</p></td>
+<td><p>Age (Years)</p></td>
 <td><p><a class="reference external" href="https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-10-r115">paper</a></p></td>
 <td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Horvath1.csv">coefficients file</a></p></td>
 </tr>
@@ -281,6 +283,7 @@
 <td><p>2013</p></td>
 <td><p>Human</p></td>
 <td><p>Blood</p></td>
+<td><p>Age (Years)</p></td>
 <td><p><a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S1097276512008933">paper</a></p></td>
 <td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Hannum.csv">coefficients file</a></p></td>
 </tr>
@@ -288,6 +291,7 @@
 <td><p>2016</p></td>
 <td><p>Human</p></td>
 <td><p>Blood</p></td>
+<td><p>Age (Years)</p></td>
 <td><p><a class="reference external" href="https://www.aging-us.com/article/100908/text">paper</a></p></td>
 <td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Lin.csv">coefficients file</a></p></td>
 </tr>
@@ -295,6 +299,7 @@
 <td><p>2018</p></td>
 <td><p>Human</p></td>
 <td><p>Blood</p></td>
+<td><p>Age (Years)</p></td>
 <td><p><a class="reference external" href="https://www.aging-us.com/article/101414/text">paper</a></p></td>
 <td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/PhenoAge.csv">coefficients file</a></p></td>
 </tr>
@@ -302,6 +307,7 @@
 <td><p>2018</p></td>
 <td><p>Human</p></td>
 <td><p>Skin + blood</p></td>
+<td><p>Age (Years)</p></td>
 <td><p><a class="reference external" href="https://www.aging-us.com/article/101508/text">paper</a></p></td>
 <td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Horvath2.csv">coefficients file</a></p></td>
 </tr>
@@ -309,6 +315,7 @@
 <td><p>2019</p></td>
 <td><p>Human</p></td>
 <td><p>Buccal</p></td>
+<td><p>Age (Years)</p></td>
 <td><p><a class="reference external" href="https://www.pnas.org/doi/10.1073/pnas.1820843116">paper</a></p></td>
 <td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/PEDBE.csv">coefficients file</a></p></td>
 </tr>
@@ -316,13 +323,15 @@
 <td><p>2019</p></td>
 <td><p>Human</p></td>
 <td><p>Blood</p></td>
-<td><p><a class="reference external" href="https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-019-0667-1">paper</a></p></td>
+<td><p>Mortality Risk</p></td>
+<td><p><a class="reference external" href="https://www.nature.com/articles/ncomms14617">paper</a></p></td>
 <td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Zhang_10.csv">coefficients file</a></p></td>
 </tr>
 <tr class="row-odd"><td><p>DunedinPoAm38</p></td>
 <td><p>2020</p></td>
 <td><p>Human</p></td>
 <td><p>Blood</p></td>
+<td><p>Aging Rate (Years/Year)</p></td>
 <td><p><a class="reference external" href="https://elifesciences.org/articles/54870#s2">paper</a></p></td>
 <td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/DunedinPoAm38.csv">coefficients file</a></p></td>
 </tr>
@@ -330,28 +339,32 @@
 <td><p>2022</p></td>
 <td><p>Human</p></td>
 <td><p>Unknown</p></td>
+<td><p>Aging Rate (Years/Year)</p></td>
 <td><p><a class="reference external" href="https://www.proquest.com/docview/2634411178">paper</a></p></td>
 <td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/DunedinPACE.csv">coefficients file</a></p></td>
 </tr>
 <tr class="row-odd"><td><p>AlcoholMcCartney</p></td>
-<td><p>unknown</p></td>
+<td><p>2018</p></td>
 <td><p>Human</p></td>
-<td><p>unknown</p></td>
-<td><p>unknown</p></td>
+<td><p>Blood</p></td>
+<td><p>Alcohol Consumption</p></td>
+<td><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6158884/">paper</a></p></td>
 <td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Alcohol.csv">coefficients file</a></p></td>
 </tr>
 <tr class="row-even"><td><p>BMI_McCartney</p></td>
-<td><p>unknown</p></td>
+<td><p>2018</p></td>
 <td><p>Human</p></td>
-<td><p>unknown</p></td>
-<td><p>unknown</p></td>
+<td><p>Blood</p></td>
+<td><p>BMI</p></td>
+<td><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6158884/">paper</a></p></td>
 <td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/BMI.csv">coefficients file</a></p></td>
 </tr>
 <tr class="row-odd"><td><p>DNAmTL</p></td>
-<td><p>unknown</p></td>
+<td><p>2019</p></td>
 <td><p>Human</p></td>
-<td><p>unknown</p></td>
-<td><p>unknown</p></td>
+<td><p>Blood, Adipose</p></td>
+<td><p>Telomere Length</p></td>
+<td><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6738410/">paper</a></p></td>
 <td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/DNAmTL.csv">coefficients file</a></p></td>
 </tr>
 <tr class="row-even"><td><p>HRSInCHPhenoAge</p></td>
@@ -359,41 +372,47 @@
 <td><p>Human</p></td>
 <td><p>unknown</p></td>
 <td><p>unknown</p></td>
+<td><p>unknown</p></td>
 <td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/HRSInCHPhenoAge.csv">coefficients file</a></p></td>
 </tr>
 <tr class="row-odd"><td><p>Knight</p></td>
-<td><p>unknown</p></td>
+<td><p>2016</p></td>
 <td><p>Human</p></td>
-<td><p>unknown</p></td>
-<td><p>unknown</p></td>
+<td><p>Cord Blood</p></td>
+<td><p>Gestational Age</p></td>
+<td><p><a class="reference external" href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1068-z">paper</a></p></td>
 <td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Knight.csv">coefficients file</a></p></td>
 </tr>
 <tr class="row-even"><td><p>LeeControl</p></td>
-<td><p>unknown</p></td>
+<td><p>2019</p></td>
 <td><p>Human</p></td>
-<td><p>unknown</p></td>
-<td><p>unknown</p></td>
+<td><p>Placenta</p></td>
+<td><p>Gestational Age</p></td>
+<td><p><a class="reference external" href="https://www.aging-us.com/article/102049/text">paper</a></p></td>
 <td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/LeeControl.csv">coefficients file</a></p></td>
 </tr>
 <tr class="row-odd"><td><p>LeeRefinedRobust</p></td>
-<td><p>unknown</p></td>
+<td><p>2019</p></td>
 <td><p>Human</p></td>
-<td><p>unknown</p></td>
-<td><p>unknown</p></td>
+<td><p>Placenta</p></td>
+<td><p>Gestational Age</p></td>
+<td><p><a class="reference external" href="https://www.aging-us.com/article/102049/text">paper</a></p></td>
 <td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/LeeRefinedRobust.csv">coefficients file</a></p></td>
 </tr>
 <tr class="row-even"><td><p>LeeRobust</p></td>
-<td><p>unknown</p></td>
+<td><p>2019</p></td>
 <td><p>Human</p></td>
-<td><p>unknown</p></td>
-<td><p>unknown</p></td>
+<td><p>Placenta</p></td>
+<td><p>Gestational Age</p></td>
+<td><p><a class="reference external" href="https://www.aging-us.com/article/102049/text">paper</a></p></td>
 <td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/LeeRobust.csv">coefficients file</a></p></td>
 </tr>
 <tr class="row-odd"><td><p>SmokingMcCartney</p></td>
-<td><p>unknown</p></td>
+<td><p>2018</p></td>
 <td><p>Human</p></td>
-<td><p>unknown</p></td>
-<td><p>unknown</p></td>
+<td><p>Blood</p></td>
+<td><p>Smoking Status</p></td>
+<td><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6158884/">paper</a></p></td>
 <td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Smoking.csv">coefficients file</a></p></td>
 </tr>
 </tbody>
