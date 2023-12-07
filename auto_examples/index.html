@@ -7,10 +7,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bio-learn.github.io/auto_examples/index.html" />
 <meta property="og:site_name" content="Biolearn" />
-<meta property="og:description" content="Epigenetic Clock Examples: Plots results of running epigenetic clock functions “Epigenetic Clocks” in GEO Data Composite Biomarkers Examples: Plot survival curves based on clocks using data from st..." />
+<meta property="og:description" content="Epigenetic Clock Examples: Plots results of running epigenetic clock functions “Epigenetic Clocks” in GEO Data Performing custom imputations Composite Biomarkers Examples: Plot survival curves base..." />
 <meta property="og:image" content="https://bio-learn.github.io/_images/sphx_glr_plot_epigenetic_clocks_on_geo_thumb.png" />
 <meta property="og:image:alt" content="" />
-<meta name="description" content="Epigenetic Clock Examples: Plots results of running epigenetic clock functions “Epigenetic Clocks” in GEO Data Composite Biomarkers Examples: Plot survival curves based on clocks using data from st..." />
+<meta name="description" content="Epigenetic Clock Examples: Plots results of running epigenetic clock functions “Epigenetic Clocks” in GEO Data Performing custom imputations Composite Biomarkers Examples: Plot survival curves base..." />
 <link rel="search" title="Search" href="../search.html" /><link rel="next" title="Epigenetic Clock Examples" href="00_epigenetic_biomarkers/index.html" /><link rel="prev" title="GEO Data Sources" href="../data.html" />
 
     <link rel="shortcut icon" href="../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
@@ -190,6 +190,7 @@
 <li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="00_epigenetic_biomarkers/index.html">Epigenetic Clock Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Epigenetic Clock Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.html">“Epigenetic Clocks” in GEO Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="00_epigenetic_biomarkers/plot_custom_imputation_implementation.html">Performing custom imputations</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="01_composite_biomarkers/index.html">Composite Biomarkers Examples</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Composite Biomarkers Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -212,6 +213,13 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../modules/model_gallery.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.model_gallery</span></code>: ModelGallery</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of biolearn.model_gallery: ModelGallery</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../modules/generated/biolearn.model_gallery.ModelGallery.html">biolearn.model_gallery.ModelGallery</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../modules/imputation.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.imputation</span></code>: Data Imputation Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of biolearn.imputation: Data Imputation Utilities</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../modules/generated/biolearn.imputation.impute_from_standard.html">biolearn.imputation.impute_from_standard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/generated/biolearn.imputation.impute_from_average.html">biolearn.imputation.impute_from_average</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/generated/biolearn.imputation.hybrid_impute.html">biolearn.imputation.hybrid_impute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules/generated/biolearn.imputation.biolearn_impute.html">biolearn.imputation.biolearn_impute</a></li>
 </ul>
 </li>
 </ul>
@@ -270,6 +278,9 @@ directory. If you install biolean manually, make sure you have followed
 <div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This example loads a DNA Methylation data from GEO, calculates multiple epigenetic clocks, and ..."><img alt="" src="../_images/sphx_glr_plot_epigenetic_clocks_on_geo_thumb.png" />
 <p><a class="reference internal" href="00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.html#sphx-glr-auto-examples-00-epigenetic-biomarkers-plot-epigenetic-clocks-on-geo-py"><span class="std std-ref">“Epigenetic Clocks” in GEO Data</span></a></p>
   <div class="sphx-glr-thumbnail-title">"Epigenetic Clocks" in GEO Data</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the ease of custom imputation using the biolearn library."><img alt="" src="../_images/sphx_glr_plot_custom_imputation_implementation_thumb.png" />
+<p><a class="reference internal" href="00_epigenetic_biomarkers/plot_custom_imputation_implementation.html#sphx-glr-auto-examples-00-epigenetic-biomarkers-plot-custom-imputation-implementation-py"><span class="std std-ref">Performing custom imputations</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Performing custom imputations</div>
 </div></div></section>
 <section id="composite-biomarkers-examples">
 <h2>Composite Biomarkers Examples<a class="headerlink" href="#composite-biomarkers-examples" title="Link to this heading">#</a></h2>

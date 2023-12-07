@@ -1,0 +1,19 @@
+﻿.. note::
+
+   This page is a reference documentation. It only explains the
+   function signature, and not how to use it. Please refer to the
+   :ref:`user guide <quickstart>` for the big picture.
+
+
+biolearn.imputation.impute_from_standard
+========================================
+
+.. currentmodule:: biolearn.imputation
+
+.. autofunction:: impute_from_standard
+
+.. include:: biolearn.imputation.impute_from_standard.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

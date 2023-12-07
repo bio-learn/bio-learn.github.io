@@ -3,18 +3,18 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="biolearn.data_library: DataLibrary" />
+<meta property="og:title" content="biolearn.imputation: Data Imputation Utilities" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://bio-learn.github.io/modules/data_library.html" />
+<meta property="og:url" content="https://bio-learn.github.io/modules/imputation.html" />
 <meta property="og:site_name" content="Biolearn" />
-<meta property="og:description" content="Classes:" />
+<meta property="og:description" content="This module provides a set of functions for imputing missing values in DNA methylation datasets. These functions allow for various strategies of imputation, from simple averaging to more complex hy..." />
 <meta property="og:image" content="https://bio-learn.github.io/_static/biolearn-logo.png" />
 <meta property="og:image:alt" content="Biolearn" />
-<meta name="description" content="Classes:" />
-<link rel="search" title="Search" href="../search.html" /><link rel="next" title="biolearn.data_library.DataLibrary" href="generated/biolearn.data_library.DataLibrary.html" /><link rel="prev" title="biolearn.load.load_fhs" href="generated/biolearn.load.load_fhs.html" />
+<meta name="description" content="This module provides a set of functions for imputing missing values in DNA methylation datasets. These functions allow for various strategies of imputation, from simple averaging to more complex hy..." />
+<link rel="search" title="Search" href="../search.html" /><link rel="next" title="biolearn.imputation.impute_from_standard" href="generated/biolearn.imputation.impute_from_standard.html" /><link rel="prev" title="biolearn.model_gallery.ModelGallery" href="generated/biolearn.model_gallery.ModelGallery.html" />
 
     <link rel="shortcut icon" href="../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
-        <title>biolearn.data_library: DataLibrary - Biolearn</title>
+        <title>biolearn.imputation: Data Imputation Utilities - Biolearn</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=045299b1" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -205,7 +205,7 @@
 <li class="toctree-l3"><a class="reference internal" href="generated/biolearn.load.load_fhs.html">biolearn.load.load_fhs</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current has-children current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.data_library</span></code>: DataLibrary</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of biolearn.data_library: DataLibrary</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="data_library.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.data_library</span></code>: DataLibrary</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of biolearn.data_library: DataLibrary</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="generated/biolearn.data_library.DataLibrary.html">biolearn.data_library.DataLibrary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/biolearn.data_library.DataSource.html">biolearn.data_library.DataSource</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/biolearn.data_library.GeoData.html">biolearn.data_library.GeoData</a></li>
@@ -215,7 +215,7 @@
 <li class="toctree-l3"><a class="reference internal" href="generated/biolearn.model_gallery.ModelGallery.html">biolearn.model_gallery.ModelGallery</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="imputation.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.imputation</span></code>: Data Imputation Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of biolearn.imputation: Data Imputation Utilities</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 current has-children current-page"><a class="current reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.imputation</span></code>: Data Imputation Utilities</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of biolearn.imputation: Data Imputation Utilities</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="generated/biolearn.imputation.impute_from_standard.html">biolearn.imputation.impute_from_standard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/biolearn.imputation.impute_from_average.html">biolearn.imputation.impute_from_average</a></li>
 <li class="toctree-l3"><a class="reference internal" href="generated/biolearn.imputation.hybrid_impute.html">biolearn.imputation.hybrid_impute</a></li>
@@ -263,20 +263,24 @@
           </label>
         </div>
         <article role="main">
-          <section id="module-biolearn.data_library">
-<span id="biolearn-data-library-datalibrary"></span><span id="data-library-ref"></span><h1><a class="reference internal" href="#module-biolearn.data_library" title="biolearn.data_library"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.data_library</span></code></a>: DataLibrary<a class="headerlink" href="#module-biolearn.data_library" title="Link to this heading">#</a></h1>
-<p><strong>Classes</strong>:</p>
+          <section id="biolearn-imputation-data-imputation-utilities">
+<span id="imputation-ref"></span><h1><a class="reference internal" href="#module-biolearn.imputation" title="biolearn.imputation"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.imputation</span></code></a>: Data Imputation Utilities<a class="headerlink" href="#biolearn-imputation-data-imputation-utilities" title="Link to this heading">#</a></h1>
+<p id="module-biolearn.imputation">This module provides a set of functions for imputing missing values in DNA methylation datasets. These functions allow for various strategies of imputation, from simple averaging to more complex hybrid methods.</p>
+<p><strong>Functions</strong>:</p>
 <div class="table-wrapper autosummary longtable docutils container">
 <table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/biolearn.data_library.DataLibrary.html#biolearn.data_library.DataLibrary" title="biolearn.data_library.DataLibrary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataLibrary</span></code></a>([library_file])</p></td>
-<td><p>Manages a collection of data sources for biomarkers research.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/biolearn.imputation.impute_from_standard.html#biolearn.imputation.impute_from_standard" title="biolearn.imputation.impute_from_standard"><code class="xref py py-obj docutils literal notranslate"><span class="pre">impute_from_standard</span></code></a>(dnam, cpg_averages[, ...])</p></td>
+<td><p>Impute all missing values in a DNA methylation dataset using the averages from an external dataset.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/biolearn.data_library.DataSource.html#biolearn.data_library.DataSource" title="biolearn.data_library.DataSource"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSource</span></code></a>(data)</p></td>
-<td><p>Represents a single data source in the DataLibrary.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/biolearn.imputation.impute_from_average.html#biolearn.imputation.impute_from_average" title="biolearn.imputation.impute_from_average"><code class="xref py py-obj docutils literal notranslate"><span class="pre">impute_from_average</span></code></a>(dnam[, cpgs_to_impute])</p></td>
+<td><p>Impute all missing values in a DNA methylation dataset using the average from the dataset itself.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/biolearn.data_library.GeoData.html#biolearn.data_library.GeoData" title="biolearn.data_library.GeoData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeoData</span></code></a>(metadata, dnam)</p></td>
-<td><p>Represents genomic data with a focus on metadata and methylation data.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/biolearn.imputation.hybrid_impute.html#biolearn.imputation.hybrid_impute" title="biolearn.imputation.hybrid_impute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hybrid_impute</span></code></a>(dnam, cpg_source, required_cpgs)</p></td>
+<td><p>Imputes missing values in a DNA methylation dataset based on a threshold.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/biolearn.imputation.biolearn_impute.html#biolearn.imputation.biolearn_impute" title="biolearn.imputation.biolearn_impute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">biolearn_impute</span></code></a>(dnam)</p></td>
+<td><p>Impute missing values in a DNA methylation dataset using a standard Biolearn dataset for reference.</p></td>
 </tr>
 </tbody>
 </table>
@@ -288,23 +292,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="generated/biolearn.data_library.DataLibrary.html">
+          <a class="next-page" href="generated/biolearn.imputation.impute_from_standard.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">biolearn.data_library.DataLibrary</div>
+                <div class="title">biolearn.imputation.impute_from_standard</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="generated/biolearn.load.load_fhs.html">
+          <a class="prev-page" href="generated/biolearn.model_gallery.ModelGallery.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">biolearn.load.load_fhs</div>
+                <div class="title">biolearn.model_gallery.ModelGallery</div>
                 
               </div>
             </a>
