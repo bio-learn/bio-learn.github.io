@@ -26,9 +26,9 @@ This example loads a DNA Methylation data from GEO, calculates multiple epigenet
 .. GENERATED FROM PYTHON SOURCE LINES 9-11
 
 First load up some methylation data from GEO using the data library
----------------------------------------
+---------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 11-20
+.. GENERATED FROM PYTHON SOURCE LINES 11-17
 
 .. code-block:: default
 
@@ -37,8 +37,6 @@ First load up some methylation data from GEO using the data library
     data_source = DataLibrary().get("GSE41169")
     data=data_source.load()
 
-    #The data has the methylation data as well as metadata for each subject
-    methylation_data = data.dnam
 
 
 
@@ -47,13 +45,12 @@ First load up some methylation data from GEO using the data library
 
 
 
-
-.. GENERATED FROM PYTHON SOURCE LINES 21-23
+.. GENERATED FROM PYTHON SOURCE LINES 18-20
 
 Now run three different clocks on the dataset to produce epigenetic clock ages
 ------------------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 23-34
+.. GENERATED FROM PYTHON SOURCE LINES 20-31
 
 .. code-block:: default
 
@@ -62,9 +59,9 @@ Now run three different clocks on the dataset to produce epigenetic clock ages
     gallery = ModelGallery()
     #Note that by default clocks will impute missing data.
     #To change this behavior set the imputation= parameter when getting the clock
-    horvath_results = gallery.get("Horvathv1").predict(methylation_data)
-    hannum_results = gallery.get("Hannum").predict(methylation_data)
-    phenoage_results = gallery.get("PhenoAge").predict(methylation_data)
+    horvath_results = gallery.get("Horvathv1").predict(data)
+    hannum_results = gallery.get("Hannum").predict(data)
+    phenoage_results = gallery.get("PhenoAge").predict(data)
 
 
 
@@ -75,12 +72,12 @@ Now run three different clocks on the dataset to produce epigenetic clock ages
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 35-37
+.. GENERATED FROM PYTHON SOURCE LINES 32-34
 
 Finally exctract the age data from the metadata from GEO and plot the results using seaborn
 --------------------------------------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-49
+.. GENERATED FROM PYTHON SOURCE LINES 34-46
 
 .. code-block:: default
 
@@ -89,9 +86,9 @@ Finally exctract the age data from the metadata from GEO and plot the results us
 
     actual_age = data.metadata['age']
     plot_data = pd.DataFrame({
-        'Horvath': horvath_results,
-        'Hannum': hannum_results,
-        'PhenoAge': phenoage_results,
+        'Horvath': horvath_results['Predicted'],
+        'Hannum': hannum_results['Predicted'],
+        'PhenoAge': phenoage_results['Predicted'],
         "Age": actual_age
     })
     plot_data.index=plot_data['Age']
@@ -112,16 +109,16 @@ Finally exctract the age data from the metadata from GEO and plot the results us
     /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/axisgrid.py:123: UserWarning: The figure layout has changed to tight
       self._figure.tight_layout(*args, **kwargs)
 
-    <seaborn.axisgrid.FacetGrid object at 0x7fbd6ae55330>
+    <seaborn.axisgrid.FacetGrid object at 0x7f75b5f34d00>
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 8.498 seconds)
+   **Total running time of the script:** (0 minutes 8.677 seconds)
 
-**Estimated memory usage:**  1769 MB
+**Estimated memory usage:**  1746 MB
 
 
 .. _sphx_glr_download_auto_examples_00_epigenetic_biomarkers_plot_epigenetic_clocks_on_geo.py:
@@ -134,7 +131,7 @@ Finally exctract the age data from the metadata from GEO and plot the results us
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.2.5?urlpath=lab/tree/notebooks/auto_examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.0?urlpath=lab/tree/notebooks/auto_examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.ipynb
         :alt: Launch binder
         :width: 150 px
 

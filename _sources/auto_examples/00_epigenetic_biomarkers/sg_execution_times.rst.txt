@@ -6,10 +6,10 @@
 
 Computation times
 =================
-**01:43.680** total execution time for **auto_examples_00_epigenetic_biomarkers** files:
+**01:42.443** total execution time for **auto_examples_00_epigenetic_biomarkers** files:
 
 +------------------------------------------------------------------------------------------------------------------------------------------------+-----------+------------+
-| :ref:`sphx_glr_auto_examples_00_epigenetic_biomarkers_plot_custom_imputation_implementation.py` (``plot_custom_imputation_implementation.py``) | 01:35.182 | 12105.9 MB |
+| :ref:`sphx_glr_auto_examples_00_epigenetic_biomarkers_plot_custom_imputation_implementation.py` (``plot_custom_imputation_implementation.py``) | 01:33.766 | 11864.3 MB |
 +------------------------------------------------------------------------------------------------------------------------------------------------+-----------+------------+
-| :ref:`sphx_glr_auto_examples_00_epigenetic_biomarkers_plot_epigenetic_clocks_on_geo.py` (``plot_epigenetic_clocks_on_geo.py``)                 | 00:08.498 | 1769.1 MB  |
+| :ref:`sphx_glr_auto_examples_00_epigenetic_biomarkers_plot_epigenetic_clocks_on_geo.py` (``plot_epigenetic_clocks_on_geo.py``)                 | 00:08.677 | 1745.5 MB  |
 +------------------------------------------------------------------------------------------------------------------------------------------------+-----------+------------+

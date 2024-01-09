@@ -26,14 +26,14 @@ This example demonstrates the ease of custom imputation using the biolearn libra
 .. GENERATED FROM PYTHON SOURCE LINES 9-11
 
 Load methylation data from a GEO dataset to use as a reference for imputation
---------------------------------------------------------------------------
+------------------------------------------------------------------------------
 
 .. GENERATED FROM PYTHON SOURCE LINES 11-18
 
 .. code-block:: default
 
 
-    from biolearn.data_library import DataLibrary
+    from biolearn.data_library import DataLibrary, GeoData
 
     # Load the reference dataset and compute averages for imputation
     reference_dataset = DataLibrary().get("GSE40279").load()
@@ -51,7 +51,7 @@ Load methylation data from a GEO dataset to use as a reference for imputation
 Load up a target dataset and run the imputation
 --------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 21-29
+.. GENERATED FROM PYTHON SOURCE LINES 21-30
 
 .. code-block:: default
 
@@ -62,6 +62,7 @@ Load up a target dataset and run the imputation
     # Perform imputation using the reference averages
     from biolearn.imputation import impute_from_standard
     imputed_data = impute_from_standard(target_dataset.dnam, reference_averages)
+    imputed_dataset = GeoData(target_dataset.metadata, imputed_data)
 
 
 
@@ -70,12 +71,12 @@ Load up a target dataset and run the imputation
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 30-32
+.. GENERATED FROM PYTHON SOURCE LINES 31-33
 
 Now run clock predictions on the dataset before and after
 --------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 32-40
+.. GENERATED FROM PYTHON SOURCE LINES 33-41
 
 .. code-block:: default
 
@@ -84,8 +85,8 @@ Now run clock predictions on the dataset before and after
     from biolearn.model_gallery import ModelGallery
     clock_model = ModelGallery().get("Horvathv1")
 
-    original_age_predictions = clock_model.predict(target_dataset.dnam)
-    imputed_age_predictions = clock_model.predict(imputed_data)
+    original_age_predictions = clock_model.predict(target_dataset)
+    imputed_age_predictions = clock_model.predict(imputed_dataset)
 
 
 
@@ -94,12 +95,12 @@ Now run clock predictions on the dataset before and after
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 41-43
+.. GENERATED FROM PYTHON SOURCE LINES 42-44
 
 Visualize the comparison of age predictions
 --------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 43-64
+.. GENERATED FROM PYTHON SOURCE LINES 44-65
 
 .. code-block:: default
 
@@ -110,8 +111,8 @@ Visualize the comparison of age predictions
 
     # Prepare data for visualization
     comparison_data = pd.DataFrame({
-        'Original': original_age_predictions,
-        'Imputed': imputed_age_predictions
+        'Original': original_age_predictions['Predicted'],
+        'Imputed': imputed_age_predictions['Predicted']
     })
 
     # Create a scatter plot to compare the results
@@ -136,12 +137,12 @@ Visualize the comparison of age predictions
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 65-67
+.. GENERATED FROM PYTHON SOURCE LINES 66-68
 
 You can also build an imputation decorator to bundle with the clock
 --------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 67-77
+.. GENERATED FROM PYTHON SOURCE LINES 68-78
 
 .. code-block:: default
 
@@ -162,18 +163,18 @@ You can also build an imputation decorator to bundle with the clock
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 78-80
+.. GENERATED FROM PYTHON SOURCE LINES 79-81
 
 You get the same results as running the function directly on your dataset
 --------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 80-87
+.. GENERATED FROM PYTHON SOURCE LINES 81-88
 
 .. code-block:: default
 
 
     # Predict epigenetic age using the decorated clock (with imputation)
-    decorated_clock_predictions = decorated_clock.predict(target_dataset.dnam)
+    decorated_clock_predictions = decorated_clock.predict(target_dataset)
 
     # Verify that the results are the same as the direct imputation approach
     same_results = all(decorated_clock_predictions == imputed_age_predictions)
@@ -194,9 +195,9 @@ You get the same results as running the function directly on your dataset
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (1 minutes 35.182 seconds)
+   **Total running time of the script:** (1 minutes 33.766 seconds)
 
-**Estimated memory usage:**  12106 MB
+**Estimated memory usage:**  11864 MB
 
 
 .. _sphx_glr_download_auto_examples_00_epigenetic_biomarkers_plot_custom_imputation_implementation.py:
@@ -209,7 +210,7 @@ You get the same results as running the function directly on your dataset
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.2.5?urlpath=lab/tree/notebooks/auto_examples/00_epigenetic_biomarkers/plot_custom_imputation_implementation.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.0?urlpath=lab/tree/notebooks/auto_examples/00_epigenetic_biomarkers/plot_custom_imputation_implementation.ipynb
         :alt: Launch binder
         :width: 150 px
 
