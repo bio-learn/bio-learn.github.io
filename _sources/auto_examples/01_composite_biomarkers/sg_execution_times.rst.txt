@@ -6,8 +6,8 @@
 
 Computation times
 =================
-**00:01.126** total execution time for **auto_examples_01_composite_biomarkers** files:
+**00:01.136** total execution time for **auto_examples_01_composite_biomarkers** files:
 
 +-------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_auto_examples_01_composite_biomarkers_plot_nhanes.py` (``plot_nhanes.py``) | 00:01.126 | 9.0 MB |
+| :ref:`sphx_glr_auto_examples_01_composite_biomarkers_plot_nhanes.py` (``plot_nhanes.py``) | 00:01.136 | 8.8 MB |
 +-------------------------------------------------------------------------------------------+-----------+--------+

@@ -6,10 +6,12 @@
 
 Computation times
 =================
-**01:42.443** total execution time for **auto_examples_00_epigenetic_biomarkers** files:
+**00:06.244** total execution time for **auto_examples_00_epigenetic_biomarkers** files:
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+-----------+------------+
-| :ref:`sphx_glr_auto_examples_00_epigenetic_biomarkers_plot_custom_imputation_implementation.py` (``plot_custom_imputation_implementation.py``) | 01:33.766 | 11864.3 MB |
-+------------------------------------------------------------------------------------------------------------------------------------------------+-----------+------------+
-| :ref:`sphx_glr_auto_examples_00_epigenetic_biomarkers_plot_epigenetic_clocks_on_geo.py` (``plot_epigenetic_clocks_on_geo.py``)                 | 00:08.677 | 1745.5 MB  |
-+------------------------------------------------------------------------------------------------------------------------------------------------+-----------+------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+-----------+-----------+
+| :ref:`sphx_glr_auto_examples_00_epigenetic_biomarkers_plot_down_syndrome_model.py` (``plot_down_syndrome_model.py``)                           | 00:06.244 | 1321.7 MB |
++------------------------------------------------------------------------------------------------------------------------------------------------+-----------+-----------+
+| :ref:`sphx_glr_auto_examples_00_epigenetic_biomarkers_plot_custom_imputation_implementation.py` (``plot_custom_imputation_implementation.py``) | 00:00.000 | 0.0 MB    |
++------------------------------------------------------------------------------------------------------------------------------------------------+-----------+-----------+
+| :ref:`sphx_glr_auto_examples_00_epigenetic_biomarkers_plot_epigenetic_clocks_on_geo.py` (``plot_epigenetic_clocks_on_geo.py``)                 | 00:00.000 | 0.0 MB    |
++------------------------------------------------------------------------------------------------------------------------------------------------+-----------+-----------+

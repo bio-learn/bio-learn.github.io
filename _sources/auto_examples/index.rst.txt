@@ -55,6 +55,23 @@ Plots results of running epigenetic clock functions
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="This example loads a DNA Methylation data from GEO with down syndrome metadata and shows how th...">
+
+.. only:: html
+
+  .. image:: /auto_examples/00_epigenetic_biomarkers/images/thumb/sphx_glr_plot_down_syndrome_model_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_00_epigenetic_biomarkers_plot_down_syndrome_model.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Down Syndrome Epigenetic Plotting</div>
+    </div>
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the ease of custom imputation using the biolearn library.">
 
 .. only:: html
@@ -109,6 +126,57 @@ Plot survival curves based on clocks using data from standard blood tests
     </div>
 
 
+=============================
+Challenge Submission Examples
+=============================
+
+Generate submissions for the biomarkers of aging challenge
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows you how to generate a submission for the community warmup using an existing ...">
+
+.. only:: html
+
+  .. image:: /auto_examples/02_challenge_submissions/images/thumb/sphx_glr_simple_competiton_submission_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_02_challenge_submissions_simple_competiton_submission.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Building a competition submission using an existing model</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows you how to train a simple elasticnet model and use it to submit to the chall...">
+
+.. only:: html
+
+  .. image:: /auto_examples/02_challenge_submissions/images/thumb/sphx_glr_training_simple_model_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_02_challenge_submissions_training_simple_model.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Training an ElasticNet model</div>
+    </div>
+
+
+.. raw:: html
+
+    </div>
+
+
 .. toctree::
    :hidden:
    :includehidden:
@@ -116,6 +184,7 @@ Plot survival curves based on clocks using data from standard blood tests
 
    /auto_examples/00_epigenetic_biomarkers/index.rst
    /auto_examples/01_composite_biomarkers/index.rst
+   /auto_examples/02_challenge_submissions/index.rst
 
 
 .. only:: html

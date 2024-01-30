@@ -74,7 +74,7 @@ Now run three different clocks on the dataset to produce epigenetic clock ages
 
 .. GENERATED FROM PYTHON SOURCE LINES 32-34
 
-Finally exctract the age data from the metadata from GEO and plot the results using seaborn
+Finally extract the age data from the metadata from GEO and plot the results using seaborn
 --------------------------------------------------------------------------------------------------------
 
 .. GENERATED FROM PYTHON SOURCE LINES 34-46
@@ -109,14 +109,14 @@ Finally exctract the age data from the metadata from GEO and plot the results us
     /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/axisgrid.py:123: UserWarning: The figure layout has changed to tight
       self._figure.tight_layout(*args, **kwargs)
 
-    <seaborn.axisgrid.FacetGrid object at 0x7f75b5f34d00>
+    <seaborn.axisgrid.FacetGrid object at 0x7f30483c6f80>
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 8.677 seconds)
+   **Total running time of the script:** (0 minutes 8.577 seconds)
 
 **Estimated memory usage:**  1746 MB
 

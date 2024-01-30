@@ -11,7 +11,7 @@
 <meta property="og:image" content="https://bio-learn.github.io/_static/biolearn-logo.png" />
 <meta property="og:image:alt" content="Biolearn" />
 <meta name="description" content="This example loads a DNA Methylation data from GEO, calculates multiple epigenetic clocks, and plots them against chronological age. First load up some methylation data from GEO using the data libr..." />
-<link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Performing custom imputations" href="plot_custom_imputation_implementation.html" /><link rel="prev" title="Epigenetic Clock Examples" href="index.html" />
+<link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Down Syndrome Epigenetic Plotting" href="plot_down_syndrome_model.html" /><link rel="prev" title="Epigenetic Clock Examples" href="index.html" />
 
     <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
         <title>“Epigenetic Clocks” in GEO Data - Biolearn</title>
@@ -190,6 +190,7 @@
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Epigenetic Clock Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Epigenetic Clock Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l3 current current-page"><a class="current reference internal" href="#">“Epigenetic Clocks” in GEO Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot_down_syndrome_model.html">Down Syndrome Epigenetic Plotting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="plot_custom_imputation_implementation.html">Performing custom imputations</a></li>
 </ul>
 </li>
@@ -197,25 +198,30 @@
 <li class="toctree-l3"><a class="reference internal" href="../01_composite_biomarkers/plot_nhanes.html">“Phenotypic Ages” in NHANES Data</a></li>
 </ul>
 </li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../02_challenge_submissions/index.html">Challenge Submission Examples</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Challenge Submission Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../02_challenge_submissions/simple_competiton_submission.html">Building a competition submission using an existing model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_challenge_submissions/training_simple_model.html">Training an ElasticNet model</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../modules/index.html">API References</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of API References</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../modules/load.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.load</span></code>: Data Loading Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of biolearn.load: Data Loading Utilities</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../modules/index.html">API References</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of API References</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../modules/load.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.load</span></code>: Data Loading Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of biolearn.load: Data Loading Utilities</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.load.load_nhanes.html">biolearn.load.load_nhanes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.load.load_fhs.html">biolearn.load.load_fhs</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../modules/data_library.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.data_library</span></code>: DataLibrary</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of biolearn.data_library: DataLibrary</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../modules/data_library.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.data_library</span></code>: DataLibrary</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of biolearn.data_library: DataLibrary</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.data_library.DataLibrary.html">biolearn.data_library.DataLibrary</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.data_library.DataSource.html">biolearn.data_library.DataSource</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.data_library.GeoData.html">biolearn.data_library.GeoData</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../modules/model_gallery.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.model_gallery</span></code>: ModelGallery</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of biolearn.model_gallery: ModelGallery</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../modules/model_gallery.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.model_gallery</span></code>: ModelGallery</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of biolearn.model_gallery: ModelGallery</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.model_gallery.ModelGallery.html">biolearn.model_gallery.ModelGallery</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../modules/imputation.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.imputation</span></code>: Data Imputation Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of biolearn.imputation: Data Imputation Utilities</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../modules/imputation.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.imputation</span></code>: Data Imputation Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of biolearn.imputation: Data Imputation Utilities</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.imputation.impute_from_standard.html">biolearn.imputation.impute_from_standard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.imputation.impute_from_average.html">biolearn.imputation.impute_from_average</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.imputation.hybrid_impute.html">biolearn.imputation.hybrid_impute</a></li>
@@ -292,8 +298,8 @@ to download the full example code or to run this example in your browser via Bin
 </pre></div>
 </div>
 </section>
-<section id="finally-exctract-the-age-data-from-the-metadata-from-geo-and-plot-the-results-using-seaborn">
-<h2>Finally exctract the age data from the metadata from GEO and plot the results using seaborn<a class="headerlink" href="#finally-exctract-the-age-data-from-the-metadata-from-geo-and-plot-the-results-using-seaborn" title="Link to this heading">#</a></h2>
+<section id="finally-extract-the-age-data-from-the-metadata-from-geo-and-plot-the-results-using-seaborn">
+<h2>Finally extract the age data from the metadata from GEO and plot the results using seaborn<a class="headerlink" href="#finally-extract-the-age-data-from-the-metadata-from-geo-and-plot-the-results-using-seaborn" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sn</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
@@ -312,10 +318,10 @@ to download the full example code or to run this example in your browser via Bin
 <img src="../../_images/sphx_glr_plot_epigenetic_clocks_on_geo_001.png" srcset="../../_images/sphx_glr_plot_epigenetic_clocks_on_geo_001.png" alt="plot epigenetic clocks on geo" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/axisgrid.py:123: UserWarning: The figure layout has changed to tight
   self._figure.tight_layout(*args, **kwargs)
 
-&lt;seaborn.axisgrid.FacetGrid object at 0x7f75b5f34d00&gt;
+&lt;seaborn.axisgrid.FacetGrid object at 0x7f30483c6f80&gt;
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 8.677 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 8.577 seconds)</p>
 <p><strong>Estimated memory usage:</strong>  1746 MB</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-00-epigenetic-biomarkers-plot-epigenetic-clocks-on-geo-py">
 <div class="binder-badge docutils container">
@@ -337,12 +343,12 @@ to download the full example code or to run this example in your browser via Bin
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="plot_custom_imputation_implementation.html">
+          <a class="next-page" href="plot_down_syndrome_model.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Performing custom imputations</div>
+                <div class="title">Down Syndrome Epigenetic Plotting</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -390,7 +396,7 @@ to download the full example code or to run this example in your browser via Bin
 <li><a class="reference internal" href="#">“Epigenetic Clocks” in GEO Data</a><ul>
 <li><a class="reference internal" href="#first-load-up-some-methylation-data-from-geo-using-the-data-library">First load up some methylation data from GEO using the data library</a></li>
 <li><a class="reference internal" href="#now-run-three-different-clocks-on-the-dataset-to-produce-epigenetic-clock-ages">Now run three different clocks on the dataset to produce epigenetic clock ages</a></li>
-<li><a class="reference internal" href="#finally-exctract-the-age-data-from-the-metadata-from-geo-and-plot-the-results-using-seaborn">Finally exctract the age data from the metadata from GEO and plot the results using seaborn</a></li>
+<li><a class="reference internal" href="#finally-extract-the-age-data-from-the-metadata-from-geo-and-plot-the-results-using-seaborn">Finally extract the age data from the metadata from GEO and plot the results using seaborn</a></li>
 </ul>
 </li>
 </ul>
