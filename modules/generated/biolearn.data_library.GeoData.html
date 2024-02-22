@@ -334,6 +334,29 @@ and rows represent different methylation sites.</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="biolearn.data_library.GeoData.quality_report">
+<span class="sig-name descname"><span class="pre">quality_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sites</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#biolearn.data_library.GeoData.quality_report" title="Link to this definition">#</a></dt>
+<dd><p>Generates a quality control report for the genomic data, optionally filtered by specified methylation sites,
+and includes a detailed section reporting the missing percentage for each methylation site.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sites</strong> (<a class="reference external" href="https://docs.python.org/3.10/library/stdtypes.html#list" title="(in Python v3.10)"><em>list</em></a><em>, </em><em>optional</em>) – A list of methylation site identifiers to include in the report.
+If None, all sites are included.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>An object containing both detailed methylation data, a summary,</dt><dd><p>and a detailed section for missing percentages per site.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QualityReport</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <section id="examples-using-biolearn-data-library-geodata">
@@ -405,6 +428,7 @@ and rows represent different methylation sites.</p>
 <li><a class="reference internal" href="#biolearn.data_library.GeoData.dnam"><code class="docutils literal notranslate"><span class="pre">GeoData.dnam</span></code></a></li>
 <li><a class="reference internal" href="#biolearn.data_library.GeoData.__init__"><code class="docutils literal notranslate"><span class="pre">GeoData.__init__</span></code></a></li>
 <li><a class="reference internal" href="#biolearn.data_library.GeoData.copy"><code class="docutils literal notranslate"><span class="pre">GeoData.copy</span></code></a></li>
+<li><a class="reference internal" href="#biolearn.data_library.GeoData.quality_report"><code class="docutils literal notranslate"><span class="pre">GeoData.quality_report</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#examples-using-biolearn-data-library-geodata">Examples using <code class="docutils literal notranslate"><span class="pre">biolearn.data_library.GeoData</span></code></a></li>
