@@ -90,7 +90,7 @@ Now we save this to a csv in the expected format.
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.2?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/simple_competiton_submission.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.3?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/simple_competiton_submission.ipynb
         :alt: Launch binder
         :width: 150 px
 
