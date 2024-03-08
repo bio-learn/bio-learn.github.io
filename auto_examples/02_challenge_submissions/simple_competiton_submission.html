@@ -279,11 +279,11 @@ to download the full example code or to run this example in your browser via Bin
 <p>This example shows you how to generate a submission for the community warmup using an existing model</p>
 <section id="loading-up-the-data-for-the-competition">
 <h2>Loading up the data for the competition<a class="headerlink" href="#loading-up-the-data-for-the-competition" title="Link to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.data_library</span> <span class="kn">import</span> <span class="n">GeoData</span>
 
 <span class="c1">#Download the data file for the warmup challenge linked here https://www.synapse.org/#!Synapse:syn52966292/wiki/625231</span>
 <span class="n">DOWNLOADED_DATA_FILE_PATH</span><span class="o">=</span><span class="s2">&quot;ADD YOUR PATH HERE&quot;</span>
-<span class="n">challenge_data</span> <span class="o">=</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html#pandas.read_csv" title="pandas.read_csv" class="sphx-glr-backref-module-pandas sphx-glr-backref-type-py-function"><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span></a><span class="p">(</span><span class="n">DOWNLOADED_DATA_FILE_PATH</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">challenge_data</span> <span class="o">=</span> <span class="n">GeoData</span><span class="o">.</span><span class="n">from_methylation_matrix</span><span class="p">(</span><span class="n">DOWNLOADED_DATA_FILE_PATH</span><span class="p">)</span>
 <span class="n">challenge_data</span>
 </pre></div>
 </div>
@@ -291,10 +291,9 @@ to download the full example code or to run this example in your browser via Bin
 <section id="use-the-lin-model-to-predict-the-age">
 <h2>Use the Lin model to predict the age<a class="headerlink" href="#use-the-lin-model-to-predict-the-age" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.model_gallery</span> <span class="kn">import</span> <a href="../../modules/generated/biolearn.model_gallery.ModelGallery.html#biolearn.model_gallery.ModelGallery" title="biolearn.model_gallery.ModelGallery" class="sphx-glr-backref-module-biolearn-model_gallery sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ModelGallery</span></a>
-<span class="kn">from</span> <span class="nn">biolearn.data_library</span> <span class="kn">import</span> <a href="../../modules/generated/biolearn.data_library.GeoData.html#biolearn.data_library.GeoData" title="biolearn.data_library.GeoData" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">GeoData</span></a>
+
 <span class="c1">#Lin scored the best so lets use that</span>
-<span class="n">data</span> <span class="o">=</span> <a href="../../modules/generated/biolearn.data_library.GeoData.html#biolearn.data_library.GeoData" title="biolearn.data_library.GeoData" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">GeoData</span></a><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">challenge_data</span><span class="p">)</span>
-<span class="n">results</span> <span class="o">=</span> <a href="../../modules/generated/biolearn.model_gallery.ModelGallery.html#biolearn.model_gallery.ModelGallery" title="biolearn.model_gallery.ModelGallery" class="sphx-glr-backref-module-biolearn-model_gallery sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ModelGallery</span></a><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Lin&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <a href="../../modules/generated/biolearn.model_gallery.ModelGallery.html#biolearn.model_gallery.ModelGallery" title="biolearn.model_gallery.ModelGallery" class="sphx-glr-backref-module-biolearn-model_gallery sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ModelGallery</span></a><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Lin&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">challenge_data</span><span class="p">)</span>
 <span class="n">results</span>
 </pre></div>
 </div>
@@ -313,7 +312,7 @@ to download the full example code or to run this example in your browser via Bin
 <p><strong>Estimated memory usage:</strong>  0 MB</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-02-challenge-submissions-simple-competiton-submission-py">
 <div class="binder-badge docutils container">
-<a class="reference external image-reference" href="https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.4?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/simple_competiton_submission.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo2.svg" width="150px" /></a>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.5?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/simple_competiton_submission.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo2.svg" width="150px" /></a>
 </div>
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/b31bda480984488d8353b5b9b0f35924/simple_competiton_submission.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">simple_competiton_submission.py</span></code></a></p>

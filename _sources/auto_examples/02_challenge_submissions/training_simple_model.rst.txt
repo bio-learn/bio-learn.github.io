@@ -28,24 +28,25 @@ This example shows you how to train a simple elasticnet model and use it to subm
 Loading up the data for the competition
 ---------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 11-18
+.. GENERATED FROM PYTHON SOURCE LINES 11-19
 
 .. code-block:: default
 
-    import pandas as pd
+    from biolearn.data_library import GeoData
 
     #Download the data file for the warmup challenge linked here https://www.synapse.org/#!Synapse:syn52966292/wiki/625231
     DOWNLOADED_DATA_FILE_PATH="ADD YOUR PATH HERE"
-    challenge_data = pd.read_csv(DOWNLOADED_DATA_FILE_PATH, index_col=0)
+    challenge_data = GeoData.from_methylation_matrix(DOWNLOADED_DATA_FILE_PATH)
     challenge_data
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 19-21
+
+.. GENERATED FROM PYTHON SOURCE LINES 20-22
 
 Load up some training data
 ------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 21-26
+.. GENERATED FROM PYTHON SOURCE LINES 22-27
 
 .. code-block:: default
 
@@ -55,13 +56,13 @@ Load up some training data
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 27-30
+.. GENERATED FROM PYTHON SOURCE LINES 28-31
 
 Narrow down what sites are correlated with age
  --------------------------------------------------------------------------------------------------------------------------
 NOTE: This takes a long time to run
 
-.. GENERATED FROM PYTHON SOURCE LINES 30-65
+.. GENERATED FROM PYTHON SOURCE LINES 31-66
 
 .. code-block:: default
 
@@ -101,12 +102,12 @@ NOTE: This takes a long time to run
     print(f"Stable CpG sites (associated with age in more than 60% of bootstrap samples): {stable_cpg_sites}")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 66-68
+.. GENERATED FROM PYTHON SOURCE LINES 67-69
 
 Seperate data into training and test sets
 --------------------------------------------------------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 68-79
+.. GENERATED FROM PYTHON SOURCE LINES 69-80
 
 .. code-block:: default
 
@@ -122,7 +123,7 @@ Seperate data into training and test sets
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 80-85
+.. GENERATED FROM PYTHON SOURCE LINES 81-86
 
 Train a model using elastic net
 --------------------------------------------------------------------------------------------------------------------------
@@ -130,7 +131,7 @@ Define the model
 alpha is the regularization strength, and l1_ratio defines the mix between L1 and L2
 l1_ratio = 1 is Lasso; l1_ratio = 0 is Ridge.
 
-.. GENERATED FROM PYTHON SOURCE LINES 85-98
+.. GENERATED FROM PYTHON SOURCE LINES 86-99
 
 .. code-block:: default
 
@@ -148,12 +149,12 @@ l1_ratio = 1 is Lasso; l1_ratio = 0 is Ridge.
     print(f"Mean Squared Error on Test Data: {mse}")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 99-101
+.. GENERATED FROM PYTHON SOURCE LINES 100-102
 
 Plot the results to see how good our model is
 --------------------------------------------------------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 101-122
+.. GENERATED FROM PYTHON SOURCE LINES 102-123
 
 .. code-block:: default
 
@@ -179,34 +180,35 @@ Plot the results to see how good our model is
     print(f"Mean Absolute Error (MAE): {mae:.4f}")
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 123-125
+.. GENERATED FROM PYTHON SOURCE LINES 124-126
 
 Run the challenge data through the model
 --------------------------------------------------------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 125-130
+.. GENERATED FROM PYTHON SOURCE LINES 126-131
 
 .. code-block:: default
 
 
-    pruned_data = challenge_data.T[stable_cpg_names]
+    pruned_data = challenge_data.dnam.T[stable_cpg_names]
     pruned_data = pruned_data.fillna(0)
     challenge_results = model.predict(pruned_data)
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 131-133
+.. GENERATED FROM PYTHON SOURCE LINES 132-134
 
 Save the results as an output file for submission
 --------------------------------------------------------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 133-138
+.. GENERATED FROM PYTHON SOURCE LINES 134-140
 
 .. code-block:: default
 
+    import pandas as pd
 
     predicted_age_df = pd.DataFrame({
         'predictedAge': challenge_results
-    }, index=challenge_data.columns)
+    }, index=challenge_data.dnam.columns)
     predicted_age_df.index.name = 'sampleId'
     predicted_age_df
 
@@ -227,7 +229,7 @@ Save the results as an output file for submission
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.4?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/training_simple_model.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.5?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/training_simple_model.ipynb
         :alt: Launch binder
         :width: 150 px
 
