@@ -30,7 +30,7 @@ First load up some methylation data from GEO using the data library
 
 .. GENERATED FROM PYTHON SOURCE LINES 11-14
 
-.. code-block:: default
+.. code-block:: Python
 
     from biolearn.data_library import DataLibrary
     test_data = DataLibrary().get("GSE52588").load()
@@ -49,7 +49,7 @@ Now run the down syndrome model on the data to get a score
 
 .. GENERATED FROM PYTHON SOURCE LINES 17-23
 
-.. code-block:: default
+.. code-block:: Python
 
 
     from biolearn.model_gallery import ModelGallery
@@ -71,7 +71,7 @@ Finally generate a boxplot to show the predictive power
 
 .. GENERATED FROM PYTHON SOURCE LINES 26-48
 
-.. code-block:: default
+.. code-block:: Python
 
     import matplotlib.pyplot as plt
     import seaborn as sns
@@ -110,9 +110,9 @@ Finally generate a boxplot to show the predictive power
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 6.244 seconds)
+   **Total running time of the script:** (0 minutes 28.809 seconds)
 
-**Estimated memory usage:**  1322 MB
+**Estimated memory usage:**  928 MB
 
 
 .. _sphx_glr_download_auto_examples_00_epigenetic_biomarkers_plot_down_syndrome_model.py:
@@ -121,23 +121,20 @@ Finally generate a boxplot to show the predictive power
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.0?urlpath=lab/tree/notebooks/auto_examples/00_epigenetic_biomarkers/plot_down_syndrome_model.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/main?urlpath=lab/tree/notebooks/auto_examples/00_epigenetic_biomarkers/plot_down_syndrome_model.ipynb
         :alt: Launch binder
         :width: 150 px
-
-
-
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: plot_down_syndrome_model.py <plot_down_syndrome_model.py>`
 
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: plot_down_syndrome_model.ipynb <plot_down_syndrome_model.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: plot_down_syndrome_model.py <plot_down_syndrome_model.py>`
 
 
 .. only:: html

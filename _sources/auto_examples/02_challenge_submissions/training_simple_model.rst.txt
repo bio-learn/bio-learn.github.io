@@ -30,7 +30,7 @@ Loading up the data for the competition
 
 .. GENERATED FROM PYTHON SOURCE LINES 11-19
 
-.. code-block:: default
+.. code-block:: Python
 
     from biolearn.data_library import GeoData
 
@@ -48,7 +48,7 @@ Load up some training data
 
 .. GENERATED FROM PYTHON SOURCE LINES 22-27
 
-.. code-block:: default
+.. code-block:: Python
 
     from biolearn.data_library import DataLibrary
     data = DataLibrary().get("GSE40279").load()
@@ -64,7 +64,7 @@ NOTE: This takes a long time to run
 
 .. GENERATED FROM PYTHON SOURCE LINES 31-66
 
-.. code-block:: default
+.. code-block:: Python
 
     import numpy as np
     from sklearn.linear_model import LinearRegression
@@ -109,7 +109,7 @@ Seperate data into training and test sets
 
 .. GENERATED FROM PYTHON SOURCE LINES 69-80
 
-.. code-block:: default
+.. code-block:: Python
 
     from sklearn.model_selection import train_test_split
 
@@ -133,7 +133,7 @@ l1_ratio = 1 is Lasso; l1_ratio = 0 is Ridge.
 
 .. GENERATED FROM PYTHON SOURCE LINES 86-99
 
-.. code-block:: default
+.. code-block:: Python
 
     from sklearn.linear_model import ElasticNet
     from sklearn.metrics import mean_squared_error
@@ -156,7 +156,7 @@ Plot the results to see how good our model is
 
 .. GENERATED FROM PYTHON SOURCE LINES 102-123
 
-.. code-block:: default
+.. code-block:: Python
 
     import matplotlib.pyplot as plt
 
@@ -187,7 +187,7 @@ Run the challenge data through the model
 
 .. GENERATED FROM PYTHON SOURCE LINES 126-131
 
-.. code-block:: default
+.. code-block:: Python
 
 
     pruned_data = challenge_data.dnam.T[stable_cpg_names]
@@ -202,7 +202,7 @@ Save the results as an output file for submission
 
 .. GENERATED FROM PYTHON SOURCE LINES 134-140
 
-.. code-block:: default
+.. code-block:: Python
 
     import pandas as pd
 
@@ -211,11 +211,6 @@ Save the results as an output file for submission
     }, index=challenge_data.dnam.columns)
     predicted_age_df.index.name = 'sampleId'
     predicted_age_df
-
-.. rst-class:: sphx-glr-timing
-
-   **Total running time of the script:** (0 minutes 0.000 seconds)
-
 **Estimated memory usage:**  0 MB
 
 
@@ -225,23 +220,20 @@ Save the results as an output file for submission
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.5?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/training_simple_model.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.7?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/training_simple_model.ipynb
         :alt: Launch binder
         :width: 150 px
-
-
-
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: training_simple_model.py <training_simple_model.py>`
 
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: training_simple_model.ipynb <training_simple_model.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: training_simple_model.py <training_simple_model.py>`
 
 
 .. only:: html

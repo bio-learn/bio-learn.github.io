@@ -30,7 +30,7 @@ First load up some methylation data from GEO using the data library
 
 .. GENERATED FROM PYTHON SOURCE LINES 11-17
 
-.. code-block:: default
+.. code-block:: Python
 
     from biolearn.data_library import DataLibrary
     #Load up GSE41169 blood DNAm data
@@ -52,7 +52,7 @@ Now run three different clocks on the dataset to produce epigenetic clock ages
 
 .. GENERATED FROM PYTHON SOURCE LINES 20-31
 
-.. code-block:: default
+.. code-block:: Python
 
 
     from biolearn.model_gallery import ModelGallery
@@ -79,7 +79,7 @@ Finally extract the age data from the metadata from GEO and plot the results usi
 
 .. GENERATED FROM PYTHON SOURCE LINES 34-46
 
-.. code-block:: default
+.. code-block:: Python
 
     import seaborn as sn
     import pandas as pd
@@ -106,19 +106,17 @@ Finally extract the age data from the metadata from GEO and plot the results usi
 
  .. code-block:: none
 
-    /home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/axisgrid.py:123: UserWarning: The figure layout has changed to tight
-      self._figure.tight_layout(*args, **kwargs)
 
-    <seaborn.axisgrid.FacetGrid object at 0x7f30483c6f80>
+    <seaborn.axisgrid.FacetGrid object at 0x79382ae8d540>
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 8.577 seconds)
+   **Total running time of the script:** (0 minutes 8.467 seconds)
 
-**Estimated memory usage:**  1746 MB
+**Estimated memory usage:**  1724 MB
 
 
 .. _sphx_glr_download_auto_examples_00_epigenetic_biomarkers_plot_epigenetic_clocks_on_geo.py:
@@ -127,23 +125,20 @@ Finally extract the age data from the metadata from GEO and plot the results usi
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.0?urlpath=lab/tree/notebooks/auto_examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/main?urlpath=lab/tree/notebooks/auto_examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.ipynb
         :alt: Launch binder
         :width: 150 px
-
-
-
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: plot_epigenetic_clocks_on_geo.py <plot_epigenetic_clocks_on_geo.py>`
 
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: plot_epigenetic_clocks_on_geo.ipynb <plot_epigenetic_clocks_on_geo.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: plot_epigenetic_clocks_on_geo.py <plot_epigenetic_clocks_on_geo.py>`
 
 
 .. only:: html

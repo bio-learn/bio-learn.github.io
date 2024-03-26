@@ -13,7 +13,7 @@
 <meta name="description" content="This example shows you how to generate a submission for the community warmup using an existing model Loading up the data for the competition: Use the Lin model to predict the age: Save a csv in the..." />
 <link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Training an ElasticNet model" href="training_simple_model.html" /><link rel="prev" title="Challenge Submission Examples" href="index.html" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
         <title>Building a competition submission using an existing model - Biolearn</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=045299b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
@@ -279,18 +279,18 @@ to download the full example code or to run this example in your browser via Bin
 <p>This example shows you how to generate a submission for the community warmup using an existing model</p>
 <section id="loading-up-the-data-for-the-competition">
 <h2>Loading up the data for the competition<a class="headerlink" href="#loading-up-the-data-for-the-competition" title="Link to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.data_library</span> <span class="kn">import</span> <span class="n">GeoData</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.data_library</span> <span class="kn">import</span> <span class="n">GeoData</span>
 
 <span class="c1">#Download the data file for the warmup challenge linked here https://www.synapse.org/#!Synapse:syn52966292/wiki/625231</span>
 <span class="n">DOWNLOADED_DATA_FILE_PATH</span><span class="o">=</span><span class="s2">&quot;ADD YOUR PATH HERE&quot;</span>
-<span class="n">challenge_data</span> <span class="o">=</span> <span class="n">GeoData</span><span class="o">.</span><span class="n">from_methylation_matrix</span><span class="p">(</span><span class="n">DOWNLOADED_DATA_FILE_PATH</span><span class="p">)</span>
+<span class="n">challenge_data</span> <span class="o">=</span> <a href="../../modules/generated/biolearn.data_library.GeoData.html#biolearn.data_library.GeoData.from_methylation_matrix" title="biolearn.data_library.GeoData.from_methylation_matrix" class="sphx-glr-backref-module-biolearn-data_library-GeoData sphx-glr-backref-type-py-method"><span class="n">GeoData</span><span class="o">.</span><span class="n">from_methylation_matrix</span></a><span class="p">(</span><span class="n">DOWNLOADED_DATA_FILE_PATH</span><span class="p">)</span>
 <span class="n">challenge_data</span>
 </pre></div>
 </div>
 </section>
 <section id="use-the-lin-model-to-predict-the-age">
 <h2>Use the Lin model to predict the age<a class="headerlink" href="#use-the-lin-model-to-predict-the-age" title="Link to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.model_gallery</span> <span class="kn">import</span> <a href="../../modules/generated/biolearn.model_gallery.ModelGallery.html#biolearn.model_gallery.ModelGallery" title="biolearn.model_gallery.ModelGallery" class="sphx-glr-backref-module-biolearn-model_gallery sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ModelGallery</span></a>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.model_gallery</span> <span class="kn">import</span> <a href="../../modules/generated/biolearn.model_gallery.ModelGallery.html#biolearn.model_gallery.ModelGallery" title="biolearn.model_gallery.ModelGallery" class="sphx-glr-backref-module-biolearn-model_gallery sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ModelGallery</span></a>
 
 <span class="c1">#Lin scored the best so lets use that</span>
 <span class="n">results</span> <span class="o">=</span> <a href="../../modules/generated/biolearn.model_gallery.ModelGallery.html#biolearn.model_gallery.ModelGallery" title="biolearn.model_gallery.ModelGallery" class="sphx-glr-backref-module-biolearn-model_gallery sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ModelGallery</span></a><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Lin&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">challenge_data</span><span class="p">)</span>
@@ -301,24 +301,23 @@ to download the full example code or to run this example in your browser via Bin
 <dt>Save a csv in the correct format for submission</dt><dd></dd>
 </dl>
 <p>Now we save this to a csv in the expected format.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">submission</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="s2">&quot;sampleId&quot;</span><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">submission</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">rename_axis</span><span class="p">(</span><span class="s2">&quot;sampleId&quot;</span><span class="p">)</span>
 <span class="n">submission</span> <span class="o">=</span> <span class="n">submission</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Predicted&quot;</span><span class="p">:</span> <span class="s2">&quot;predictedAge&quot;</span><span class="p">})</span>
 <span class="n">submission</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;lin_submission.csv&quot;</span><span class="p">)</span>
 <span class="c1">#You can submit this file to the community warmup challenge by following the instructions below</span>
 <span class="n">submission</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.000 seconds)</p>
 <p><strong>Estimated memory usage:</strong>  0 MB</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-02-challenge-submissions-simple-competiton-submission-py">
 <div class="binder-badge docutils container">
-<a class="reference external image-reference" href="https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.5?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/simple_competiton_submission.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo2.svg" width="150px" /></a>
-</div>
-<div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/b31bda480984488d8353b5b9b0f35924/simple_competiton_submission.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">simple_competiton_submission.py</span></code></a></p>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.7?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/simple_competiton_submission.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo2.svg" width="150px" /></a>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/097efd573efd69c248c612b7d5ada8b7/simple_competiton_submission.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">simple_competiton_submission.ipynb</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/b31bda480984488d8353b5b9b0f35924/simple_competiton_submission.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">simple_competiton_submission.py</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>

@@ -2,9 +2,20 @@
 <html class="no-js" lang="en" data-content_root="./">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="search" title="Search" href="#" />
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Biolearn and the Future of Biomarkers" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bio-learn.github.io/roadmap.html" />
+<meta property="og:site_name" content="Biolearn" />
+<meta property="og:description" content="The omics revolution is transforming biology by providing a wealth of data that has the potential to transform health care. We see a future where a single blood test could offer comprehensive insig..." />
+<meta property="og:image" content="https://bio-learn.github.io/_images/biolearn-roadmap.png" />
+<meta property="og:image:alt" content="Biolearn Roadmap" />
+<meta name="description" content="The omics revolution is transforming biology by providing a wealth of data that has the potential to transform health care. We see a future where a single blood test could offer comprehensive insig..." />
+<link rel="search" title="Search" href="search.html" />
 
-    <link rel="shortcut icon" href="_static/favicon.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 --><title>Search - Biolearn</title><link rel="stylesheet" type="text/css" href="_static/pygments.css?v=045299b1" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
+        <title>Biolearn and the Future of Biomarkers - Biolearn</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=045299b1" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=61a4c737" />
@@ -166,7 +177,7 @@
   
   <span class="sidebar-brand-text">Biolearn</span>
   
-</a><form class="sidebar-search-container" method="get" action="#" role="search">
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
@@ -243,7 +254,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -257,17 +269,38 @@
           </label>
         </div>
         <article role="main">
-          
-<noscript>
-<div class="admonition error">
-  <p class="admonition-title">Error</p>
-  <p>
-    Please activate JavaScript to enable the search functionality.
-  </p>
-</div>
-</noscript>
-
-<div id="search-results"></div>
+          <section id="biolearn-and-the-future-of-biomarkers">
+<h1>Biolearn and the Future of Biomarkers<a class="headerlink" href="#biolearn-and-the-future-of-biomarkers" title="Link to this heading">#</a></h1>
+<p>The omics revolution is transforming biology by providing a wealth of data that has the potential to transform health care. We see a future where a single blood test could offer comprehensive insights into one’s health and surrogate endpoints for the development of age reversing therapeutics. However, the path to this future is obstructed by challenges such as data access and the complexity of human biology. Biolearn is addressing these issues by developing modern tools for accessing data and extracting insights. Recognizing the magnitude of this challenge, we’ve adopted an open-source and open-science approach. We invite you to explore our roadmap and learn how you can contribute to this mission.</p>
+<a class="reference internal image-reference" href="_images/biolearn-roadmap.png"><img alt="Biolearn Roadmap" src="_images/biolearn-roadmap.png" style="width: 100%;" /></a>
+<p>Currently, Biolearn supports primarily epigenetic methylation models with 25 models and easy to load data sources from <a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/">GEO</a> comprising collectively thousands of samples. We have big ambitions for Biolearn but we need help to achieve them. How can you help?</p>
+<ul>
+<li><p><strong>You can code.</strong></p>
+<p>If you can write code we need your help building the library. We have both large and small tasks available for varying skill levels, knowledge of biology and time availability.</p>
+<p>Some items needing work right now:</p>
+<ul class="simple">
+<li><p><em>Improved Caching</em> - Caching needs to be better configurable for different environments</p></li>
+<li><p><em>Data loading and parsing optimizations</em> - Currently loading large files can take minutes. We can speed this up ~10x.</p></li>
+<li><p><em>Integrating blood biomarkers into unified data format</em> - Currently Geo data and blood biomarkers use separate data structures. We want to integrate these in preparation of supporting multi-omics.</p></li>
+<li><p><em>Adding GEO datasets</em> - We know of many more GEO datasets that have methylation and age data. This process is partially automated but requires a human to review.</p></li>
+<li><p><em>Implement Genetic Disease Models</em> - Currently we have 1 but there are more genetic diseases that can be identified using epigenetic data</p></li>
+</ul>
+</li>
+<li><p><strong>You have built a model.</strong></p>
+<p>If you have built a model for aging or human health and are interested in sharing it by including it in biolearn please reach out to us. If your model is proprietary but you would be open to sharing access with researchers via API we are interested in talking with you also.</p>
+</li>
+<li><p><strong>You have access to data.</strong></p>
+<p>If you know of useful public omics datasets that are not in biolearn we would like to hear about it. If you have access to data that is currently private but you think could be made more public in some way please reach out to us.</p>
+</li>
+<li><p><strong>You would like to fund our work.</strong></p>
+<p>If you are interested in supporting our mission financially please reach out to us directly. Money will be used to support maintenance and development of Biolearn, provide prize pots for further challenges and support the generation of more expansive open multi-omics datasets.</p>
+</li>
+</ul>
+</section>
+<section id="join-us">
+<h1>Join Us<a class="headerlink" href="#join-us" title="Link to this heading">#</a></h1>
+<p>If you would like to contriubte join our <a class="reference external" href="https://discord.gg/wZH85WRTxN">Discord server</a> and reach out to any of our Maintainers.</p>
+</section>
 
         </article>
       </div>
@@ -307,8 +340,5 @@
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=4ea706d9"></script>
     <script src="_static/design-tabs.js?v=36754332"></script>
-    
-<script src="_static/searchtools.js"></script>
-<script src="_static/language_data.js"></script>
-<script src="searchindex.js"></script></body>
+    </body>
 </html>

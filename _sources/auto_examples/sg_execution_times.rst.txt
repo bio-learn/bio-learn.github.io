@@ -1,12 +1,12 @@
 
 :orphan:
 
-.. _sphx_glr_auto_examples_01_composite_biomarkers_sg_execution_times:
+.. _sphx_glr_auto_examples_sg_execution_times:
 
 
 Computation times
 =================
-**00:01.108** total execution time for 1 file **from auto_examples/01_composite_biomarkers**:
+**00:00.000** total execution time for 0 files **from auto_examples**:
 
 .. container::
 
@@ -32,6 +32,6 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_auto_examples_01_composite_biomarkers_plot_nhanes.py` (``plot_nhanes.py``)
-     - 00:01.108
-     - 9.0
+   * - N/A
+     - N/A
+     - N/A

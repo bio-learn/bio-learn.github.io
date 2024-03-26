@@ -13,7 +13,7 @@
 <meta name="description" content="This example loads a DNA Methylation data from GEO with down syndrome metadata and shows how the sameples can be distiguished with epigenetic data First load up some methylation data from GEO using..." />
 <link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Performing custom imputations" href="plot_custom_imputation_implementation.html" /><link rel="prev" title="“Epigenetic Clocks” in GEO Data" href="plot_epigenetic_clocks_on_geo.html" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
         <title>Down Syndrome Epigenetic Plotting - Biolearn</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=045299b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
@@ -279,14 +279,14 @@ to download the full example code or to run this example in your browser via Bin
 <p>This example loads a DNA Methylation data from GEO with down syndrome metadata and shows how the sameples can be distiguished with epigenetic data</p>
 <section id="first-load-up-some-methylation-data-from-geo-using-the-data-library">
 <h2>First load up some methylation data from GEO using the data library<a class="headerlink" href="#first-load-up-some-methylation-data-from-geo-using-the-data-library" title="Link to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.data_library</span> <span class="kn">import</span> <a href="../../modules/generated/biolearn.data_library.DataLibrary.html#biolearn.data_library.DataLibrary" title="biolearn.data_library.DataLibrary" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class"><span class="n">DataLibrary</span></a>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.data_library</span> <span class="kn">import</span> <a href="../../modules/generated/biolearn.data_library.DataLibrary.html#biolearn.data_library.DataLibrary" title="biolearn.data_library.DataLibrary" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class"><span class="n">DataLibrary</span></a>
 <a href="../../modules/generated/biolearn.data_library.GeoData.html#biolearn.data_library.GeoData" title="biolearn.data_library.GeoData" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">test_data</span></a> <span class="o">=</span> <a href="../../modules/generated/biolearn.data_library.DataLibrary.html#biolearn.data_library.DataLibrary" title="biolearn.data_library.DataLibrary" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class"><span class="n">DataLibrary</span></a><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;GSE52588&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
 <section id="now-run-the-down-syndrome-model-on-the-data-to-get-a-score">
 <h2>Now run the down syndrome model on the data to get a score<a class="headerlink" href="#now-run-the-down-syndrome-model-on-the-data-to-get-a-score" title="Link to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.model_gallery</span> <span class="kn">import</span> <a href="../../modules/generated/biolearn.model_gallery.ModelGallery.html#biolearn.model_gallery.ModelGallery" title="biolearn.model_gallery.ModelGallery" class="sphx-glr-backref-module-biolearn-model_gallery sphx-glr-backref-type-py-class"><span class="n">ModelGallery</span></a>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.model_gallery</span> <span class="kn">import</span> <a href="../../modules/generated/biolearn.model_gallery.ModelGallery.html#biolearn.model_gallery.ModelGallery" title="biolearn.model_gallery.ModelGallery" class="sphx-glr-backref-module-biolearn-model_gallery sphx-glr-backref-type-py-class"><span class="n">ModelGallery</span></a>
 <span class="n">model</span> <span class="o">=</span> <a href="../../modules/generated/biolearn.model_gallery.ModelGallery.html#biolearn.model_gallery.ModelGallery" title="biolearn.model_gallery.ModelGallery" class="sphx-glr-backref-module-biolearn-model_gallery sphx-glr-backref-type-py-class"><span class="n">ModelGallery</span></a><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;DownSyndrome&quot;</span><span class="p">)</span>
 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">results</span></a> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><a href="../../modules/generated/biolearn.data_library.GeoData.html#biolearn.data_library.GeoData" title="biolearn.data_library.GeoData" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">test_data</span></a><span class="p">)</span>
 </pre></div>
@@ -294,7 +294,7 @@ to download the full example code or to run this example in your browser via Bin
 </section>
 <section id="finally-generate-a-boxplot-to-show-the-predictive-power">
 <h2>Finally generate a boxplot to show the predictive power<a class="headerlink" href="#finally-generate-a-boxplot-to-show-the-predictive-power" title="Link to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 
 <span class="c1"># Set index for merging</span>
@@ -318,17 +318,17 @@ to download the full example code or to run this example in your browser via Bin
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_plot_down_syndrome_model_001.png" srcset="../../_images/sphx_glr_plot_down_syndrome_model_001.png" alt="Epigenetic Score" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 6.244 seconds)</p>
-<p><strong>Estimated memory usage:</strong>  1322 MB</p>
+<img src="../../_images/sphx_glr_plot_down_syndrome_model_001.png" srcset="../../_images/sphx_glr_plot_down_syndrome_model_001.png" alt="Epigenetic Score" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 28.809 seconds)</p>
+<p><strong>Estimated memory usage:</strong>  928 MB</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-00-epigenetic-biomarkers-plot-down-syndrome-model-py">
 <div class="binder-badge docutils container">
-<a class="reference external image-reference" href="https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.0?urlpath=lab/tree/notebooks/auto_examples/00_epigenetic_biomarkers/plot_down_syndrome_model.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo.svg" width="150px" /></a>
-</div>
-<div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/ecf0c0e243622b03f195ef58fa384213/plot_down_syndrome_model.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_down_syndrome_model.py</span></code></a></p>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/bio-learn/biolearn/main?urlpath=lab/tree/notebooks/auto_examples/00_epigenetic_biomarkers/plot_down_syndrome_model.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo.svg" width="150px" /></a>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/5678e49b7d6f7ad270f764fcdbd0b30f/plot_down_syndrome_model.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_down_syndrome_model.ipynb</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/ecf0c0e243622b03f195ef58fa384213/plot_down_syndrome_model.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_down_syndrome_model.py</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>

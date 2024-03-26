@@ -30,7 +30,7 @@ Loading up the data for the competition
 
 .. GENERATED FROM PYTHON SOURCE LINES 11-18
 
-.. code-block:: default
+.. code-block:: Python
 
     from biolearn.data_library import GeoData
 
@@ -47,7 +47,7 @@ Use the Lin model to predict the age
 
 .. GENERATED FROM PYTHON SOURCE LINES 21-27
 
-.. code-block:: default
+.. code-block:: Python
 
     from biolearn.model_gallery import ModelGallery
 
@@ -64,18 +64,13 @@ Now we save this to a csv in the expected format.
 
 .. GENERATED FROM PYTHON SOURCE LINES 31-35
 
-.. code-block:: default
+.. code-block:: Python
 
     submission = results.rename_axis("sampleId")
     submission = submission.rename(columns={"Predicted": "predictedAge"})
     submission.to_csv("lin_submission.csv")
     #You can submit this file to the community warmup challenge by following the instructions below
     submission
-
-.. rst-class:: sphx-glr-timing
-
-   **Total running time of the script:** (0 minutes 0.000 seconds)
-
 **Estimated memory usage:**  0 MB
 
 
@@ -85,23 +80,20 @@ Now we save this to a csv in the expected format.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.5?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/simple_competiton_submission.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.7?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/simple_competiton_submission.ipynb
         :alt: Launch binder
         :width: 150 px
-
-
-
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: simple_competiton_submission.py <simple_competiton_submission.py>`
 
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: simple_competiton_submission.ipynb <simple_competiton_submission.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: simple_competiton_submission.py <simple_competiton_submission.py>`
 
 
 .. only:: html

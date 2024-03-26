@@ -13,7 +13,7 @@
 <meta name="description" content="This example shows you how to train a simple elasticnet model and use it to submit to the challenge Loading up the data for the competition: Load up some training data: Narrow down what sites are c..." />
 <link rel="search" title="Search" href="../../search.html" /><link rel="next" title="API References" href="../../modules/index.html" /><link rel="prev" title="Building a competition submission using an existing model" href="simple_competiton_submission.html" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
         <title>Training an ElasticNet model - Biolearn</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=045299b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
@@ -279,18 +279,18 @@ to download the full example code or to run this example in your browser via Bin
 <p>This example shows you how to train a simple elasticnet model and use it to submit to the challenge</p>
 <section id="loading-up-the-data-for-the-competition">
 <h2>Loading up the data for the competition<a class="headerlink" href="#loading-up-the-data-for-the-competition" title="Link to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.data_library</span> <span class="kn">import</span> <span class="n">GeoData</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.data_library</span> <span class="kn">import</span> <span class="n">GeoData</span>
 
 <span class="c1">#Download the data file for the warmup challenge linked here https://www.synapse.org/#!Synapse:syn52966292/wiki/625231</span>
 <span class="n">DOWNLOADED_DATA_FILE_PATH</span><span class="o">=</span><span class="s2">&quot;ADD YOUR PATH HERE&quot;</span>
-<span class="n">challenge_data</span> <span class="o">=</span> <span class="n">GeoData</span><span class="o">.</span><span class="n">from_methylation_matrix</span><span class="p">(</span><span class="n">DOWNLOADED_DATA_FILE_PATH</span><span class="p">)</span>
+<span class="n">challenge_data</span> <span class="o">=</span> <a href="../../modules/generated/biolearn.data_library.GeoData.html#biolearn.data_library.GeoData.from_methylation_matrix" title="biolearn.data_library.GeoData.from_methylation_matrix" class="sphx-glr-backref-module-biolearn-data_library-GeoData sphx-glr-backref-type-py-method"><span class="n">GeoData</span><span class="o">.</span><span class="n">from_methylation_matrix</span></a><span class="p">(</span><span class="n">DOWNLOADED_DATA_FILE_PATH</span><span class="p">)</span>
 <span class="n">challenge_data</span>
 </pre></div>
 </div>
 </section>
 <section id="load-up-some-training-data">
 <h2>Load up some training data<a class="headerlink" href="#load-up-some-training-data" title="Link to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.data_library</span> <span class="kn">import</span> <a href="../../modules/generated/biolearn.data_library.DataLibrary.html#biolearn.data_library.DataLibrary" title="biolearn.data_library.DataLibrary" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">DataLibrary</span></a>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.data_library</span> <span class="kn">import</span> <a href="../../modules/generated/biolearn.data_library.DataLibrary.html#biolearn.data_library.DataLibrary" title="biolearn.data_library.DataLibrary" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">DataLibrary</span></a>
 <span class="n">data</span> <span class="o">=</span> <a href="../../modules/generated/biolearn.data_library.DataLibrary.html#biolearn.data_library.DataLibrary" title="biolearn.data_library.DataLibrary" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">DataLibrary</span></a><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;GSE40279&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
 <span class="n">data</span><span class="o">.</span><span class="n">metadata</span>
 </pre></div>
@@ -299,7 +299,7 @@ to download the full example code or to run this example in your browser via Bin
 <dt>Narrow down what sites are correlated with age</dt><dd></dd>
 </dl>
 <p>NOTE: This takes a long time to run</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html#sklearn.linear_model.LinearRegression" title="sklearn.linear_model.LinearRegression" class="sphx-glr-backref-module-sklearn-linear_model sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">LinearRegression</span></a>
 
 <span class="c1"># Extract data from your &#39;data&#39; object</span>
@@ -338,7 +338,7 @@ to download the full example code or to run this example in your browser via Bin
 </section>
 <section id="seperate-data-into-training-and-test-sets">
 <h2>Seperate data into training and test sets<a class="headerlink" href="#seperate-data-into-training-and-test-sets" title="Link to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html#sklearn.model_selection.train_test_split" title="sklearn.model_selection.train_test_split" class="sphx-glr-backref-module-sklearn-model_selection sphx-glr-backref-type-py-function"><span class="n">train_test_split</span></a>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html#sklearn.model_selection.train_test_split" title="sklearn.model_selection.train_test_split" class="sphx-glr-backref-module-sklearn-model_selection sphx-glr-backref-type-py-function"><span class="n">train_test_split</span></a>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">dnam</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
@@ -356,7 +356,7 @@ to download the full example code or to run this example in your browser via Bin
 <p>Define the model
 alpha is the regularization strength, and l1_ratio defines the mix between L1 and L2
 l1_ratio = 1 is Lasso; l1_ratio = 0 is Ridge.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html#sklearn.linear_model.ElasticNet" title="sklearn.linear_model.ElasticNet" class="sphx-glr-backref-module-sklearn-linear_model sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ElasticNet</span></a>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html#sklearn.linear_model.ElasticNet" title="sklearn.linear_model.ElasticNet" class="sphx-glr-backref-module-sklearn-linear_model sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ElasticNet</span></a>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_squared_error.html#sklearn.metrics.mean_squared_error" title="sklearn.metrics.mean_squared_error" class="sphx-glr-backref-module-sklearn-metrics sphx-glr-backref-type-py-function"><span class="n">mean_squared_error</span></a>
 
 <span class="n">model</span> <span class="o">=</span> <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html#sklearn.linear_model.ElasticNet" title="sklearn.linear_model.ElasticNet" class="sphx-glr-backref-module-sklearn-linear_model sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ElasticNet</span></a><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">l1_ratio</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
@@ -373,7 +373,7 @@ l1_ratio = 1 is Lasso; l1_ratio = 0 is Ridge.</p>
 </section>
 <section id="plot-the-results-to-see-how-good-our-model-is">
 <h2>Plot the results to see how good our model is<a class="headerlink" href="#plot-the-results-to-see-how-good-our-model-is" title="Link to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 
@@ -398,7 +398,7 @@ l1_ratio = 1 is Lasso; l1_ratio = 0 is Ridge.</p>
 </section>
 <section id="run-the-challenge-data-through-the-model">
 <h2>Run the challenge data through the model<a class="headerlink" href="#run-the-challenge-data-through-the-model" title="Link to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pruned_data</span> <span class="o">=</span> <span class="n">challenge_data</span><span class="o">.</span><span class="n">dnam</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="n">stable_cpg_names</span><span class="p">]</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">pruned_data</span> <span class="o">=</span> <span class="n">challenge_data</span><span class="o">.</span><span class="n">dnam</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="n">stable_cpg_names</span><span class="p">]</span>
 <span class="n">pruned_data</span> <span class="o">=</span> <span class="n">pruned_data</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">challenge_results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pruned_data</span><span class="p">)</span>
 </pre></div>
@@ -406,7 +406,7 @@ l1_ratio = 1 is Lasso; l1_ratio = 0 is Ridge.</p>
 </section>
 <section id="save-the-results-as-an-output-file-for-submission">
 <h2>Save the results as an output file for submission<a class="headerlink" href="#save-the-results-as-an-output-file-for-submission" title="Link to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="n">predicted_age_df</span> <span class="o">=</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.DataFrame" class="sphx-glr-backref-module-pandas sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span></a><span class="p">({</span>
     <span class="s1">&#39;predictedAge&#39;</span><span class="p">:</span> <span class="n">challenge_results</span>
@@ -415,17 +415,16 @@ l1_ratio = 1 is Lasso; l1_ratio = 0 is Ridge.</p>
 <span class="n">predicted_age_df</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.000 seconds)</p>
 <p><strong>Estimated memory usage:</strong>  0 MB</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-02-challenge-submissions-training-simple-model-py">
 <div class="binder-badge docutils container">
-<a class="reference external image-reference" href="https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.5?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/training_simple_model.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo2.svg" width="150px" /></a>
-</div>
-<div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/d2034f596e313a260f3b7e1f4a87d746/training_simple_model.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">training_simple_model.py</span></code></a></p>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.7?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/training_simple_model.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo2.svg" width="150px" /></a>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/9d6419c1b7da427cabe6da2ae524be9e/training_simple_model.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">training_simple_model.ipynb</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/d2034f596e313a260f3b7e1f4a87d746/training_simple_model.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">training_simple_model.py</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>

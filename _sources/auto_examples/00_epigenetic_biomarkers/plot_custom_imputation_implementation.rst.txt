@@ -30,7 +30,7 @@ Load methylation data from a GEO dataset to use as a reference for imputation
 
 .. GENERATED FROM PYTHON SOURCE LINES 11-18
 
-.. code-block:: default
+.. code-block:: Python
 
 
     from biolearn.data_library import DataLibrary, GeoData
@@ -53,7 +53,7 @@ Load up a target dataset and run the imputation
 
 .. GENERATED FROM PYTHON SOURCE LINES 21-30
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # Load a second dataset for imputation
@@ -78,7 +78,7 @@ Now run clock predictions on the dataset before and after
 
 .. GENERATED FROM PYTHON SOURCE LINES 33-41
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # Using a model from the gallery, compare the epigenetic age before and after imputation
@@ -102,7 +102,7 @@ Visualize the comparison of age predictions
 
 .. GENERATED FROM PYTHON SOURCE LINES 44-65
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import seaborn as sns
@@ -144,7 +144,7 @@ You can also build an imputation decorator to bundle with the clock
 
 .. GENERATED FROM PYTHON SOURCE LINES 68-78
 
-.. code-block:: default
+.. code-block:: Python
 
 
     from biolearn.model import ImputationDecorator
@@ -170,7 +170,7 @@ You get the same results as running the function directly on your dataset
 
 .. GENERATED FROM PYTHON SOURCE LINES 81-88
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # Predict epigenetic age using the decorated clock (with imputation)
@@ -195,9 +195,9 @@ You get the same results as running the function directly on your dataset
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (1 minutes 34.825 seconds)
+   **Total running time of the script:** (1 minutes 32.315 seconds)
 
-**Estimated memory usage:**  11937 MB
+**Estimated memory usage:**  11827 MB
 
 
 .. _sphx_glr_download_auto_examples_00_epigenetic_biomarkers_plot_custom_imputation_implementation.py:
@@ -206,23 +206,20 @@ You get the same results as running the function directly on your dataset
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.0?urlpath=lab/tree/notebooks/auto_examples/00_epigenetic_biomarkers/plot_custom_imputation_implementation.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/main?urlpath=lab/tree/notebooks/auto_examples/00_epigenetic_biomarkers/plot_custom_imputation_implementation.ipynb
         :alt: Launch binder
         :width: 150 px
-
-
-
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: plot_custom_imputation_implementation.py <plot_custom_imputation_implementation.py>`
 
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: plot_custom_imputation_implementation.ipynb <plot_custom_imputation_implementation.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: plot_custom_imputation_implementation.py <plot_custom_imputation_implementation.py>`
 
 
 .. only:: html

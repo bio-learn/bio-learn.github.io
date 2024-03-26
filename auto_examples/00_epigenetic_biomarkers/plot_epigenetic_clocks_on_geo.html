@@ -13,7 +13,7 @@
 <meta name="description" content="This example loads a DNA Methylation data from GEO, calculates multiple epigenetic clocks, and plots them against chronological age. First load up some methylation data from GEO using the data libr..." />
 <link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Down Syndrome Epigenetic Plotting" href="plot_down_syndrome_model.html" /><link rel="prev" title="Epigenetic Clock Examples" href="index.html" />
 
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
         <title>“Epigenetic Clocks” in GEO Data - Biolearn</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=045299b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
@@ -279,7 +279,7 @@ to download the full example code or to run this example in your browser via Bin
 <p>This example loads a DNA Methylation data from GEO, calculates multiple epigenetic clocks, and plots them against chronological age.</p>
 <section id="first-load-up-some-methylation-data-from-geo-using-the-data-library">
 <h2>First load up some methylation data from GEO using the data library<a class="headerlink" href="#first-load-up-some-methylation-data-from-geo-using-the-data-library" title="Link to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.data_library</span> <span class="kn">import</span> <a href="../../modules/generated/biolearn.data_library.DataLibrary.html#biolearn.data_library.DataLibrary" title="biolearn.data_library.DataLibrary" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class"><span class="n">DataLibrary</span></a>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.data_library</span> <span class="kn">import</span> <a href="../../modules/generated/biolearn.data_library.DataLibrary.html#biolearn.data_library.DataLibrary" title="biolearn.data_library.DataLibrary" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class"><span class="n">DataLibrary</span></a>
 <span class="c1">#Load up GSE41169 blood DNAm data</span>
 <a href="../../modules/generated/biolearn.data_library.DataSource.html#biolearn.data_library.DataSource" title="biolearn.data_library.DataSource" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data_source</span></a> <span class="o">=</span> <a href="../../modules/generated/biolearn.data_library.DataLibrary.html#biolearn.data_library.DataLibrary" title="biolearn.data_library.DataLibrary" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class"><span class="n">DataLibrary</span></a><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;GSE41169&quot;</span><span class="p">)</span>
 <a href="../../modules/generated/biolearn.data_library.GeoData.html#biolearn.data_library.GeoData" title="biolearn.data_library.GeoData" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data</span></a><span class="o">=</span><a href="../../modules/generated/biolearn.data_library.DataSource.html#biolearn.data_library.DataSource.load" title="biolearn.data_library.DataSource.load" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-method"><span class="n">data_source</span><span class="o">.</span><span class="n">load</span></a><span class="p">()</span>
@@ -288,7 +288,7 @@ to download the full example code or to run this example in your browser via Bin
 </section>
 <section id="now-run-three-different-clocks-on-the-dataset-to-produce-epigenetic-clock-ages">
 <h2>Now run three different clocks on the dataset to produce epigenetic clock ages<a class="headerlink" href="#now-run-three-different-clocks-on-the-dataset-to-produce-epigenetic-clock-ages" title="Link to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.model_gallery</span> <span class="kn">import</span> <a href="../../modules/generated/biolearn.model_gallery.ModelGallery.html#biolearn.model_gallery.ModelGallery" title="biolearn.model_gallery.ModelGallery" class="sphx-glr-backref-module-biolearn-model_gallery sphx-glr-backref-type-py-class"><span class="n">ModelGallery</span></a>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.model_gallery</span> <span class="kn">import</span> <a href="../../modules/generated/biolearn.model_gallery.ModelGallery.html#biolearn.model_gallery.ModelGallery" title="biolearn.model_gallery.ModelGallery" class="sphx-glr-backref-module-biolearn-model_gallery sphx-glr-backref-type-py-class"><span class="n">ModelGallery</span></a>
 <a href="../../modules/generated/biolearn.model_gallery.ModelGallery.html#biolearn.model_gallery.ModelGallery" title="biolearn.model_gallery.ModelGallery" class="sphx-glr-backref-module-biolearn-model_gallery sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">gallery</span></a> <span class="o">=</span> <a href="../../modules/generated/biolearn.model_gallery.ModelGallery.html#biolearn.model_gallery.ModelGallery" title="biolearn.model_gallery.ModelGallery" class="sphx-glr-backref-module-biolearn-model_gallery sphx-glr-backref-type-py-class"><span class="n">ModelGallery</span></a><span class="p">()</span>
 <span class="c1">#Note that by default clocks will impute missing data.</span>
 <span class="c1">#To change this behavior set the imputation= parameter when getting the clock</span>
@@ -300,7 +300,7 @@ to download the full example code or to run this example in your browser via Bin
 </section>
 <section id="finally-extract-the-age-data-from-the-metadata-from-geo-and-plot-the-results-using-seaborn">
 <h2>Finally extract the age data from the metadata from GEO and plot the results using seaborn<a class="headerlink" href="#finally-extract-the-age-data-from-the-metadata-from-geo-and-plot-the-results-using-seaborn" title="Link to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sn</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sn</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series" title="pandas.core.series.Series" class="sphx-glr-backref-module-pandas-core-series sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">actual_age</span></a> <span class="o">=</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data</span><span class="o">.</span><span class="n">metadata</span></a><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
@@ -315,23 +315,20 @@ to download the full example code or to run this example in your browser via Bin
 <span class="n">sn</span><span class="o">.</span><span class="n">relplot</span><span class="p">(</span><a href="../../modules/generated/biolearn.data_library.GeoData.html#biolearn.data_library.GeoData" title="biolearn.data_library.GeoData" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data</span></a><span class="o">=</span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">plot_data</span></a><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;scatter&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_plot_epigenetic_clocks_on_geo_001.png" srcset="../../_images/sphx_glr_plot_epigenetic_clocks_on_geo_001.png" alt="plot epigenetic clocks on geo" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/seth/longevity/biolearn/.venv/lib/python3.10/site-packages/seaborn/axisgrid.py:123: UserWarning: The figure layout has changed to tight
-  self._figure.tight_layout(*args, **kwargs)
-
-&lt;seaborn.axisgrid.FacetGrid object at 0x7f30483c6f80&gt;
+<img src="../../_images/sphx_glr_plot_epigenetic_clocks_on_geo_001.png" srcset="../../_images/sphx_glr_plot_epigenetic_clocks_on_geo_001.png" alt="plot epigenetic clocks on geo" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid object at 0x79382ae8d540&gt;
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 8.577 seconds)</p>
-<p><strong>Estimated memory usage:</strong>  1746 MB</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 8.467 seconds)</p>
+<p><strong>Estimated memory usage:</strong>  1724 MB</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-00-epigenetic-biomarkers-plot-epigenetic-clocks-on-geo-py">
 <div class="binder-badge docutils container">
-<a class="reference external image-reference" href="https://mybinder.org/v2/gh/bio-learn/biolearn/0.3.0?urlpath=lab/tree/notebooks/auto_examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo.svg" width="150px" /></a>
-</div>
-<div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/b819306bf1233fd1d3d9217f72f2fd0d/plot_epigenetic_clocks_on_geo.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_epigenetic_clocks_on_geo.py</span></code></a></p>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/bio-learn/biolearn/main?urlpath=lab/tree/notebooks/auto_examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo.svg" width="150px" /></a>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/f37720a37dbae92af72ecfe050d65bdc/plot_epigenetic_clocks_on_geo.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_epigenetic_clocks_on_geo.ipynb</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/b819306bf1233fd1d3d9217f72f2fd0d/plot_epigenetic_clocks_on_geo.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_epigenetic_clocks_on_geo.py</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
