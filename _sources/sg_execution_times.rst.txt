@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:00.000** total execution time for 6 files **from all galleries**:
+**00:00.000** total execution time for 7 files **from all galleries**:
 
 .. container::
 
@@ -48,5 +48,8 @@ Computation times
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_examples_02_challenge_submissions_training_simple_model.py` (``../examples/02_challenge_submissions/training_simple_model.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_03_deconvolution_plot_blood_deconvolution.py` (``../examples/03_deconvolution/plot_blood_deconvolution.py``)
      - 00:00.000
      - 0.0
