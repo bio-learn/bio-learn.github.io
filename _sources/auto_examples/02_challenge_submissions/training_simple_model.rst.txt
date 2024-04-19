@@ -223,7 +223,7 @@ Save the results as an output file for submission
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.4.0?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/training_simple_model.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.4.1?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/training_simple_model.ipynb
         :alt: Launch binder
         :width: 150 px
 
