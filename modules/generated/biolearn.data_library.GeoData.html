@@ -7,10 +7,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bio-learn.github.io/modules/generated/biolearn.data_library.GeoData.html" />
 <meta property="og:site_name" content="Biolearn" />
-<meta property="og:description" content="Examples using biolearn.data_library.GeoData: “Epigenetic Clocks” in GEO Data Down Syndrome Epigenetic Plotting Performing custom imputations “Deconvolution Example”" />
-<meta property="og:image" content="https://bio-learn.github.io/_images/sphx_glr_plot_epigenetic_clocks_on_geo_thumb.png" />
+<meta property="og:description" content="Examples using biolearn.data_library.GeoData: “Transcriptomic Clock” using GEO Data" />
+<meta property="og:image" content="https://bio-learn.github.io/_images/sphx_glr_plot_transcriptomic_clock_thumb.png" />
 <meta property="og:image:alt" content="" />
-<meta name="description" content="Examples using biolearn.data_library.GeoData: “Epigenetic Clocks” in GEO Data Down Syndrome Epigenetic Plotting Performing custom imputations “Deconvolution Example”" />
+<meta name="description" content="Examples using biolearn.data_library.GeoData: “Transcriptomic Clock” using GEO Data" />
 <link rel="search" title="Search" href="../../search.html" /><link rel="next" title="biolearn.model_gallery: ModelGallery" href="../model_gallery.html" /><link rel="prev" title="biolearn.data_library.DataSource" href="biolearn.data_library.DataSource.html" />
 
     <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
@@ -188,10 +188,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../clocks.html">Clocks and Other Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../data.html">GEO Data Sources</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../auto_examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/00_epigenetic_biomarkers/index.html">Epigenetic Clock Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Epigenetic Clock Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.html">“Epigenetic Clocks” in GEO Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/00_epigenetic_biomarkers/plot_down_syndrome_model.html">Down Syndrome Epigenetic Plotting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/00_epigenetic_biomarkers/plot_custom_imputation_implementation.html">Performing custom imputations</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/00_omics_biomarkers/index.html">Omics Biomarker Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Omics Biomarker Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/00_omics_biomarkers/plot_transcriptomic_clock.html">“Transcriptomic Clock” using GEO Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/00_omics_biomarkers/plot_epigenetic_clocks_on_geo.html">“Epigenetic Clocks” in GEO Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/00_omics_biomarkers/plot_down_syndrome_model.html">Down Syndrome Epigenetic Plotting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../auto_examples/00_omics_biomarkers/plot_custom_imputation_implementation.html">Performing custom imputations</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../auto_examples/01_composite_biomarkers/index.html">Composite Biomarkers Examples</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Composite Biomarkers Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -287,7 +288,7 @@ signature, and not how to use it. Please refer to the
 <h1>biolearn.data_library.GeoData<a class="headerlink" href="#biolearn-data-library-geodata" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="biolearn.data_library.GeoData">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">biolearn.data_library.</span></span><span class="sig-name descname"><span class="pre">GeoData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metadata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dnam</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#biolearn.data_library.GeoData" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">biolearn.data_library.</span></span><span class="sig-name descname"><span class="pre">GeoData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metadata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dnam</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rna</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#biolearn.data_library.GeoData" title="Link to this definition">#</a></dt>
 <dd><p>Represents genomic data with a focus on metadata and methylation data.</p>
 <p>GeoData facilitates the organization and access to metadata and methylation data.</p>
 <dl class="py attribute">
@@ -316,7 +317,7 @@ and rows represent different methylation sites.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="biolearn.data_library.GeoData.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metadata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dnam</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#biolearn.data_library.GeoData.__init__" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metadata</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dnam</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rna</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#biolearn.data_library.GeoData.__init__" title="Link to this definition">#</a></dt>
 <dd><p>Initializes the GeoData instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -387,18 +388,9 @@ either a DataFrame directly or a path to a CSV file.</p>
 
 <section id="examples-using-biolearn-data-library-geodata">
 <h2>Examples using <code class="docutils literal notranslate"><span class="pre">biolearn.data_library.GeoData</span></code><a class="headerlink" href="#examples-using-biolearn-data-library-geodata" title="Link to this heading">#</a></h2>
-<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This example loads a DNA Methylation data from GEO, calculates multiple epigenetic clocks, and ..."><img alt="" src="../../_images/sphx_glr_plot_epigenetic_clocks_on_geo_thumb.png" />
-<p><a class="reference internal" href="../../auto_examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.html#sphx-glr-auto-examples-00-epigenetic-biomarkers-plot-epigenetic-clocks-on-geo-py"><span class="std std-ref">“Epigenetic Clocks” in GEO Data</span></a></p>
-  <div class="sphx-glr-thumbnail-title">"Epigenetic Clocks" in GEO Data</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="This example loads a DNA Methylation data from GEO with down syndrome metadata and shows how th..."><img alt="" src="../../_images/sphx_glr_plot_down_syndrome_model_thumb.png" />
-<p><a class="reference internal" href="../../auto_examples/00_epigenetic_biomarkers/plot_down_syndrome_model.html#sphx-glr-auto-examples-00-epigenetic-biomarkers-plot-down-syndrome-model-py"><span class="std std-ref">Down Syndrome Epigenetic Plotting</span></a></p>
-  <div class="sphx-glr-thumbnail-title">Down Syndrome Epigenetic Plotting</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the ease of custom imputation using the biolearn library."><img alt="" src="../../_images/sphx_glr_plot_custom_imputation_implementation_thumb.png" />
-<p><a class="reference internal" href="../../auto_examples/00_epigenetic_biomarkers/plot_custom_imputation_implementation.html#sphx-glr-auto-examples-00-epigenetic-biomarkers-plot-custom-imputation-implementation-py"><span class="std std-ref">Performing custom imputations</span></a></p>
-  <div class="sphx-glr-thumbnail-title">Performing custom imputations</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="This example loads blood DNA Methylation data from GEO, estimates the proportion of cell types,..."><img alt="" src="../../_images/sphx_glr_plot_blood_deconvolution_thumb.png" />
-<p><a class="reference internal" href="../../auto_examples/03_deconvolution/plot_blood_deconvolution.html#sphx-glr-auto-examples-03-deconvolution-plot-blood-deconvolution-py"><span class="std std-ref">“Deconvolution Example”</span></a></p>
-  <div class="sphx-glr-thumbnail-title">"Deconvolution Example"</div>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This example loads transcriptomic data from GEO, calculates the predicted age using a transcrip..."><img alt="" src="../../_images/sphx_glr_plot_transcriptomic_clock_thumb.png" />
+<p><a class="reference internal" href="../../auto_examples/00_omics_biomarkers/plot_transcriptomic_clock.html#sphx-glr-auto-examples-00-omics-biomarkers-plot-transcriptomic-clock-py"><span class="std std-ref">“Transcriptomic Clock” using GEO Data</span></a></p>
+  <div class="sphx-glr-thumbnail-title">"Transcriptomic Clock" using GEO Data</div>
 </div></div><div style='clear:both'></div></section>
 </section>
 

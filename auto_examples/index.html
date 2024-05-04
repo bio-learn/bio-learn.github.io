@@ -7,11 +7,11 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bio-learn.github.io/auto_examples/index.html" />
 <meta property="og:site_name" content="Biolearn" />
-<meta property="og:description" content="Epigenetic Clock Examples: Plots results of running epigenetic clock functions “Epigenetic Clocks” in GEO Data Down Syndrome Epigenetic Plotting Performing custom imputations Composite Biomarkers E..." />
-<meta property="og:image" content="https://bio-learn.github.io/_images/sphx_glr_plot_epigenetic_clocks_on_geo_thumb.png" />
+<meta property="og:description" content="Omics Biomarker Examples: Plots results of running omics based biomarker models functions. Includes methylation and transcriptomic data. “Transcriptomic Clock” using GEO Data “Epigenetic Clocks” in..." />
+<meta property="og:image" content="https://bio-learn.github.io/_images/sphx_glr_plot_transcriptomic_clock_thumb.png" />
 <meta property="og:image:alt" content="" />
-<meta name="description" content="Epigenetic Clock Examples: Plots results of running epigenetic clock functions “Epigenetic Clocks” in GEO Data Down Syndrome Epigenetic Plotting Performing custom imputations Composite Biomarkers E..." />
-<link rel="search" title="Search" href="../search.html" /><link rel="next" title="Epigenetic Clock Examples" href="00_epigenetic_biomarkers/index.html" /><link rel="prev" title="GEO Data Sources" href="../data.html" />
+<meta name="description" content="Omics Biomarker Examples: Plots results of running omics based biomarker models functions. Includes methylation and transcriptomic data. “Transcriptomic Clock” using GEO Data “Epigenetic Clocks” in..." />
+<link rel="search" title="Search" href="../search.html" /><link rel="next" title="Omics Biomarker Examples" href="00_omics_biomarkers/index.html" /><link rel="prev" title="GEO Data Sources" href="../data.html" />
 
     <link rel="shortcut icon" href="../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
         <title>Examples - Biolearn</title>
@@ -188,10 +188,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../clocks.html">Clocks and Other Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../data.html">GEO Data Sources</a></li>
 <li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="00_epigenetic_biomarkers/index.html">Epigenetic Clock Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Epigenetic Clock Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.html">“Epigenetic Clocks” in GEO Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="00_epigenetic_biomarkers/plot_down_syndrome_model.html">Down Syndrome Epigenetic Plotting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="00_epigenetic_biomarkers/plot_custom_imputation_implementation.html">Performing custom imputations</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="00_omics_biomarkers/index.html">Omics Biomarker Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Omics Biomarker Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="00_omics_biomarkers/plot_transcriptomic_clock.html">“Transcriptomic Clock” using GEO Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="00_omics_biomarkers/plot_epigenetic_clocks_on_geo.html">“Epigenetic Clocks” in GEO Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="00_omics_biomarkers/plot_down_syndrome_model.html">Down Syndrome Epigenetic Plotting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="00_omics_biomarkers/plot_custom_imputation_implementation.html">Performing custom imputations</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="01_composite_biomarkers/index.html">Composite Biomarkers Examples</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Composite Biomarkers Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -286,17 +287,20 @@ where you have write permissions, or you copy the examples into such a
 directory. If you install biolean manually, make sure you have followed
 <a class="reference internal" href="../quickstart.html#quickstart"><span class="std std-ref">the instructions</span></a>.</p>
 </div>
-<div class="sphx-glr-thumbnails"></div><section id="epigenetic-clock-examples">
-<h2>Epigenetic Clock Examples<a class="headerlink" href="#epigenetic-clock-examples" title="Link to this heading">#</a></h2>
-<p>Plots results of running epigenetic clock functions</p>
-<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This example loads a DNA Methylation data from GEO, calculates multiple epigenetic clocks, and ..."><img alt="" src="../_images/sphx_glr_plot_epigenetic_clocks_on_geo_thumb.png" />
-<p><a class="reference internal" href="00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.html#sphx-glr-auto-examples-00-epigenetic-biomarkers-plot-epigenetic-clocks-on-geo-py"><span class="std std-ref">“Epigenetic Clocks” in GEO Data</span></a></p>
+<div class="sphx-glr-thumbnails"></div><section id="omics-biomarker-examples">
+<h2>Omics Biomarker Examples<a class="headerlink" href="#omics-biomarker-examples" title="Link to this heading">#</a></h2>
+<p>Plots results of running omics based biomarker models functions. Includes methylation and transcriptomic data.</p>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This example loads transcriptomic data from GEO, calculates the predicted age using a transcrip..."><img alt="" src="../_images/sphx_glr_plot_transcriptomic_clock_thumb.png" />
+<p><a class="reference internal" href="00_omics_biomarkers/plot_transcriptomic_clock.html#sphx-glr-auto-examples-00-omics-biomarkers-plot-transcriptomic-clock-py"><span class="std std-ref">“Transcriptomic Clock” using GEO Data</span></a></p>
+  <div class="sphx-glr-thumbnail-title">"Transcriptomic Clock" using GEO Data</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example loads a DNA Methylation data from GEO, calculates multiple epigenetic clocks, and ..."><img alt="" src="../_images/sphx_glr_plot_epigenetic_clocks_on_geo_thumb.png" />
+<p><a class="reference internal" href="00_omics_biomarkers/plot_epigenetic_clocks_on_geo.html#sphx-glr-auto-examples-00-omics-biomarkers-plot-epigenetic-clocks-on-geo-py"><span class="std std-ref">“Epigenetic Clocks” in GEO Data</span></a></p>
   <div class="sphx-glr-thumbnail-title">"Epigenetic Clocks" in GEO Data</div>
 </div><div class="sphx-glr-thumbcontainer" tooltip="This example loads a DNA Methylation data from GEO with down syndrome metadata and shows how th..."><img alt="" src="../_images/sphx_glr_plot_down_syndrome_model_thumb.png" />
-<p><a class="reference internal" href="00_epigenetic_biomarkers/plot_down_syndrome_model.html#sphx-glr-auto-examples-00-epigenetic-biomarkers-plot-down-syndrome-model-py"><span class="std std-ref">Down Syndrome Epigenetic Plotting</span></a></p>
+<p><a class="reference internal" href="00_omics_biomarkers/plot_down_syndrome_model.html#sphx-glr-auto-examples-00-omics-biomarkers-plot-down-syndrome-model-py"><span class="std std-ref">Down Syndrome Epigenetic Plotting</span></a></p>
   <div class="sphx-glr-thumbnail-title">Down Syndrome Epigenetic Plotting</div>
 </div><div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the ease of custom imputation using the biolearn library."><img alt="" src="../_images/sphx_glr_plot_custom_imputation_implementation_thumb.png" />
-<p><a class="reference internal" href="00_epigenetic_biomarkers/plot_custom_imputation_implementation.html#sphx-glr-auto-examples-00-epigenetic-biomarkers-plot-custom-imputation-implementation-py"><span class="std std-ref">Performing custom imputations</span></a></p>
+<p><a class="reference internal" href="00_omics_biomarkers/plot_custom_imputation_implementation.html#sphx-glr-auto-examples-00-omics-biomarkers-plot-custom-imputation-implementation-py"><span class="std std-ref">Performing custom imputations</span></a></p>
   <div class="sphx-glr-thumbnail-title">Performing custom imputations</div>
 </div></div></section>
 <section id="composite-biomarkers-examples">
@@ -341,12 +345,12 @@ directory. If you install biolean manually, make sure you have followed
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="00_epigenetic_biomarkers/index.html">
+          <a class="next-page" href="00_omics_biomarkers/index.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Epigenetic Clock Examples</div>
+                <div class="title">Omics Biomarker Examples</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -392,7 +396,7 @@ directory. If you install biolean manually, make sure you have followed
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Examples</a><ul>
-<li><a class="reference internal" href="#epigenetic-clock-examples">Epigenetic Clock Examples</a></li>
+<li><a class="reference internal" href="#omics-biomarker-examples">Omics Biomarker Examples</a></li>
 <li><a class="reference internal" href="#composite-biomarkers-examples">Composite Biomarkers Examples</a></li>
 <li><a class="reference internal" href="#challenge-submission-examples">Challenge Submission Examples</a></li>
 <li><a class="reference internal" href="#deconvolution-examples">Deconvolution Examples</a></li>

@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:00.000** total execution time for 7 files **from all galleries**:
+**00:01.515** total execution time for 8 files **from all galleries**:
 
 .. container::
 
@@ -32,13 +32,16 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_auto_examples_00_epigenetic_biomarkers_plot_custom_imputation_implementation.py` (``../examples/00_epigenetic_biomarkers/plot_custom_imputation_implementation.py``)
+   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_transcriptomic_clock.py` (``../examples/00_omics_biomarkers/plot_transcriptomic_clock.py``)
+     - 00:01.515
+     - 408.3
+   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_custom_imputation_implementation.py` (``../examples/00_omics_biomarkers/plot_custom_imputation_implementation.py``)
      - 00:00.000
      - 0.0
-   * - :ref:`sphx_glr_auto_examples_00_epigenetic_biomarkers_plot_down_syndrome_model.py` (``../examples/00_epigenetic_biomarkers/plot_down_syndrome_model.py``)
+   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_down_syndrome_model.py` (``../examples/00_omics_biomarkers/plot_down_syndrome_model.py``)
      - 00:00.000
      - 0.0
-   * - :ref:`sphx_glr_auto_examples_00_epigenetic_biomarkers_plot_epigenetic_clocks_on_geo.py` (``../examples/00_epigenetic_biomarkers/plot_epigenetic_clocks_on_geo.py``)
+   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_epigenetic_clocks_on_geo.py` (``../examples/00_omics_biomarkers/plot_epigenetic_clocks_on_geo.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_examples_01_composite_biomarkers_plot_nhanes.py` (``../examples/01_composite_biomarkers/plot_nhanes.py``)
