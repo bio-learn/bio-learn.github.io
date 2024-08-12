@@ -288,7 +288,7 @@ signature, and not how to use it. Please refer to the
 <h1>biolearn.data_library.DataSource<a class="headerlink" href="#biolearn-data-library-datasource" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="biolearn.data_library.DataSource">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">biolearn.data_library.</span></span><span class="sig-name descname"><span class="pre">DataSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#biolearn.data_library.DataSource" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">biolearn.data_library.</span></span><span class="sig-name descname"><span class="pre">DataSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#biolearn.data_library.DataSource" title="Link to this definition">#</a></dt>
 <dd><p>Represents a single data source in the DataLibrary.</p>
 <p>This class encapsulates the details of a data source including metadata about the source and
 functionality to load the data.</p>
@@ -300,14 +300,14 @@ functionality to load the data.</p>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="biolearn.data_library.DataSource.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#biolearn.data_library.DataSource.__init__" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#biolearn.data_library.DataSource.__init__" title="Link to this definition">#</a></dt>
 <dd><p>Initializes the DataSource instance with configuration data and an optional cache mechanism.
 This method parses a dictionary typically loaded from a YAML configuration file for a data source.
 It checks for essential fields, sets up attributes, and configures a parser for data handling.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> (<a class="reference external" href="https://docs.python.org/3.10/library/stdtypes.html#dict" title="(in Python v3.10)"><em>dict</em></a>) – A dictionary containing the data source’s properties. Must include keys like ‘id’,
+<li><p><strong>source_definition</strong> (<a class="reference external" href="https://docs.python.org/3.10/library/stdtypes.html#dict" title="(in Python v3.10)"><em>dict</em></a>) – A dictionary containing the data source’s properties. Must include keys like ‘id’,
 ‘path’, ‘parser’, and optionally ‘title’, ‘summary’, ‘format’, and ‘organism’.</p></li>
 <li><p><strong>cache</strong> (<a class="reference external" href="https://docs.python.org/3.10/library/functions.html#object" title="(in Python v3.10)"><em>object</em></a><em>, </em><em>optional</em>) – An object that adheres to the caching interface used in the caching module.
 If no cache is provided, a default NoCache instance is used.</p></li>
