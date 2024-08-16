@@ -18,10 +18,10 @@
 .. _sphx_glr_auto_examples_02_challenge_submissions_plot_challenge_data.py:
 
 
-Building a competition submission using an existing model
+Exploring the Challenge Data
 =============================================================
 
-This example shows you how to generate a submission for the community warmup using an existing model
+This example shows you how to load and explore the challenge data with biolearn
 
 .. GENERATED FROM PYTHON SOURCE LINES 9-11
 
@@ -801,9 +801,9 @@ We can then compare the output from the two models
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 20.420 seconds)
+   **Total running time of the script:** (0 minutes 20.893 seconds)
 
-**Estimated memory usage:**  15197 MB
+**Estimated memory usage:**  15052 MB
 
 
 .. _sphx_glr_download_auto_examples_02_challenge_submissions_plot_challenge_data.py:
@@ -815,7 +815,7 @@ We can then compare the output from the two models
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/main?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/plot_challenge_data.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.6.0?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/plot_challenge_data.ipynb
         :alt: Launch binder
         :width: 150 px
 

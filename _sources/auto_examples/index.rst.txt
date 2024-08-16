@@ -174,7 +174,7 @@ Generate submissions for the biomarkers of aging challenge
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example shows you how to generate a submission for the community warmup using an existing ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows you how to load and explore the challenge data with biolearn">
 
 .. only:: html
 
@@ -185,7 +185,7 @@ Generate submissions for the biomarkers of aging challenge
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Building a competition submission using an existing model</div>
+      <div class="sphx-glr-thumbnail-title">Exploring the Challenge Data</div>
     </div>
 
 
