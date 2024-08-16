@@ -1,0 +1,1062 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Building a competition submission using an existing model" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bio-learn.github.io/auto_examples/02_challenge_submissions/plot_challenge_data.html" />
+<meta property="og:site_name" content="Biolearn" />
+<meta property="og:description" content="This example shows you how to generate a submission for the community warmup using an existing model Loading up the data for the competition: The challenge data has methylation data: The challenge ..." />
+<meta property="og:image" content="https://bio-learn.github.io/_static/biolearn-logo.png" />
+<meta property="og:image:alt" content="Biolearn" />
+<meta name="description" content="This example shows you how to generate a submission for the community warmup using an existing model Loading up the data for the competition: The challenge data has methylation data: The challenge ..." />
+<link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Training an ElasticNet model" href="training_simple_model.html" /><link rel="prev" title="Building a competition submission using an existing model" href="simple_competiton_submission.html" />
+
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
+        <title>Building a competition submission using an existing model - Biolearn</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=045299b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=b603f989" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #ffffff;
+  --color-code-foreground: black;
+  --admonition-font-size: 100%;
+  --admonition-title-font-size: 100%;
+  --color-announcement-background: #FBB360;
+  --color-announcement-text: #111418;
+  --color-admonition-title--note: #448aff;
+  --color-admonition-title-background--note: #448aff10;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #232629;
+  --color-code-foreground: #cccccc;
+  --color-announcement-background: #935610;
+  --color-announcement-text: #FFFFFF;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #232629;
+  --color-code-foreground: #cccccc;
+  --color-announcement-background: #935610;
+  --color-announcement-text: #FFFFFF;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Biolearn</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../_static/biolearn-transparent.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Biolearn</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../clocks.html">Clocks and Other Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../data.html">GEO Data Sources</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../00_omics_biomarkers/index.html">Omics Biomarker Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Omics Biomarker Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../00_omics_biomarkers/plot_transcriptomic_clock.html">“Transcriptomic Clock” using GEO Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../00_omics_biomarkers/plot_epigenetic_clocks_on_geo.html">“Epigenetic Clocks” in GEO Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../00_omics_biomarkers/plot_down_syndrome_model.html">Down Syndrome Epigenetic Plotting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../00_omics_biomarkers/plot_custom_imputation_implementation.html">Performing custom imputations</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../01_composite_biomarkers/index.html">Composite Biomarkers Examples</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Composite Biomarkers Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../01_composite_biomarkers/plot_nhanes.html">“Phenotypic Ages” in NHANES Data</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Challenge Submission Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Challenge Submission Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="simple_competiton_submission.html">Building a competition submission using an existing model</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Building a competition submission using an existing model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="training_simple_model.html">Training an ElasticNet model</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../03_deconvolution/index.html">Deconvolution Examples</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Deconvolution Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../03_deconvolution/plot_blood_deconvolution.html">“Deconvolution Example”</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../modules/index.html">API References</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of API References</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../modules/data_library.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.data_library</span></code>: DataLibrary</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of biolearn.data_library: DataLibrary</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.data_library.DataLibrary.html">biolearn.data_library.DataLibrary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.data_library.DataSource.html">biolearn.data_library.DataSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.data_library.GeoData.html">biolearn.data_library.GeoData</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../modules/model_gallery.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.model_gallery</span></code>: ModelGallery</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of biolearn.model_gallery: ModelGallery</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.model_gallery.ModelGallery.html">biolearn.model_gallery.ModelGallery</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../modules/cache.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.cache</span></code>: Cache</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of biolearn.cache: Cache</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.cache.NoCache.html">biolearn.cache.NoCache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.cache.LocalFolderCache.html">biolearn.cache.LocalFolderCache</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../modules/imputation.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.imputation</span></code>: Data Imputation Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of biolearn.imputation: Data Imputation Utilities</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.imputation.impute_from_standard.html">biolearn.imputation.impute_from_standard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.imputation.impute_from_average.html">biolearn.imputation.impute_from_average</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.imputation.hybrid_impute.html">biolearn.imputation.hybrid_impute</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../modules/load.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">biolearn.load</span></code>: Data Loading Utilities</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of biolearn.load: Data Loading Utilities</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.load.load_nhanes.html">biolearn.load.load_nhanes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../modules/generated/biolearn.load.load_fhs.html">biolearn.load.load_fhs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../authors.html">Team</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/bio-learn/biolearn">GitHub Repository</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#sphx-glr-download-auto-examples-02-challenge-submissions-plot-challenge-data-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code or to run this example in your browser via Binder</p>
+</div>
+<section class="sphx-glr-example-title" id="building-a-competition-submission-using-an-existing-model">
+<span id="sphx-glr-auto-examples-02-challenge-submissions-plot-challenge-data-py"></span><h1>Building a competition submission using an existing model<a class="headerlink" href="#building-a-competition-submission-using-an-existing-model" title="Link to this heading">#</a></h1>
+<p>This example shows you how to generate a submission for the community warmup using an existing model</p>
+<section id="loading-up-the-data-for-the-competition">
+<h2>Loading up the data for the competition<a class="headerlink" href="#loading-up-the-data-for-the-competition" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.data_library</span> <span class="kn">import</span> <a href="../../modules/generated/biolearn.data_library.DataLibrary.html#biolearn.data_library.DataLibrary" title="biolearn.data_library.DataLibrary" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class"><span class="n">DataLibrary</span></a>
+
+<a href="../../modules/generated/biolearn.data_library.GeoData.html#biolearn.data_library.GeoData" title="biolearn.data_library.GeoData" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">challenge_data</span></a> <span class="o">=</span> <a href="../../modules/generated/biolearn.data_library.DataLibrary.html#biolearn.data_library.DataLibrary" title="biolearn.data_library.DataLibrary" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class"><span class="n">DataLibrary</span></a><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;BoAChallengeData&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="the-challenge-data-has-methylation-data">
+<h2>The challenge data has methylation data<a class="headerlink" href="#the-challenge-data-has-methylation-data" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<a href="https://docs.python.org/3.10/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">max_columns</span></a> <span class="o">=</span> <span class="mi">6</span>
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">challenge_data</span><span class="o">.</span><span class="n">dnam</span></a>
+</pre></div>
+</div>
+<div class="output_subarea output_html rendered_html output_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>GSM7866999</th>
+      <th>GSM7867305</th>
+      <th>GSM7867077</th>
+      <th>...</th>
+      <th>GSM7867431</th>
+      <th>GSM7867126</th>
+      <th>GSM7867000</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>cg00000029</th>
+      <td>0.720084</td>
+      <td>0.453491</td>
+      <td>0.535564</td>
+      <td>...</td>
+      <td>0.487361</td>
+      <td>0.337215</td>
+      <td>0.062426</td>
+    </tr>
+    <tr>
+      <th>cg00000109</th>
+      <td>0.938044</td>
+      <td>0.925149</td>
+      <td>0.949446</td>
+      <td>...</td>
+      <td>0.938523</td>
+      <td>0.940187</td>
+      <td>0.942090</td>
+    </tr>
+    <tr>
+      <th>cg00000155</th>
+      <td>0.957093</td>
+      <td>0.959030</td>
+      <td>0.948919</td>
+      <td>...</td>
+      <td>0.966912</td>
+      <td>0.968026</td>
+      <td>0.970274</td>
+    </tr>
+    <tr>
+      <th>cg00000158</th>
+      <td>0.965191</td>
+      <td>0.957272</td>
+      <td>0.967278</td>
+      <td>...</td>
+      <td>0.971039</td>
+      <td>0.969745</td>
+      <td>0.969660</td>
+    </tr>
+    <tr>
+      <th>cg00000165</th>
+      <td>0.144061</td>
+      <td>0.122099</td>
+      <td>0.167346</td>
+      <td>...</td>
+      <td>0.156199</td>
+      <td>0.133038</td>
+      <td>0.641788</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>rs9292570</th>
+      <td>0.523412</td>
+      <td>0.980810</td>
+      <td>0.986609</td>
+      <td>...</td>
+      <td>0.525876</td>
+      <td>0.537722</td>
+      <td>0.538440</td>
+    </tr>
+    <tr>
+      <th>rs9363764</th>
+      <td>0.960815</td>
+      <td>0.038638</td>
+      <td>0.451884</td>
+      <td>...</td>
+      <td>0.978343</td>
+      <td>0.971838</td>
+      <td>0.973633</td>
+    </tr>
+    <tr>
+      <th>rs951295</th>
+      <td>0.971034</td>
+      <td>0.558011</td>
+      <td>0.553397</td>
+      <td>...</td>
+      <td>0.485287</td>
+      <td>0.526686</td>
+      <td>0.499980</td>
+    </tr>
+    <tr>
+      <th>rs966367</th>
+      <td>0.455920</td>
+      <td>0.963994</td>
+      <td>0.453094</td>
+      <td>...</td>
+      <td>0.455700</td>
+      <td>0.029342</td>
+      <td>0.026907</td>
+    </tr>
+    <tr>
+      <th>rs9839873</th>
+      <td>0.599735</td>
+      <td>0.595571</td>
+      <td>0.630871</td>
+      <td>...</td>
+      <td>0.576566</td>
+      <td>0.579195</td>
+      <td>0.973815</td>
+    </tr>
+  </tbody>
+</table>
+<p>930659 rows × 500 columns</p>
+</div>
+</div>
+<br />
+<br /></section>
+<section id="the-challenge-data-also-has-proteomic-data">
+<h2>The challenge data also has proteomic data<a class="headerlink" href="#the-challenge-data-also-has-proteomic-data" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">challenge_data</span><span class="o">.</span><span class="n">protein</span></a>
+</pre></div>
+</div>
+<div class="output_subarea output_html rendered_html output_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>GSM7867173</th>
+      <th>GSM7867127</th>
+      <th>GSM7867083</th>
+      <th>...</th>
+      <th>GSM7867095</th>
+      <th>GSM7867115</th>
+      <th>GSM7867385</th>
+    </tr>
+    <tr>
+      <th>AlamarTargetID</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>t10319</th>
+      <td>13.387778</td>
+      <td>12.948052</td>
+      <td>13.256551</td>
+      <td>...</td>
+      <td>12.062449</td>
+      <td>13.390582</td>
+      <td>13.587867</td>
+    </tr>
+    <tr>
+      <th>t10413</th>
+      <td>16.674015</td>
+      <td>15.992939</td>
+      <td>15.547946</td>
+      <td>...</td>
+      <td>14.827118</td>
+      <td>15.872686</td>
+      <td>15.584386</td>
+    </tr>
+    <tr>
+      <th>t10466</th>
+      <td>12.890963</td>
+      <td>13.556167</td>
+      <td>13.528756</td>
+      <td>...</td>
+      <td>14.683530</td>
+      <td>13.667331</td>
+      <td>13.483932</td>
+    </tr>
+    <tr>
+      <th>t10563</th>
+      <td>10.933342</td>
+      <td>8.323690</td>
+      <td>13.271350</td>
+      <td>...</td>
+      <td>9.993500</td>
+      <td>11.699095</td>
+      <td>11.860206</td>
+    </tr>
+    <tr>
+      <th>t10876</th>
+      <td>14.063506</td>
+      <td>15.429302</td>
+      <td>13.582464</td>
+      <td>...</td>
+      <td>11.978461</td>
+      <td>6.654607</td>
+      <td>11.931614</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>t8333</th>
+      <td>14.725785</td>
+      <td>13.537733</td>
+      <td>14.848917</td>
+      <td>...</td>
+      <td>13.729721</td>
+      <td>13.787099</td>
+      <td>14.055526</td>
+    </tr>
+    <tr>
+      <th>t8334</th>
+      <td>13.503408</td>
+      <td>12.103376</td>
+      <td>13.381374</td>
+      <td>...</td>
+      <td>13.070087</td>
+      <td>14.317681</td>
+      <td>14.314627</td>
+    </tr>
+    <tr>
+      <th>t8358</th>
+      <td>12.734120</td>
+      <td>15.238780</td>
+      <td>11.673970</td>
+      <td>...</td>
+      <td>13.103683</td>
+      <td>13.949114</td>
+      <td>13.794795</td>
+    </tr>
+    <tr>
+      <th>t8367</th>
+      <td>11.062422</td>
+      <td>12.291734</td>
+      <td>12.604654</td>
+      <td>...</td>
+      <td>11.803189</td>
+      <td>14.313347</td>
+      <td>13.830717</td>
+    </tr>
+    <tr>
+      <th>t8399</th>
+      <td>11.599597</td>
+      <td>14.642498</td>
+      <td>14.590723</td>
+      <td>...</td>
+      <td>12.073775</td>
+      <td>14.184558</td>
+      <td>12.040475</td>
+    </tr>
+  </tbody>
+</table>
+<p>374 rows × 503 columns</p>
+</div>
+</div>
+<br />
+<br /></section>
+<section id="you-can-learn-more-about-what-the-protein-identifies-in-our-reference">
+<h2>You can learn more about what the protein identifies in our reference<a class="headerlink" href="#you-can-learn-more-about-what-the-protein-identifies-in-our-reference" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.util</span> <span class="kn">import</span> <span class="n">get_data_file</span>
+
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">reference</span></a> <span class="o">=</span> <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html#pandas.read_csv" title="pandas.read_csv" class="sphx-glr-backref-module-pandas sphx-glr-backref-type-py-function"><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span></a><span class="p">(</span><span class="n">get_data_file</span><span class="p">(</span><span class="s2">&quot;reference/alamar_reference.csv&quot;</span><span class="p">))</span>
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">reference</span></a>
+</pre></div>
+</div>
+<div class="output_subarea output_html rendered_html output_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>AlamarTargetID</th>
+      <th>UniProtID</th>
+      <th>Target</th>
+      <th>ProteinName</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>t10034</td>
+      <td>O75888</td>
+      <td>TNFSF13</td>
+      <td>TNF superfamily member 13</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>t10319</td>
+      <td>O95760</td>
+      <td>IL33</td>
+      <td>Interleukin 33</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>t10412</td>
+      <td>P01258</td>
+      <td>CALCA</td>
+      <td>Calcitonin [Cleaved into: Calcitonin; Katacalcin</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>t10417</td>
+      <td>P01903</td>
+      <td>HLA-DRA</td>
+      <td>Major histocompatibility complex, class II, DR...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>t10433</td>
+      <td>P02745</td>
+      <td>C1QA</td>
+      <td>Complement C1q A chain</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>317</th>
+      <td>t8244</td>
+      <td>P35247</td>
+      <td>SFTPD</td>
+      <td>Pulmonary surfactant-associated protein D</td>
+    </tr>
+    <tr>
+      <th>318</th>
+      <td>t8246</td>
+      <td>P22303</td>
+      <td>ACHE</td>
+      <td>Acetylcholinesterase</td>
+    </tr>
+    <tr>
+      <th>319</th>
+      <td>t8254</td>
+      <td>Q8N474</td>
+      <td>SFRP1</td>
+      <td>Secreted frizzled-related protein 1</td>
+    </tr>
+    <tr>
+      <th>320</th>
+      <td>t8355</td>
+      <td>P0DJI8</td>
+      <td>SAA1</td>
+      <td>Serum amyloid A-1 protein</td>
+    </tr>
+    <tr>
+      <th>321</th>
+      <td>t9441</td>
+      <td>O15240</td>
+      <td>VGF</td>
+      <td>VGF nerve growth factor inducible</td>
+    </tr>
+  </tbody>
+</table>
+<p>322 rows × 4 columns</p>
+</div>
+</div>
+<br />
+<br /></section>
+<section id="some-of-the-data-overlaps-while-some-does-not-but-all-the-metadata-is-combined">
+<h2>Some of the data overlaps while some does not but all the metadata is combined<a class="headerlink" href="#some-of-the-data-overlaps-while-some-does-not-but-all-the-metadata-is-combined" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">challenge_data</span><span class="o">.</span><span class="n">metadata</span></a>
+</pre></div>
+</div>
+<div class="output_subarea output_html rendered_html output_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>sex</th>
+      <th>subject_id</th>
+      <th>tissue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GSM7866964</th>
+      <td>31.35</td>
+      <td>2</td>
+      <td>BoA1</td>
+      <td>Blood</td>
+    </tr>
+    <tr>
+      <th>GSM7866965</th>
+      <td>79.45</td>
+      <td>1</td>
+      <td>BoA2</td>
+      <td>Blood</td>
+    </tr>
+    <tr>
+      <th>GSM7866966</th>
+      <td>60.42</td>
+      <td>2</td>
+      <td>BoA3</td>
+      <td>Blood</td>
+    </tr>
+    <tr>
+      <th>GSM7866967</th>
+      <td>59.24</td>
+      <td>1</td>
+      <td>BoA4</td>
+      <td>Blood</td>
+    </tr>
+    <tr>
+      <th>GSM7866968</th>
+      <td>22.41</td>
+      <td>1</td>
+      <td>BoA5</td>
+      <td>Blood</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>P499</th>
+      <td>80.98</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>P500</th>
+      <td>89.00</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>P501</th>
+      <td>80.92</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>P502</th>
+      <td>69.80</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>P503</th>
+      <td>68.18</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>651 rows × 4 columns</p>
+</div>
+</div>
+<br />
+<br /></section>
+<section id="you-can-easily-run-several-models-on-them">
+<h2>You can easily run several models on them<a class="headerlink" href="#you-can-easily-run-several-models-on-them" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">biolearn.mortality</span> <span class="kn">import</span> <span class="n">run_predictions</span>
+
+<a href="https://docs.python.org/3.10/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">prediction_dict</span></a> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Horvathv1&quot;</span><span class="p">:</span> <span class="s2">&quot;Predicted&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Hannum&quot;</span><span class="p">:</span> <span class="s2">&quot;Predicted&quot;</span>
+<span class="p">}</span>
+
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">predictions</span></a> <span class="o">=</span> <span class="n">run_predictions</span><span class="p">(</span><a href="../../modules/generated/biolearn.data_library.GeoData.html#biolearn.data_library.GeoData" title="biolearn.data_library.GeoData" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">challenge_data</span></a><span class="p">,</span> <a href="https://docs.python.org/3.10/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">prediction_dict</span></a><span class="p">)</span>
+<a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">predictions</span></a>
+</pre></div>
+</div>
+<div class="output_subarea output_html rendered_html output_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Horvathv1</th>
+      <th>Hannum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GSM7866999</th>
+      <td>21.822423</td>
+      <td>17.303025</td>
+    </tr>
+    <tr>
+      <th>GSM7867305</th>
+      <td>56.266752</td>
+      <td>52.803410</td>
+    </tr>
+    <tr>
+      <th>GSM7867077</th>
+      <td>39.660930</td>
+      <td>36.211078</td>
+    </tr>
+    <tr>
+      <th>GSM7867095</th>
+      <td>29.806215</td>
+      <td>32.821235</td>
+    </tr>
+    <tr>
+      <th>GSM7867457</th>
+      <td>51.285108</td>
+      <td>49.308239</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>GSM7867136</th>
+      <td>37.539954</td>
+      <td>32.494127</td>
+    </tr>
+    <tr>
+      <th>GSM7867452</th>
+      <td>74.975617</td>
+      <td>68.639608</td>
+    </tr>
+    <tr>
+      <th>GSM7867431</th>
+      <td>33.083565</td>
+      <td>33.906176</td>
+    </tr>
+    <tr>
+      <th>GSM7867126</th>
+      <td>91.428559</td>
+      <td>74.870807</td>
+    </tr>
+    <tr>
+      <th>GSM7867000</th>
+      <td>75.005273</td>
+      <td>77.630528</td>
+    </tr>
+  </tbody>
+</table>
+<p>500 rows × 2 columns</p>
+</div>
+</div>
+<br />
+<br /></section>
+<section id="we-can-then-compare-the-output-from-the-two-models">
+<h2>We can then compare the output from the two models<a class="headerlink" href="#we-can-then-compare-the-output-from-the-two-models" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="c1"># Assuming your dataframe is named &#39;df&#39;</span>
+<span class="c1"># df should have columns &#39;Horvathv1&#39; and &#39;Hannum&#39;</span>
+
+<span class="c1"># Create a scatter plot with a regression line</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Horvathv1&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Hannum&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">predictions</span></a><span class="p">,</span> <span class="n">ci</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.title.html#matplotlib.pyplot.title" title="matplotlib.pyplot.title" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">title</span></a><span class="p">(</span><span class="s1">&#39;Scatter Plot with Regression Line&#39;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlabel.html#matplotlib.pyplot.xlabel" title="matplotlib.pyplot.xlabel" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span></a><span class="p">(</span><span class="s1">&#39;Horvathv1&#39;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.ylabel.html#matplotlib.pyplot.ylabel" title="matplotlib.pyplot.ylabel" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span></a><span class="p">(</span><span class="s1">&#39;Hannum&#39;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.grid.html#matplotlib.pyplot.grid" title="matplotlib.pyplot.grid" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span></a><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
+</pre></div>
+</div>
+<img src="../../_images/sphx_glr_plot_challenge_data_001.png" srcset="../../_images/sphx_glr_plot_challenge_data_001.png" alt="Scatter Plot with Regression Line" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 20.420 seconds)</p>
+<p><strong>Estimated memory usage:</strong>  15197 MB</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-02-challenge-submissions-plot-challenge-data-py">
+<div class="binder-badge docutils container">
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/bio-learn/biolearn/main?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/plot_challenge_data.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo2.svg" width="150px" /></a>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/e2c40c72c94a18149a91c1d47ee4de74/plot_challenge_data.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_challenge_data.ipynb</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/acd6238a1daae33a3d10982388e35ac0/plot_challenge_data.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_challenge_data.py</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="training_simple_model.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Training an ElasticNet model</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="simple_competiton_submission.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Building a competition submission using an existing model</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; The biolearn developers 2023-2024
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Building a competition submission using an existing model</a><ul>
+<li><a class="reference internal" href="#loading-up-the-data-for-the-competition">Loading up the data for the competition</a></li>
+<li><a class="reference internal" href="#the-challenge-data-has-methylation-data">The challenge data has methylation data</a></li>
+<li><a class="reference internal" href="#the-challenge-data-also-has-proteomic-data">The challenge data also has proteomic data</a></li>
+<li><a class="reference internal" href="#you-can-learn-more-about-what-the-protein-identifies-in-our-reference">You can learn more about what the protein identifies in our reference</a></li>
+<li><a class="reference internal" href="#some-of-the-data-overlaps-while-some-does-not-but-all-the-metadata-is-combined">Some of the data overlaps while some does not but all the metadata is combined</a></li>
+<li><a class="reference internal" href="#you-can-easily-run-several-models-on-them">You can easily run several models on them</a></li>
+<li><a class="reference internal" href="#we-can-then-compare-the-output-from-the-two-models">We can then compare the output from the two models</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=4ea706d9"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    </body>
+</html>
