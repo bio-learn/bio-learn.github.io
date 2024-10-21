@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:01.515** total execution time for 4 files **from auto_examples/00_omics_biomarkers**:
+**03:14.879** total execution time for 4 files **from auto_examples/00_omics_biomarkers**:
 
 .. container::
 
@@ -32,15 +32,15 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_transcriptomic_clock.py` (``plot_transcriptomic_clock.py``)
-     - 00:01.515
-     - 408.3
    * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_custom_imputation_implementation.py` (``plot_custom_imputation_implementation.py``)
-     - 00:00.000
-     - 0.0
-   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_down_syndrome_model.py` (``plot_down_syndrome_model.py``)
-     - 00:00.000
-     - 0.0
+     - 03:09.803
+     - 11895.3
    * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_epigenetic_clocks_on_geo.py` (``plot_epigenetic_clocks_on_geo.py``)
-     - 00:00.000
-     - 0.0
+     - 00:02.616
+     - 1587.1
+   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_transcriptomic_clock.py` (``plot_transcriptomic_clock.py``)
+     - 00:01.739
+     - 406.4
+   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_down_syndrome_model.py` (``plot_down_syndrome_model.py``)
+     - 00:00.721
+     - 944.9

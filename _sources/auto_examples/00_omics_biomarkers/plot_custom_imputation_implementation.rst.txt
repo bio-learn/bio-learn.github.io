@@ -195,9 +195,9 @@ You get the same results as running the function directly on your dataset
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 21.760 seconds)
+   **Total running time of the script:** (3 minutes 9.803 seconds)
 
-**Estimated memory usage:**  9865 MB
+**Estimated memory usage:**  11895 MB
 
 
 .. _sphx_glr_download_auto_examples_00_omics_biomarkers_plot_custom_imputation_implementation.py:

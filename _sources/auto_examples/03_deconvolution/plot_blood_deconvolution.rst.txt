@@ -61,16 +61,6 @@ Estimate cell proportions using EPIC deconvolution model
 
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    Estimating cell proportions using 'EPIC' platform reference...
-    Number of CpGs in reference: 600
-    Number of CpGs in methylation data intersecting with reference CpGs: 600
-    Running deconvolution...
-    Deconvolution complete!
-
 
 
 
@@ -120,9 +110,9 @@ Compare to known cell proportions measured with FACS (fluorescence-activated cel
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.562 seconds)
+   **Total running time of the script:** (0 minutes 0.934 seconds)
 
-**Estimated memory usage:**  118 MB
+**Estimated memory usage:**  10 MB
 
 
 .. _sphx_glr_download_auto_examples_03_deconvolution_plot_blood_deconvolution.py:

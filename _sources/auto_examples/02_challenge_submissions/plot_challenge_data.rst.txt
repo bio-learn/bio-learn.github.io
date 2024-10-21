@@ -559,6 +559,9 @@ Some of the data overlaps while some does not but all the metadata is combined
         <tr style="text-align: right;">
           <th></th>
           <th>age</th>
+          <th>ethnicity</th>
+          <th>race1</th>
+          <th>...</th>
           <th>sex</th>
           <th>subject_id</th>
           <th>tissue</th>
@@ -568,40 +571,58 @@ Some of the data overlaps while some does not but all the metadata is combined
         <tr>
           <th>GSM7866964</th>
           <td>31.35</td>
+          <td>Non Hispanic</td>
+          <td>White</td>
+          <td>...</td>
           <td>2</td>
           <td>BoA1</td>
-          <td>Blood</td>
+          <td>blood</td>
         </tr>
         <tr>
           <th>GSM7866965</th>
           <td>79.45</td>
+          <td>Non Hispanic</td>
+          <td>Asian</td>
+          <td>...</td>
           <td>1</td>
           <td>BoA2</td>
-          <td>Blood</td>
+          <td>blood</td>
         </tr>
         <tr>
           <th>GSM7866966</th>
           <td>60.42</td>
+          <td>Non Hispanic</td>
+          <td>Asian</td>
+          <td>...</td>
           <td>2</td>
           <td>BoA3</td>
-          <td>Blood</td>
+          <td>blood</td>
         </tr>
         <tr>
           <th>GSM7866967</th>
           <td>59.24</td>
+          <td>HISPANIC</td>
+          <td>White</td>
+          <td>...</td>
           <td>1</td>
           <td>BoA4</td>
-          <td>Blood</td>
+          <td>blood</td>
         </tr>
         <tr>
           <th>GSM7866968</th>
           <td>22.41</td>
+          <td>Non Hispanic</td>
+          <td>White</td>
+          <td>...</td>
           <td>1</td>
           <td>BoA5</td>
-          <td>Blood</td>
+          <td>blood</td>
         </tr>
         <tr>
           <th>...</th>
+          <td>...</td>
+          <td>...</td>
+          <td>...</td>
           <td>...</td>
           <td>...</td>
           <td>...</td>
@@ -610,6 +631,9 @@ Some of the data overlaps while some does not but all the metadata is combined
         <tr>
           <th>P499</th>
           <td>80.98</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>...</td>
           <td>1</td>
           <td>NaN</td>
           <td>NaN</td>
@@ -617,6 +641,9 @@ Some of the data overlaps while some does not but all the metadata is combined
         <tr>
           <th>P500</th>
           <td>89.00</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>...</td>
           <td>1</td>
           <td>NaN</td>
           <td>NaN</td>
@@ -624,6 +651,9 @@ Some of the data overlaps while some does not but all the metadata is combined
         <tr>
           <th>P501</th>
           <td>80.92</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>...</td>
           <td>2</td>
           <td>NaN</td>
           <td>NaN</td>
@@ -631,6 +661,9 @@ Some of the data overlaps while some does not but all the metadata is combined
         <tr>
           <th>P502</th>
           <td>69.80</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>...</td>
           <td>1</td>
           <td>NaN</td>
           <td>NaN</td>
@@ -638,13 +671,16 @@ Some of the data overlaps while some does not but all the metadata is combined
         <tr>
           <th>P503</th>
           <td>68.18</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>...</td>
           <td>1</td>
           <td>NaN</td>
           <td>NaN</td>
         </tr>
       </tbody>
     </table>
-    <p>651 rows × 4 columns</p>
+    <p>651 rows × 7 columns</p>
     </div>
     </div>
     <br />
@@ -801,9 +837,9 @@ We can then compare the output from the two models
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 20.893 seconds)
+   **Total running time of the script:** (0 minutes 21.304 seconds)
 
-**Estimated memory usage:**  15052 MB
+**Estimated memory usage:**  14385 MB
 
 
 .. _sphx_glr_download_auto_examples_02_challenge_submissions_plot_challenge_data.py:
@@ -815,7 +851,7 @@ We can then compare the output from the two models
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.6.0?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/plot_challenge_data.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/main?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/plot_challenge_data.ipynb
         :alt: Launch binder
         :width: 150 px
 
