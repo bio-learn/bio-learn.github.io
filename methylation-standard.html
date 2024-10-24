@@ -3,18 +3,18 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="Clocks and Other Models" />
+<meta property="og:title" content="DNA Methylation Array Data Standard V-2410" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://bio-learn.github.io/clocks.html" />
+<meta property="og:url" content="https://bio-learn.github.io/methylation-standard.html" />
 <meta property="og:site_name" content="Biolearn" />
-<meta property="og:description" content="Biolearn supports a number of clock models that can be easily run from the clock gallery.,,,,,,, Name, Year, Species, Tissue, Predicts, Source, Coefficients,,, Horvathv1, 2013, Human, Multi-tissue,..." />
+<meta property="og:description" content="This standard describes a consistent file format for methylation matrix data and associated metadata. It focuses on file formatting for storage and transmission without mandating any specific form ..." />
 <meta property="og:image" content="https://bio-learn.github.io/_static/biolearn-logo.png" />
 <meta property="og:image:alt" content="Biolearn" />
-<meta name="description" content="Biolearn supports a number of clock models that can be easily run from the clock gallery.,,,,,,, Name, Year, Species, Tissue, Predicts, Source, Coefficients,,, Horvathv1, 2013, Human, Multi-tissue,..." />
-<link rel="search" title="Search" href="search.html" /><link rel="next" title="GEO Data Sources" href="data.html" /><link rel="prev" title="Quickstart" href="quickstart.html" />
+<meta name="description" content="This standard describes a consistent file format for methylation matrix data and associated metadata. It focuses on file formatting for storage and transmission without mandating any specific form ..." />
+<link rel="search" title="Search" href="search.html" />
 
     <link rel="shortcut icon" href="_static/favicon.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>Clocks and Other Models - Biolearn</title>
+        <title>DNA Methylation Array Data Standard V-2410 - Biolearn</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=045299b1" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -160,7 +160,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -183,9 +183,9 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul class="current">
+  <ul>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Clocks and Other Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clocks.html">Clocks and Other Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data.html">GEO Data Sources</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="auto_examples/index.html">Examples</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="auto_examples/00_omics_biomarkers/index.html">Omics Biomarker Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Omics Biomarker Examples</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -273,351 +273,106 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="clocks-and-other-models">
-<h1>Clocks and Other Models<a class="headerlink" href="#clocks-and-other-models" title="Link to this heading">#</a></h1>
-<p>Biolearn supports a number of clock models that can be easily run from the clock gallery.</p>
-<div class="table-wrapper docutils container">
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Year</p></th>
-<th class="head"><p>Species</p></th>
-<th class="head"><p>Tissue</p></th>
-<th class="head"><p>Predicts</p></th>
-<th class="head"><p>Source</p></th>
-<th class="head"><p>Coefficients</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Horvathv1</p></td>
-<td><p>2013</p></td>
-<td><p>Human</p></td>
-<td><p>Multi-tissue</p></td>
-<td><p>Age (Years)</p></td>
-<td><p><a class="reference external" href="https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-10-r115">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Horvath1.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>Hannum</p></td>
-<td><p>2013</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Age (Years)</p></td>
-<td><p><a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S1097276512008933">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Hannum.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-even"><td><p>Lin</p></td>
-<td><p>2016</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Age (Years)</p></td>
-<td><p><a class="reference external" href="https://www.aging-us.com/article/100908/text">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Lin.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>PhenoAge</p></td>
-<td><p>2018</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Age (Years)</p></td>
-<td><p><a class="reference external" href="https://www.aging-us.com/article/101414/text">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/PhenoAge.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-even"><td><p>YingCausAge</p></td>
-<td><p>2022</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Age (Years)</p></td>
-<td><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2022.10.07.511382v2">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/YingCausAge.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>YingDamAge</p></td>
-<td><p>2022</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Age (Years)</p></td>
-<td><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2022.10.07.511382v2">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/YingDamAge.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-even"><td><p>YingAdaptAge</p></td>
-<td><p>2022</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Age (Years)</p></td>
-<td><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2022.10.07.511382v2">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/YingAdaptAge.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>Horvathv2</p></td>
-<td><p>2018</p></td>
-<td><p>Human</p></td>
-<td><p>Skin + blood</p></td>
-<td><p>Age (Years)</p></td>
-<td><p><a class="reference external" href="https://www.aging-us.com/article/101508/text">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Horvath2.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-even"><td><p>PEDBE</p></td>
-<td><p>2019</p></td>
-<td><p>Human</p></td>
-<td><p>Buccal</p></td>
-<td><p>Age (Years)</p></td>
-<td><p><a class="reference external" href="https://www.pnas.org/doi/10.1073/pnas.1820843116">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/PEDBE.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>Zhang_10</p></td>
-<td><p>2019</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Mortality Risk</p></td>
-<td><p><a class="reference external" href="https://www.nature.com/articles/ncomms14617">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Zhang_10.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-even"><td><p>DunedinPoAm38</p></td>
-<td><p>2020</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Aging Rate (Years/Year)</p></td>
-<td><p><a class="reference external" href="https://elifesciences.org/articles/54870#s2">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/DunedinPoAm38.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>DunedinPACE</p></td>
-<td><p>2022</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Aging Rate (Years/Year)</p></td>
-<td><p><a class="reference external" href="https://www.proquest.com/docview/2634411178">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/DunedinPACE.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-even"><td><p>GrimAgeV1</p></td>
-<td><p>2019</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Mortality Adjusted Age (Years)</p></td>
-<td><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6366976/">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/GrimAgeV1.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>GrimAgeV2</p></td>
-<td><p>2022</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Mortality Adjusted Age (Years)</p></td>
-<td><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9792204/">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/GrimAgeV2.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-even"><td><p>AlcoholMcCartney</p></td>
-<td><p>2018</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Alcohol Consumption</p></td>
-<td><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6158884/">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Alcohol.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>DNAmTL</p></td>
-<td><p>2019</p></td>
-<td><p>Human</p></td>
-<td><p>Blood, Adipose</p></td>
-<td><p>Telomere Length</p></td>
-<td><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6738410/">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/DNAmTL.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-even"><td><p>HRSInCHPhenoAge</p></td>
-<td><p>2022</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Age (Years)</p></td>
-<td><p><a class="reference external" href="https://www.nature.com/articles/s43587-022-00248-2">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/HRSInCHPhenoAge.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>Knight</p></td>
-<td><p>2016</p></td>
-<td><p>Human</p></td>
-<td><p>Cord Blood</p></td>
-<td><p>Gestational Age</p></td>
-<td><p><a class="reference external" href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1068-z">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Knight.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-even"><td><p>LeeControl</p></td>
-<td><p>2019</p></td>
-<td><p>Human</p></td>
-<td><p>Placenta</p></td>
-<td><p>Gestational Age</p></td>
-<td><p><a class="reference external" href="https://www.aging-us.com/article/102049/text">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/LeeControl.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>SexEstimation</p></td>
-<td><p>2021</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Sex</p></td>
-<td><p><a class="reference external" href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-021-07675-2">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/estimateSex.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-even"><td><p>LeeRefinedRobust</p></td>
-<td><p>2019</p></td>
-<td><p>Human</p></td>
-<td><p>Placenta</p></td>
-<td><p>Gestational Age</p></td>
-<td><p><a class="reference external" href="https://www.aging-us.com/article/102049/text">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/LeeRefinedRobust.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>LeeRobust</p></td>
-<td><p>2019</p></td>
-<td><p>Human</p></td>
-<td><p>Placenta</p></td>
-<td><p>Gestational Age</p></td>
-<td><p><a class="reference external" href="https://www.aging-us.com/article/102049/text">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/LeeRobust.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-even"><td><p>SmokingMcCartney</p></td>
-<td><p>2018</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Smoking Status</p></td>
-<td><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6158884/">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/Smoking.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>DownSyndrome</p></td>
-<td><p>2021</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Down Syndrome Prediction</p></td>
-<td><p><a class="reference external" href="https://www.nature.com/articles/s41467-021-21064-z">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/down_syndrome.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-even"><td><p>DeconvoluteBlood450K</p></td>
-<td><p>2024</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Cell Proportions</p></td>
-<td><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2023.12.02.569722v6">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/450K_reinius_12_reference.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>DeconvoluteBloodEPIC</p></td>
-<td><p>2024</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Cell Proportions</p></td>
-<td><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2023.12.02.569722v6">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/EPIC_salas_18_reference.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-even"><td><p>TwelveCellDeconvoluteBloodEPIC</p></td>
-<td><p>2024</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Cell Proportions</p></td>
-<td><p><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2023.12.02.569722v6">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/twelve_cell_deconv.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>BMI_McCartney</p></td>
-<td><p>2018</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>BMI</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1186/s13059-018-1514-1">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/BMI_McCartney.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-even"><td><p>EducationMcCartney</p></td>
-<td><p>2018</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Educational Attainment</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1186/s13059-018-1514-1">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/EducationMcCartney.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>TotalCholesterolMcCartney</p></td>
-<td><p>2018</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Total Cholesterol</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1186/s13059-018-1514-1">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/TotalCholesterolMcCartney.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-even"><td><p>HDLCholesterolMcCartney</p></td>
-<td><p>2018</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>HDL Cholesterol</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1186/s13059-018-1514-1">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/HDLCholesterolMcCartney.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>LDLCholesterolMcCartney</p></td>
-<td><p>2018</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>LDL with Remnant Cholesterol</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1186/s13059-018-1514-1">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/LDLCholesterolMcCartney.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-even"><td><p>BodyFatMcCartney</p></td>
-<td><p>2018</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Percentage Body Fat</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1186/s13059-018-1514-1">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/BodyFatMcCartney.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>BMI_Reed</p></td>
-<td><p>2020</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>BMI</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1186/s13148-020-00841-5">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/BMI_Reed.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-even"><td><p>ProstateCancerKirby</p></td>
-<td><p>2017</p></td>
-<td><p>Human</p></td>
-<td><p>Prostate</p></td>
-<td><p>Prostate Cancer Status</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1186/s12885-017-3252-2">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/ProstateCancerKirby.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>HepatoXu</p></td>
-<td><p>2017</p></td>
-<td><p>Human</p></td>
-<td><p>Circulating DNA</p></td>
-<td><p>Hepatocellular Carcinoma Status</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1038/nmat4997">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/HepatoXu.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-even"><td><p>CVD_Westerman</p></td>
-<td><p>2020</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Coronary Heart Disease Status</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1161/JAHA.119.015299">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/CVD_Westermann.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>AD_Bahado-Singh</p></td>
-<td><p>2021</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Alzheimer’s Disease Status</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1371/journal.pone.0248375">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/AD_Bahado-Singh.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-even"><td><p>DepressionBarbu</p></td>
-<td><p>2021</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Depression Risk</p></td>
-<td><p><a class="reference external" href="https://doi.org/10.1038/s41380-020-0808-3">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/DepressionBarbu.csv">coefficients file</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>TranscriptomicPredictionModel</p></td>
-<td><p>2015</p></td>
-<td><p>Human</p></td>
-<td><p>Blood</p></td>
-<td><p>Age (Years)</p></td>
-<td><p><a class="reference external" href="https://www.nature.com/articles/ncomms9570">paper</a></p></td>
-<td><p><a class="reference external" href="https://github.com/bio-learn/biolearn/blob/master/biolearn/data/TranscriptomicPrediction.csv">coefficients file</a></p></td>
-</tr>
-</tbody>
-</table>
+          <section id="dna-methylation-array-data-standard-v-2410">
+<h1>DNA Methylation Array Data Standard V-2410<a class="headerlink" href="#dna-methylation-array-data-standard-v-2410" title="Link to this heading">#</a></h1>
+<p>This standard describes a consistent file format for methylation matrix data and associated metadata.
+It focuses on file formatting for storage and transmission without mandating any specific form of data processing.</p>
+<section id="why-is-this-standard-needed">
+<h2>Why is this standard needed?<a class="headerlink" href="#why-is-this-standard-needed" title="Link to this heading">#</a></h2>
+<p>GEO Series Matrix files are a very commonly used standard for representing methylation data and sample metadata. However, they have two problems:</p>
+<ul class="simple">
+<li><p>While metadata field inclusion follows a standard format, GEO does not standardize metadata values even for common data fields like sex and age.</p></li>
+<li><p>As methylation data has grown larger, the matrix can no longer be included in the Series Matrix files and is instead added as a supplementary file; however, these files do not have a standard format.</p></li>
+</ul>
+</section>
+<section id="preprocessing">
+<h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Link to this heading">#</a></h2>
+<p>This standard assumes that the array data has been pre-processed, including quality control, batch correction, and normalization.
+We recommend using SeSAMe for preprocessing, as recommended by Illumina.</p>
+</section>
+<section id="methylation-matrix-file-standard">
+<h2>Methylation Matrix File Standard<a class="headerlink" href="#methylation-matrix-file-standard" title="Link to this heading">#</a></h2>
+<section id="file-format">
+<h3>File Format<a class="headerlink" href="#file-format" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Files must be formatted as CSV (Comma-Separated Values).</p></li>
+<li><p>Each row in the file must contain the same number of entries.</p></li>
+<li><p><strong>Rows</strong>: Each row corresponds to measurements for a CpG site, with the CpG ID in the first column.</p></li>
+<li><dl class="simple">
+<dt><strong>Columns</strong>: Each column corresponds to a sample, with the sample ID as the header.</dt><dd><ul>
+<li><p><strong>Header Row</strong>: The first row must contain sample IDs.</p></li>
+<li><p>If published on GEO, the sample IDs must match GEO IDs exactly.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>Length</strong>: No more than 1000 samples should be included in a single file.</p></li>
+</ul>
+</section>
+<section id="data-values">
+<h3>Data Values<a class="headerlink" href="#data-values" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Beta Values</strong>: All data values must be beta values (methylation levels).</p></li>
+<li><p><strong>Range</strong>: Beta values must be decimal numbers between 0 and 1 or “NaN”.</p></li>
+<li><p><strong>Precision</strong>: Beta values must be rounded to no more than three decimal places.</p></li>
+<li><p><strong>Handling Multiple Values</strong>: If multiple values exist for the same CpG site, use the average of the available values.</p></li>
+</ul>
+</section>
+</section>
+<section id="metadata-file-standard">
+<h2>Metadata File Standard<a class="headerlink" href="#metadata-file-standard" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>File Format<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Files must be formatted as CSV (Comma-Separated Values).</p></li>
+<li><p>Each row represents a sample, and each column represents a metadata field.</p></li>
+</ul>
+</section>
+<section id="standard-metadata-fields">
+<h3>Standard Metadata Fields<a class="headerlink" href="#standard-metadata-fields" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Sex</strong>: Integer value with 0 for female and 1 for male. “NaN” (no values) is permitted for unknown values.</p></li>
+<li><p><strong>Age</strong>: Integer or decimal value representing age in years.</p></li>
+</ul>
+</section>
+<section id="additional-metadata-fields">
+<h3>Additional Metadata Fields<a class="headerlink" href="#additional-metadata-fields" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Other metadata fields are permitted.</p></li>
+</ul>
+</section>
+</section>
+<section id="example-files">
+<h2>Example Files<a class="headerlink" href="#example-files" title="Link to this heading">#</a></h2>
+<p>Example DNAm File:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cpgSite</span>     <span class="n">GSM3074480</span>    <span class="n">GSM3074481</span>    <span class="n">GSM3074482</span>    <span class="n">GSM3074483</span>
+<span class="n">cg00000029</span>    <span class="mf">0.395</span>         <span class="mf">0.499</span>         <span class="mf">0.42</span>         <span class="mf">0.423</span>
+<span class="n">cg00000109</span>    <span class="mf">0.821</span>         <span class="mf">0.868</span>         <span class="mf">0.877</span>        <span class="mf">0.841</span>
+<span class="n">cg00000155</span>    <span class="mf">0.878</span>         <span class="mf">0.89</span>          <span class="mf">0.894</span>        <span class="mf">0.822</span>
+</pre></div>
 </div>
+<p>Example Metadata File:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SampleID</span>    <span class="n">Sex</span>    <span class="n">Age</span>     <span class="n">Disease</span> <span class="n">State</span>
+<span class="n">GSM3074480</span>    <span class="mi">0</span>    <span class="mf">25.2</span>    <span class="kc">None</span>
+<span class="n">GSM3074481</span>    <span class="mi">0</span>    <span class="mf">29.5</span>    <span class="n">COVID</span>
+<span class="n">GSM3074482</span>    <span class="mi">1</span>    <span class="mf">39.7</span>    <span class="kc">None</span>
+</pre></div>
+</div>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.encodeproject.org/data-standards/">Data standards – ENCODE</a></p></li>
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/geo/info/soft.html">SOFT file format and content - GEO - NCBI</a></p></li>
+<li><p><a class="reference external" href="https://www.illumina.com/techniques/microarrays/methylation-arrays/methylation-array-data-analysis-tips.html">Methylation Array Data Analysis Tips - Illumina</a></p></li>
+</ul>
+</section>
 </section>
 
         </article>
@@ -625,26 +380,8 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="data.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">GEO Data Sources</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="quickstart.html">
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Quickstart</div>
-                
-              </div>
-            </a>
+          
+          
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -663,8 +400,41 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">DNA Methylation Array Data Standard V-2410</a><ul>
+<li><a class="reference internal" href="#why-is-this-standard-needed">Why is this standard needed?</a></li>
+<li><a class="reference internal" href="#preprocessing">Preprocessing</a></li>
+<li><a class="reference internal" href="#methylation-matrix-file-standard">Methylation Matrix File Standard</a><ul>
+<li><a class="reference internal" href="#file-format">File Format</a></li>
+<li><a class="reference internal" href="#data-values">Data Values</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#metadata-file-standard">Metadata File Standard</a><ul>
+<li><a class="reference internal" href="#id1">File Format</a></li>
+<li><a class="reference internal" href="#standard-metadata-fields">Standard Metadata Fields</a></li>
+<li><a class="reference internal" href="#additional-metadata-fields">Additional Metadata Fields</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#example-files">Example Files</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
