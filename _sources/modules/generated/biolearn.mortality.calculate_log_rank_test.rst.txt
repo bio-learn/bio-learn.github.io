@@ -1,0 +1,19 @@
+﻿.. note::
+
+   This page is a reference documentation. It only explains the
+   function signature, and not how to use it. Please refer to the
+   :ref:`user guide <quickstart>` for the big picture.
+
+
+biolearn.mortality.calculate_log_rank_test
+==========================================
+
+.. currentmodule:: biolearn.mortality
+
+.. autofunction:: calculate_log_rank_test
+
+.. include:: biolearn.mortality.calculate_log_rank_test.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>

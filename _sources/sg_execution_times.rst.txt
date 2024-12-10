@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**03:38.388** total execution time for 9 files **from all galleries**:
+**00:00.421** total execution time for 10 files **from all galleries**:
 
 .. container::
 
@@ -32,30 +32,33 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
+   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_local_data_load.py` (``../examples/00_omics_biomarkers/plot_local_data_load.py``)
+     - 00:00.421
+     - 35.6
    * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_custom_imputation_implementation.py` (``../examples/00_omics_biomarkers/plot_custom_imputation_implementation.py``)
-     - 03:09.803
-     - 11895.3
-   * - :ref:`sphx_glr_auto_examples_02_challenge_submissions_plot_challenge_data.py` (``../examples/02_challenge_submissions/plot_challenge_data.py``)
-     - 00:21.304
-     - 14384.8
-   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_epigenetic_clocks_on_geo.py` (``../examples/00_omics_biomarkers/plot_epigenetic_clocks_on_geo.py``)
-     - 00:02.616
-     - 1587.1
-   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_transcriptomic_clock.py` (``../examples/00_omics_biomarkers/plot_transcriptomic_clock.py``)
-     - 00:01.739
-     - 406.4
-   * - :ref:`sphx_glr_auto_examples_01_composite_biomarkers_plot_nhanes.py` (``../examples/01_composite_biomarkers/plot_nhanes.py``)
-     - 00:01.271
-     - 8.8
-   * - :ref:`sphx_glr_auto_examples_03_deconvolution_plot_blood_deconvolution.py` (``../examples/03_deconvolution/plot_blood_deconvolution.py``)
-     - 00:00.934
-     - 9.6
+     - 00:00.000
+     - 0.0
    * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_down_syndrome_model.py` (``../examples/00_omics_biomarkers/plot_down_syndrome_model.py``)
-     - 00:00.721
-     - 944.9
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_epigenetic_clocks_on_geo.py` (``../examples/00_omics_biomarkers/plot_epigenetic_clocks_on_geo.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_transcriptomic_clock.py` (``../examples/00_omics_biomarkers/plot_transcriptomic_clock.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_01_composite_biomarkers_plot_nhanes.py` (``../examples/01_composite_biomarkers/plot_nhanes.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_02_challenge_submissions_plot_challenge_data.py` (``../examples/02_challenge_submissions/plot_challenge_data.py``)
+     - 00:00.000
+     - 0.0
    * - :ref:`sphx_glr_auto_examples_02_challenge_submissions_simple_competiton_submission.py` (``../examples/02_challenge_submissions/simple_competiton_submission.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_examples_02_challenge_submissions_training_simple_model.py` (``../examples/02_challenge_submissions/training_simple_model.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_03_deconvolution_plot_blood_deconvolution.py` (``../examples/03_deconvolution/plot_blood_deconvolution.py``)
      - 00:00.000
      - 0.0

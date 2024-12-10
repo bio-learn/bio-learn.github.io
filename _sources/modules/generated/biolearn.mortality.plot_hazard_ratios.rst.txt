@@ -1,0 +1,19 @@
+﻿.. note::
+
+   This page is a reference documentation. It only explains the
+   function signature, and not how to use it. Please refer to the
+   :ref:`user guide <quickstart>` for the big picture.
+
+
+biolearn.mortality.plot_hazard_ratios
+=====================================
+
+.. currentmodule:: biolearn.mortality
+
+.. autofunction:: plot_hazard_ratios
+
+.. include:: biolearn.mortality.plot_hazard_ratios.examples
+
+.. raw:: html
+
+    <div style='clear:both'></div>
