@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:00.421** total execution time for 10 files **from all galleries**:
+**00:44.961** total execution time for 13 files **from all galleries**:
 
 .. container::
 
@@ -32,9 +32,15 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_local_data_load.py` (``../examples/00_omics_biomarkers/plot_local_data_load.py``)
-     - 00:00.421
-     - 35.6
+   * - :ref:`sphx_glr_auto_examples_04_additional_visualizations_plot_clock_model_relationships.py` (``../examples/04_additional_visualizations/plot_clock_model_relationships.py``)
+     - 00:21.955
+     - 1515.9
+   * - :ref:`sphx_glr_auto_examples_04_additional_visualizations_plot_quality_control.py` (``../examples/04_additional_visualizations/plot_quality_control.py``)
+     - 00:16.229
+     - 3315.0
+   * - :ref:`sphx_glr_auto_examples_04_additional_visualizations_plot_dnam_relationships.py` (``../examples/04_additional_visualizations/plot_dnam_relationships.py``)
+     - 00:06.778
+     - 1928.2
    * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_custom_imputation_implementation.py` (``../examples/00_omics_biomarkers/plot_custom_imputation_implementation.py``)
      - 00:00.000
      - 0.0
@@ -42,6 +48,9 @@ Computation times
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_epigenetic_clocks_on_geo.py` (``../examples/00_omics_biomarkers/plot_epigenetic_clocks_on_geo.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_local_data_load.py` (``../examples/00_omics_biomarkers/plot_local_data_load.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_transcriptomic_clock.py` (``../examples/00_omics_biomarkers/plot_transcriptomic_clock.py``)

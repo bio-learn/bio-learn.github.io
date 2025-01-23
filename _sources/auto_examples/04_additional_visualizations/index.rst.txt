@@ -1,0 +1,82 @@
+
+
+.. _sphx_glr_auto_examples_04_additional_visualizations:
+
+.. _additional_visualization_examples:
+
+=============================
+Additional Visualization Examples
+=============================
+
+This document showcases functions in visualize.py for visualizing 
+quality control results, DNA methylation, and aging clock/model predictions
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the built-in quality control plotting function to visualize  the dist...">
+
+.. only:: html
+
+  .. image:: /auto_examples/04_additional_visualizations/images/thumb/sphx_glr_plot_quality_control_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_04_additional_visualizations_plot_quality_control.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Quality control visualization using GEO datasets</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the built-in aging clock/model function to visualize  different plots...">
+
+.. only:: html
+
+  .. image:: /auto_examples/04_additional_visualizations/images/thumb/sphx_glr_plot_clock_model_relationships_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_04_additional_visualizations_plot_clock_model_relationships.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Clock/model visualizations using GEO datasets</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the built-in DNA methylation plotting function to visualize  DNA meth...">
+
+.. only:: html
+
+  .. image:: /auto_examples/04_additional_visualizations/images/thumb/sphx_glr_plot_dnam_relationships_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_04_additional_visualizations_plot_dnam_relationships.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">DNA methylation visualizations using GEO datasets</div>
+    </div>
+
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/04_additional_visualizations/plot_quality_control
+   /auto_examples/04_additional_visualizations/plot_clock_model_relationships
+   /auto_examples/04_additional_visualizations/plot_dnam_relationships
+
