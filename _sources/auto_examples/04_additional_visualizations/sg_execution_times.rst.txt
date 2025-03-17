@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:44.961** total execution time for 3 files **from auto_examples/04_additional_visualizations**:
+**00:44.062** total execution time for 3 files **from auto_examples/04_additional_visualizations**:
 
 .. container::
 
@@ -33,11 +33,11 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_auto_examples_04_additional_visualizations_plot_clock_model_relationships.py` (``plot_clock_model_relationships.py``)
-     - 00:21.955
-     - 1515.9
+     - 00:21.721
+     - 1483.1
    * - :ref:`sphx_glr_auto_examples_04_additional_visualizations_plot_quality_control.py` (``plot_quality_control.py``)
-     - 00:16.229
-     - 3315.0
+     - 00:15.621
+     - 3082.0
    * - :ref:`sphx_glr_auto_examples_04_additional_visualizations_plot_dnam_relationships.py` (``plot_dnam_relationships.py``)
-     - 00:06.778
-     - 1928.2
+     - 00:06.720
+     - 1813.7

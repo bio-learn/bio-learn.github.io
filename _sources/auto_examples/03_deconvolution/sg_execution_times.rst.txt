@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:00.934** total execution time for 1 file **from auto_examples/03_deconvolution**:
+**00:04.265** total execution time for 1 file **from auto_examples/03_deconvolution**:
 
 .. container::
 
@@ -33,5 +33,5 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_auto_examples_03_deconvolution_plot_blood_deconvolution.py` (``plot_blood_deconvolution.py``)
-     - 00:00.934
-     - 9.6
+     - 00:04.265
+     - 73.3

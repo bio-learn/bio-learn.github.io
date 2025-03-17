@@ -7,10 +7,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bio-learn.github.io/modules/generated/biolearn.data_library.GeoData.html" />
 <meta property="og:site_name" content="Biolearn" />
-<meta property="og:description" content="Examples using biolearn.data_library.GeoData: Clock/model visualizations using GEO datasets" />
-<meta property="og:image" content="https://bio-learn.github.io/_images/sphx_glr_plot_clock_model_relationships_thumb.png" />
+<meta property="og:description" content="Examples using biolearn.data_library.GeoData: Local Data Loading “Transcriptomic Clock” using GEO Data “Epigenetic Clocks” in GEO Data Down Syndrome Epigenetic Plotting Performing custom imputation..." />
+<meta property="og:image" content="https://bio-learn.github.io/_images/sphx_glr_plot_local_data_load_thumb.png" />
 <meta property="og:image:alt" content="" />
-<meta name="description" content="Examples using biolearn.data_library.GeoData: Clock/model visualizations using GEO datasets" />
+<meta name="description" content="Examples using biolearn.data_library.GeoData: Local Data Loading “Transcriptomic Clock” using GEO Data “Epigenetic Clocks” in GEO Data Down Syndrome Epigenetic Plotting Performing custom imputation..." />
 <link rel="search" title="Search" href="../../search.html" /><link rel="next" title="biolearn.model_gallery: ModelGallery" href="../model_gallery.html" /><link rel="prev" title="biolearn.data_library.DataSource" href="biolearn.data_library.DataSource.html" />
 
     <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
@@ -402,11 +402,105 @@ either a DataFrame directly or a path to a CSV file.</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="biolearn.data_library.GeoData.convert_biolearn_to_standard_sex">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_biolearn_to_standard_sex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#biolearn.data_library.GeoData.convert_biolearn_to_standard_sex" title="Link to this definition">#</a></dt>
+<dd><p>Converts internal sex representation to the standard format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>s</strong> (<em>Any</em>) – The internal sex value (1 for Female, 2 for Male, 0 for unknown).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Returns 0 if the input is 1 (Female), 1 if input is 2 (Male), or “NaN” otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Union[<a class="reference external" href="https://docs.python.org/3.10/library/functions.html#int" title="(in Python v3.10)">int</a>, <a class="reference external" href="https://docs.python.org/3.10/library/stdtypes.html#str" title="(in Python v3.10)">str</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="biolearn.data_library.GeoData.convert_standard_to_biolearn_sex">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">convert_standard_to_biolearn_sex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#biolearn.data_library.GeoData.convert_standard_to_biolearn_sex" title="Link to this definition">#</a></dt>
+<dd><p>Converts a standard sex value back to the internal representation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>val</strong> (<em>Any</em>) – The standard sex value (0 for female, 1 for male, “NaN” or other for unknown).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Returns 1 for standard 0 (Female), 2 for standard 1 (Male), or 0 otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.10/library/functions.html#int" title="(in Python v3.10)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="biolearn.data_library.GeoData.save_csv">
+<span class="sig-name descname"><span class="pre">save_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#biolearn.data_library.GeoData.save_csv" title="Link to this definition">#</a></dt>
+<dd><p>Saves the GeoData instance to CSV files according to the DNA Methylation Array Data Standard V-2410.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>folder_path</strong> (<a class="reference external" href="https://docs.python.org/3.10/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The directory where the files will be saved.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.10/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The base name for the saved files.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="biolearn.data_library.GeoData.load_csv">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">series_part</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#biolearn.data_library.GeoData.load_csv" title="Link to this definition">#</a></dt>
+<dd><p>Loads a GeoData instance from CSV files according to the DNA Methylation Array Data Standard V-2410.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>folder_path</strong> (<a class="reference external" href="https://docs.python.org/3.10/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The directory where the files are located.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.10/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a>) – The base name for the files.</p></li>
+<li><p><strong>series_part</strong> (<a class="reference external" href="https://docs.python.org/3.10/library/stdtypes.html#str" title="(in Python v3.10)"><em>str</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3.10/library/functions.html#int" title="(in Python v3.10)"><em>int</em></a>) – “all” to load all methylation parts and concatenate;
+otherwise, an integer specifying the part number to load.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A GeoData instance with metadata, methylation data, RNA, and protein data loaded.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#biolearn.data_library.GeoData" title="biolearn.data_library.GeoData">GeoData</a></p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <section id="examples-using-biolearn-data-library-geodata">
 <h2>Examples using <code class="docutils literal notranslate"><span class="pre">biolearn.data_library.GeoData</span></code><a class="headerlink" href="#examples-using-biolearn-data-library-geodata" title="Link to this heading">#</a></h2>
-<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the built-in aging clock/model function to visualize  different plots..."><img alt="" src="../../_images/sphx_glr_plot_clock_model_relationships_thumb.png" />
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This example loads data from a local file"><img alt="" src="../../_images/sphx_glr_plot_local_data_load_thumb.png" />
+<p><a class="reference internal" href="../../auto_examples/00_omics_biomarkers/plot_local_data_load.html#sphx-glr-auto-examples-00-omics-biomarkers-plot-local-data-load-py"><span class="std std-ref">Local Data Loading</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Local Data Loading</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example loads transcriptomic data from GEO, calculates the predicted age using a transcrip..."><img alt="" src="../../_images/sphx_glr_plot_transcriptomic_clock_thumb.png" />
+<p><a class="reference internal" href="../../auto_examples/00_omics_biomarkers/plot_transcriptomic_clock.html#sphx-glr-auto-examples-00-omics-biomarkers-plot-transcriptomic-clock-py"><span class="std std-ref">“Transcriptomic Clock” using GEO Data</span></a></p>
+  <div class="sphx-glr-thumbnail-title">"Transcriptomic Clock" using GEO Data</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example loads a DNA Methylation data from GEO, calculates multiple epigenetic clocks, and ..."><img alt="" src="../../_images/sphx_glr_plot_epigenetic_clocks_on_geo_thumb.png" />
+<p><a class="reference internal" href="../../auto_examples/00_omics_biomarkers/plot_epigenetic_clocks_on_geo.html#sphx-glr-auto-examples-00-omics-biomarkers-plot-epigenetic-clocks-on-geo-py"><span class="std std-ref">“Epigenetic Clocks” in GEO Data</span></a></p>
+  <div class="sphx-glr-thumbnail-title">"Epigenetic Clocks" in GEO Data</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example loads a DNA Methylation data from GEO with down syndrome metadata and shows how th..."><img alt="" src="../../_images/sphx_glr_plot_down_syndrome_model_thumb.png" />
+<p><a class="reference internal" href="../../auto_examples/00_omics_biomarkers/plot_down_syndrome_model.html#sphx-glr-auto-examples-00-omics-biomarkers-plot-down-syndrome-model-py"><span class="std std-ref">Down Syndrome Epigenetic Plotting</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Down Syndrome Epigenetic Plotting</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the ease of custom imputation using the biolearn library."><img alt="" src="../../_images/sphx_glr_plot_custom_imputation_implementation_thumb.png" />
+<p><a class="reference internal" href="../../auto_examples/00_omics_biomarkers/plot_custom_imputation_implementation.html#sphx-glr-auto-examples-00-omics-biomarkers-plot-custom-imputation-implementation-py"><span class="std std-ref">Performing custom imputations</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Performing custom imputations</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example shows you how to load and explore the challenge data with biolearn"><img alt="" src="../../_images/sphx_glr_plot_challenge_data_thumb.png" />
+<p><a class="reference internal" href="../../auto_examples/02_challenge_submissions/plot_challenge_data.html#sphx-glr-auto-examples-02-challenge-submissions-plot-challenge-data-py"><span class="std std-ref">Exploring the Challenge Data</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Exploring the Challenge Data</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example loads blood DNA Methylation data from GEO, estimates the proportion of cell types,..."><img alt="" src="../../_images/sphx_glr_plot_blood_deconvolution_thumb.png" />
+<p><a class="reference internal" href="../../auto_examples/03_deconvolution/plot_blood_deconvolution.html#sphx-glr-auto-examples-03-deconvolution-plot-blood-deconvolution-py"><span class="std std-ref">“Deconvolution Example”</span></a></p>
+  <div class="sphx-glr-thumbnail-title">"Deconvolution Example"</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the built-in aging clock/model function to visualize  different plots..."><img alt="" src="../../_images/sphx_glr_plot_clock_model_relationships_thumb.png" />
 <p><a class="reference internal" href="../../auto_examples/04_additional_visualizations/plot_clock_model_relationships.html#sphx-glr-auto-examples-04-additional-visualizations-plot-clock-model-relationships-py"><span class="std std-ref">Clock/model visualizations using GEO datasets</span></a></p>
   <div class="sphx-glr-thumbnail-title">Clock/model visualizations using GEO datasets</div>
 </div></div><div style='clear:both'></div></section>
@@ -475,6 +569,10 @@ either a DataFrame directly or a path to a CSV file.</p>
 <li><a class="reference internal" href="#biolearn.data_library.GeoData.copy"><code class="docutils literal notranslate"><span class="pre">GeoData.copy</span></code></a></li>
 <li><a class="reference internal" href="#biolearn.data_library.GeoData.quality_report"><code class="docutils literal notranslate"><span class="pre">GeoData.quality_report</span></code></a></li>
 <li><a class="reference internal" href="#biolearn.data_library.GeoData.from_methylation_matrix"><code class="docutils literal notranslate"><span class="pre">GeoData.from_methylation_matrix</span></code></a></li>
+<li><a class="reference internal" href="#biolearn.data_library.GeoData.convert_biolearn_to_standard_sex"><code class="docutils literal notranslate"><span class="pre">GeoData.convert_biolearn_to_standard_sex</span></code></a></li>
+<li><a class="reference internal" href="#biolearn.data_library.GeoData.convert_standard_to_biolearn_sex"><code class="docutils literal notranslate"><span class="pre">GeoData.convert_standard_to_biolearn_sex</span></code></a></li>
+<li><a class="reference internal" href="#biolearn.data_library.GeoData.save_csv"><code class="docutils literal notranslate"><span class="pre">GeoData.save_csv</span></code></a></li>
+<li><a class="reference internal" href="#biolearn.data_library.GeoData.load_csv"><code class="docutils literal notranslate"><span class="pre">GeoData.load_csv</span></code></a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#examples-using-biolearn-data-library-geodata">Examples using <code class="docutils literal notranslate"><span class="pre">biolearn.data_library.GeoData</span></code></a></li>

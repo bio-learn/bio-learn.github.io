@@ -36,12 +36,12 @@ Load up a local data file
     from biolearn.util import get_test_data_file
 
     #Files formatted as described in the standard https://bio-learn.github.io/methylation-standard.html will load correctly. 
+    #Load will search for files names [name]_metadata.csv and [name]_methylation_part0.csv
 
-    file_path = get_test_data_file("example_data.csv")
-    data = GeoData.from_methylation_matrix(file_path)
+    file_path = get_test_data_file("")
+    data = GeoData.load_csv(file_path, "example")
 
     data.dnam
-
 
 
 
@@ -113,10 +113,84 @@ Load up a local data file
 
 .. GENERATED FROM PYTHON SOURCE LINES 23-25
 
+Metadata is loaded if available
+---------------------------------------------------------------------------
+
+.. GENERATED FROM PYTHON SOURCE LINES 25-27
+
+.. code-block:: Python
+
+    data.metadata
+
+
+
+
+
+
+.. raw:: html
+
+    <div class="output_subarea output_html rendered_html output_result">
+    <div>
+    <style scoped>
+        .dataframe tbody tr th:only-of-type {
+            vertical-align: middle;
+        }
+
+        .dataframe tbody tr th {
+            vertical-align: top;
+        }
+
+        .dataframe thead th {
+            text-align: right;
+        }
+    </style>
+    <table border="1" class="dataframe">
+      <thead>
+        <tr style="text-align: right;">
+          <th></th>
+          <th>Sex</th>
+          <th>Age</th>
+          <th>Disease_State</th>
+        </tr>
+        <tr>
+          <th>SampleID</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>GSM3074480</th>
+          <td>1</td>
+          <td>25.2</td>
+          <td>None</td>
+        </tr>
+        <tr>
+          <th>GSM3074481</th>
+          <td>1</td>
+          <td>29.5</td>
+          <td>COVID</td>
+        </tr>
+        <tr>
+          <th>GSM3074482</th>
+          <td>2</td>
+          <td>39.7</td>
+          <td>None</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    </div>
+    <br />
+    <br />
+
+.. GENERATED FROM PYTHON SOURCE LINES 28-30
+
 You can now use it like any other Biolearn dataset
 ------------------------------------------------------------------------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 25-26
+.. GENERATED FROM PYTHON SOURCE LINES 30-31
 
 .. code-block:: Python
 
@@ -150,9 +224,9 @@ You can now use it like any other Biolearn dataset
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.421 seconds)
+   **Total running time of the script:** (0 minutes 0.482 seconds)
 
-**Estimated memory usage:**  36 MB
+**Estimated memory usage:**  78 MB
 
 
 .. _sphx_glr_download_auto_examples_00_omics_biomarkers_plot_local_data_load.py:
@@ -164,7 +238,7 @@ You can now use it like any other Biolearn dataset
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.6.6?urlpath=lab/tree/notebooks/auto_examples/00_omics_biomarkers/plot_local_data_load.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.7.0?urlpath=lab/tree/notebooks/auto_examples/00_omics_biomarkers/plot_local_data_load.ipynb
         :alt: Launch binder
         :width: 150 px
 

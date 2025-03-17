@@ -7,10 +7,10 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://bio-learn.github.io/auto_examples/00_omics_biomarkers/plot_local_data_load.html" />
 <meta property="og:site_name" content="Biolearn" />
-<meta property="og:description" content="This example loads data from a local file Load up a local data file: You can now use it like any other Biolearn dataset: Total running time of the script:(0 minutes 0.421 seconds) Estimated memory ..." />
+<meta property="og:description" content="This example loads data from a local file Load up a local data file: Metadata is loaded if available: You can now use it like any other Biolearn dataset: Total running time of the script:(0 minutes..." />
 <meta property="og:image" content="https://bio-learn.github.io/_static/biolearn-logo.png" />
 <meta property="og:image:alt" content="Biolearn" />
-<meta name="description" content="This example loads data from a local file Load up a local data file: You can now use it like any other Biolearn dataset: Total running time of the script:(0 minutes 0.421 seconds) Estimated memory ..." />
+<meta name="description" content="This example loads data from a local file Load up a local data file: Metadata is loaded if available: You can now use it like any other Biolearn dataset: Total running time of the script:(0 minutes..." />
 <link rel="search" title="Search" href="../../search.html" /><link rel="next" title="“Transcriptomic Clock” using GEO Data" href="plot_transcriptomic_clock.html" /><link rel="prev" title="Omics Biomarker Examples" href="index.html" />
 
     <link rel="shortcut icon" href="../../_static/favicon.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
@@ -310,9 +310,10 @@ to download the full example code or to run this example in your browser via Bin
 <span class="kn">from</span> <span class="nn">biolearn.util</span> <span class="kn">import</span> <span class="n">get_test_data_file</span>
 
 <span class="c1">#Files formatted as described in the standard https://bio-learn.github.io/methylation-standard.html will load correctly.</span>
+<span class="c1">#Load will search for files names [name]_metadata.csv and [name]_methylation_part0.csv</span>
 
-<a href="https://docs.python.org/3.10/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">file_path</span></a> <span class="o">=</span> <span class="n">get_test_data_file</span><span class="p">(</span><span class="s2">&quot;example_data.csv&quot;</span><span class="p">)</span>
-<a href="../../modules/generated/biolearn.data_library.GeoData.html#biolearn.data_library.GeoData" title="biolearn.data_library.GeoData" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data</span></a> <span class="o">=</span> <a href="../../modules/generated/biolearn.data_library.GeoData.html#biolearn.data_library.GeoData.from_methylation_matrix" title="biolearn.data_library.GeoData.from_methylation_matrix" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-method"><span class="n">GeoData</span><span class="o">.</span><span class="n">from_methylation_matrix</span></a><span class="p">(</span><a href="https://docs.python.org/3.10/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">file_path</span></a><span class="p">)</span>
+<a href="https://docs.python.org/3.10/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">file_path</span></a> <span class="o">=</span> <span class="n">get_test_data_file</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<a href="../../modules/generated/biolearn.data_library.GeoData.html#biolearn.data_library.GeoData" title="biolearn.data_library.GeoData" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data</span></a> <span class="o">=</span> <a href="../../modules/generated/biolearn.data_library.GeoData.html#biolearn.data_library.GeoData.load_csv" title="biolearn.data_library.GeoData.load_csv" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-method"><span class="n">GeoData</span><span class="o">.</span><span class="n">load_csv</span></a><span class="p">(</span><a href="https://docs.python.org/3.10/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">file_path</span></a><span class="p">,</span> <span class="s2">&quot;example&quot;</span><span class="p">)</span>
 
 <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data</span><span class="o">.</span><span class="n">dnam</span></a>
 </pre></div>
@@ -377,6 +378,66 @@ to download the full example code or to run this example in your browser via Bin
 </div>
 <br />
 <br /></section>
+<section id="metadata-is-loaded-if-available">
+<h2>Metadata is loaded if available<a class="headerlink" href="#metadata-is-loaded-if-available" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="pandas.core.frame.DataFrame" class="sphx-glr-backref-module-pandas-core-frame sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data</span><span class="o">.</span><span class="n">metadata</span></a>
+</pre></div>
+</div>
+<div class="output_subarea output_html rendered_html output_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>Disease_State</th>
+    </tr>
+    <tr>
+      <th>SampleID</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GSM3074480</th>
+      <td>1</td>
+      <td>25.2</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>GSM3074481</th>
+      <td>1</td>
+      <td>29.5</td>
+      <td>COVID</td>
+    </tr>
+    <tr>
+      <th>GSM3074482</th>
+      <td>2</td>
+      <td>39.7</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<br />
+<br /></section>
 <section id="you-can-now-use-it-like-any-other-biolearn-dataset">
 <h2>You can now use it like any other Biolearn dataset<a class="headerlink" href="#you-can-now-use-it-like-any-other-biolearn-dataset" title="Link to this heading">#</a></h2>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../modules/generated/biolearn.data_library.GeoData.html#biolearn.data_library.GeoData.quality_report" title="biolearn.data_library.GeoData.quality_report" class="sphx-glr-backref-module-biolearn-data_library sphx-glr-backref-type-py-method"><span class="n">data</span><span class="o">.</span><span class="n">quality_report</span></a><span class="p">()</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -396,11 +457,11 @@ Notes:
 - Your data set includes methylation sites that have over 20% of reads missing. Default imputation may replace the values for all reads from this site with a gold standard.
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.421 seconds)</p>
-<p><strong>Estimated memory usage:</strong>  36 MB</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.482 seconds)</p>
+<p><strong>Estimated memory usage:</strong>  78 MB</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-00-omics-biomarkers-plot-local-data-load-py">
 <div class="binder-badge docutils container">
-<a class="reference external image-reference" href="https://mybinder.org/v2/gh/bio-learn/biolearn/0.6.6?urlpath=lab/tree/notebooks/auto_examples/00_omics_biomarkers/plot_local_data_load.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo.svg" width="150px" /></a>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/bio-learn/biolearn/0.7.0?urlpath=lab/tree/notebooks/auto_examples/00_omics_biomarkers/plot_local_data_load.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo.svg" width="150px" /></a>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/758913723f4a044bad348bdd01f7646c/plot_local_data_load.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_local_data_load.ipynb</span></code></a></p>
@@ -470,6 +531,7 @@ Notes:
             <ul>
 <li><a class="reference internal" href="#">Local Data Loading</a><ul>
 <li><a class="reference internal" href="#load-up-a-local-data-file">Load up a local data file</a></li>
+<li><a class="reference internal" href="#metadata-is-loaded-if-available">Metadata is loaded if available</a></li>
 <li><a class="reference internal" href="#you-can-now-use-it-like-any-other-biolearn-dataset">You can now use it like any other Biolearn dataset</a></li>
 </ul>
 </li>

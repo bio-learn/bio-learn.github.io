@@ -113,9 +113,9 @@ Plot the results against the chronological age using seaborn
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.739 seconds)
+   **Total running time of the script:** (0 minutes 5.081 seconds)
 
-**Estimated memory usage:**  406 MB
+**Estimated memory usage:**  393 MB
 
 
 .. _sphx_glr_download_auto_examples_00_omics_biomarkers_plot_transcriptomic_clock.py:
@@ -127,7 +127,7 @@ Plot the results against the chronological age using seaborn
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/main?urlpath=lab/tree/notebooks/auto_examples/00_omics_biomarkers/plot_transcriptomic_clock.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.7.0?urlpath=lab/tree/notebooks/auto_examples/00_omics_biomarkers/plot_transcriptomic_clock.ipynb
         :alt: Launch binder
         :width: 150 px
 
