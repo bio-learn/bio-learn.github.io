@@ -110,9 +110,9 @@ Finally generate a boxplot to show the predictive power
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 3.564 seconds)
+   **Total running time of the script:** (0 minutes 3.498 seconds)
 
-**Estimated memory usage:**  1034 MB
+**Estimated memory usage:**  1159 MB
 
 
 .. _sphx_glr_download_auto_examples_00_omics_biomarkers_plot_down_syndrome_model.py:
@@ -124,7 +124,7 @@ Finally generate a boxplot to show the predictive power
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/main?urlpath=lab/tree/notebooks/auto_examples/00_omics_biomarkers/plot_down_syndrome_model.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.8.0?urlpath=lab/tree/notebooks/auto_examples/00_omics_biomarkers/plot_down_syndrome_model.ipynb
         :alt: Launch binder
         :width: 150 px
 

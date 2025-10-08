@@ -171,9 +171,9 @@ Visualize the distribution of sample deviations from the population mean
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 12.195 seconds)
+   **Total running time of the script:** (0 minutes 12.149 seconds)
 
-**Estimated memory usage:**  3250 MB
+**Estimated memory usage:**  3228 MB
 
 
 .. _sphx_glr_download_auto_examples_04_additional_visualizations_plot_quality_control.py:
@@ -185,7 +185,7 @@ Visualize the distribution of sample deviations from the population mean
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/main?urlpath=lab/tree/notebooks/auto_examples/04_additional_visualizations/plot_quality_control.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.8.0?urlpath=lab/tree/notebooks/auto_examples/04_additional_visualizations/plot_quality_control.ipynb
         :alt: Launch binder
         :width: 150 px
 

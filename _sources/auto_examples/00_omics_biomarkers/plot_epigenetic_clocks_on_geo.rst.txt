@@ -107,16 +107,16 @@ Finally extract the age data from the metadata from GEO and plot the results usi
  .. code-block:: none
 
 
-    <seaborn.axisgrid.FacetGrid object at 0x725e5018c6d0>
+    <seaborn.axisgrid.FacetGrid object at 0x729f7117d4d0>
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 5.658 seconds)
+   **Total running time of the script:** (0 minutes 5.589 seconds)
 
-**Estimated memory usage:**  1682 MB
+**Estimated memory usage:**  1742 MB
 
 
 .. _sphx_glr_download_auto_examples_00_omics_biomarkers_plot_epigenetic_clocks_on_geo.py:
@@ -128,7 +128,7 @@ Finally extract the age data from the metadata from GEO and plot the results usi
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/main?urlpath=lab/tree/notebooks/auto_examples/00_omics_biomarkers/plot_epigenetic_clocks_on_geo.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.8.0?urlpath=lab/tree/notebooks/auto_examples/00_omics_biomarkers/plot_epigenetic_clocks_on_geo.ipynb
         :alt: Launch binder
         :width: 150 px
 

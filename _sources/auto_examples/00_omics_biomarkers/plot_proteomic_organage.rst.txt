@@ -143,7 +143,7 @@ Create boxplot visualization
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 3.402 seconds)
+   **Total running time of the script:** (0 minutes 3.331 seconds)
 
 **Estimated memory usage:**  190 MB
 
@@ -157,7 +157,7 @@ Create boxplot visualization
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/main?urlpath=lab/tree/notebooks/auto_examples/00_omics_biomarkers/plot_proteomic_organage.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.8.0?urlpath=lab/tree/notebooks/auto_examples/00_omics_biomarkers/plot_proteomic_organage.ipynb
         :alt: Launch binder
         :width: 150 px
 
