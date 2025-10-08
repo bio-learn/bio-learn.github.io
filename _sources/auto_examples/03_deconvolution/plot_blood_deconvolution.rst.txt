@@ -110,9 +110,9 @@ Compare to known cell proportions measured with FACS (fluorescence-activated cel
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 3.340 seconds)
+   **Total running time of the script:** (0 minutes 3.269 seconds)
 
-**Estimated memory usage:**  202 MB
+**Estimated memory usage:**  196 MB
 
 
 .. _sphx_glr_download_auto_examples_03_deconvolution_plot_blood_deconvolution.py:

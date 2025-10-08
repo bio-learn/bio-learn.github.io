@@ -143,9 +143,9 @@ Create boxplot visualization
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 3.331 seconds)
+   **Total running time of the script:** (0 minutes 3.364 seconds)
 
-**Estimated memory usage:**  190 MB
+**Estimated memory usage:**  184 MB
 
 
 .. _sphx_glr_download_auto_examples_00_omics_biomarkers_plot_proteomic_organage.py:

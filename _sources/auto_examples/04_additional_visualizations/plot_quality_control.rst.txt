@@ -171,9 +171,9 @@ Visualize the distribution of sample deviations from the population mean
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 12.149 seconds)
+   **Total running time of the script:** (0 minutes 12.037 seconds)
 
-**Estimated memory usage:**  3228 MB
+**Estimated memory usage:**  3219 MB
 
 
 .. _sphx_glr_download_auto_examples_04_additional_visualizations_plot_quality_control.py:
