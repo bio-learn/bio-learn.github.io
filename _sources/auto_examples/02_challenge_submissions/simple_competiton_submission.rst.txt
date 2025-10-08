@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_auto_examples_02_challenge_submissions_simple_competiton_submission.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -83,7 +83,7 @@ Now we save this to a csv in the expected format.
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.7.1?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/simple_competiton_submission.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.8.0?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/simple_competiton_submission.ipynb
         :alt: Launch binder
         :width: 150 px
 
@@ -94,6 +94,10 @@ Now we save this to a csv in the expected format.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: simple_competiton_submission.py <simple_competiton_submission.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: simple_competiton_submission.zip <simple_competiton_submission.zip>`
 
 
 .. only:: html

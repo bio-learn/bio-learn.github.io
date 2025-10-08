@@ -16,10 +16,11 @@ Plots results of running deconvolution on dataset with known cell proportions
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example loads blood DNA Methylation data from GEO, estimates the proportion of cell types,...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example loads blood DNA Methylation data from GEO, estimates the proportion of cell types, and compares them to known cell type proportions. ">
 
 .. only:: html
 
@@ -33,6 +34,8 @@ Plots results of running deconvolution on dataset with known cell proportions
       <div class="sphx-glr-thumbnail-title">"Deconvolution Example"</div>
     </div>
 
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 

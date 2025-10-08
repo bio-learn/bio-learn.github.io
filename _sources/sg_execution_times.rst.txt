@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**02:01.500** total execution time for 13 files **from all galleries**:
+**00:30.778** total execution time for 14 files **from all galleries**:
 
 .. container::
 
@@ -32,42 +32,45 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_custom_imputation_implementation.py` (``../examples/00_omics_biomarkers/plot_custom_imputation_implementation.py``)
-     - 00:30.427
-     - 9837.8
    * - :ref:`sphx_glr_auto_examples_02_challenge_submissions_plot_challenge_data.py` (``../examples/02_challenge_submissions/plot_challenge_data.py``)
-     - 00:25.779
-     - 15006.5
-   * - :ref:`sphx_glr_auto_examples_04_additional_visualizations_plot_clock_model_relationships.py` (``../examples/04_additional_visualizations/plot_clock_model_relationships.py``)
-     - 00:21.721
-     - 1483.1
-   * - :ref:`sphx_glr_auto_examples_04_additional_visualizations_plot_quality_control.py` (``../examples/04_additional_visualizations/plot_quality_control.py``)
-     - 00:15.621
-     - 3082.0
-   * - :ref:`sphx_glr_auto_examples_04_additional_visualizations_plot_dnam_relationships.py` (``../examples/04_additional_visualizations/plot_dnam_relationships.py``)
-     - 00:06.720
-     - 1813.7
-   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_epigenetic_clocks_on_geo.py` (``../examples/00_omics_biomarkers/plot_epigenetic_clocks_on_geo.py``)
-     - 00:06.464
-     - 1554.9
-   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_transcriptomic_clock.py` (``../examples/00_omics_biomarkers/plot_transcriptomic_clock.py``)
-     - 00:05.081
-     - 392.5
+     - 00:30.778
+     - 15529.7
+   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_custom_imputation_implementation.py` (``../examples/00_omics_biomarkers/plot_custom_imputation_implementation.py``)
+     - 00:00.000
+     - 0.0
    * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_down_syndrome_model.py` (``../examples/00_omics_biomarkers/plot_down_syndrome_model.py``)
-     - 00:04.346
-     - 933.8
-   * - :ref:`sphx_glr_auto_examples_03_deconvolution_plot_blood_deconvolution.py` (``../examples/03_deconvolution/plot_blood_deconvolution.py``)
-     - 00:04.265
-     - 73.3
-   * - :ref:`sphx_glr_auto_examples_01_composite_biomarkers_plot_nhanes.py` (``../examples/01_composite_biomarkers/plot_nhanes.py``)
-     - 00:00.593
-     - 19.1
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_epigenetic_clocks_on_geo.py` (``../examples/00_omics_biomarkers/plot_epigenetic_clocks_on_geo.py``)
+     - 00:00.000
+     - 0.0
    * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_local_data_load.py` (``../examples/00_omics_biomarkers/plot_local_data_load.py``)
-     - 00:00.482
-     - 78.2
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_proteomic_organage.py` (``../examples/00_omics_biomarkers/plot_proteomic_organage.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_00_omics_biomarkers_plot_transcriptomic_clock.py` (``../examples/00_omics_biomarkers/plot_transcriptomic_clock.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_01_composite_biomarkers_plot_nhanes.py` (``../examples/01_composite_biomarkers/plot_nhanes.py``)
+     - 00:00.000
+     - 0.0
    * - :ref:`sphx_glr_auto_examples_02_challenge_submissions_simple_competiton_submission.py` (``../examples/02_challenge_submissions/simple_competiton_submission.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_auto_examples_02_challenge_submissions_training_simple_model.py` (``../examples/02_challenge_submissions/training_simple_model.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_03_deconvolution_plot_blood_deconvolution.py` (``../examples/03_deconvolution/plot_blood_deconvolution.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_04_additional_visualizations_plot_clock_model_relationships.py` (``../examples/04_additional_visualizations/plot_clock_model_relationships.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_04_additional_visualizations_plot_dnam_relationships.py` (``../examples/04_additional_visualizations/plot_dnam_relationships.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_auto_examples_04_additional_visualizations_plot_quality_control.py` (``../examples/04_additional_visualizations/plot_quality_control.py``)
      - 00:00.000
      - 0.0

@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:00.593** total execution time for 1 file **from auto_examples/01_composite_biomarkers**:
+**00:00.613** total execution time for 1 file **from auto_examples/01_composite_biomarkers**:
 
 .. container::
 
@@ -33,5 +33,5 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_auto_examples_01_composite_biomarkers_plot_nhanes.py` (``plot_nhanes.py``)
-     - 00:00.593
-     - 19.1
+     - 00:00.613
+     - 129.4

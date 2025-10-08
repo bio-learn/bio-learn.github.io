@@ -15,10 +15,11 @@ Plot survival curves based on clocks using data from standard blood tests
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example loads blood exam data from NHANES 2010, calculates &quot;Phenotypic Ages,&quot; and performs...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example loads blood exam data from NHANES 2010, calculates &quot;Phenotypic Ages,&quot; and performs survival analyses by phenotypic age. ">
 
 .. only:: html
 
@@ -32,6 +33,8 @@ Plot survival curves based on clocks using data from standard blood tests
       <div class="sphx-glr-thumbnail-title">"Phenotypic Ages" in NHANES Data</div>
     </div>
 
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 

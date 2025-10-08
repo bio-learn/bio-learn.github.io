@@ -16,10 +16,11 @@ quality control results, DNA methylation, and aging clock/model predictions
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the built-in quality control plotting function to visualize  the dist...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the built-in quality control plotting function to visualize  the distribution of sample deviations from the population mean in a ridge density plot.">
 
 .. only:: html
 
@@ -36,7 +37,7 @@ quality control results, DNA methylation, and aging clock/model predictions
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the built-in aging clock/model function to visualize  different plots...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the built-in aging clock/model function to visualize  different plots on clock(s)/model(s) predictions.">
 
 .. only:: html
 
@@ -53,7 +54,7 @@ quality control results, DNA methylation, and aging clock/model predictions
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the built-in DNA methylation plotting function to visualize  DNA meth...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the built-in DNA methylation plotting function to visualize  DNA methylation against age across datasets in a violin and linear and polynomial regression plots.">
 
 .. only:: html
 
@@ -67,6 +68,8 @@ quality control results, DNA methylation, and aging clock/model predictions
       <div class="sphx-glr-thumbnail-title">DNA methylation visualizations using GEO datasets</div>
     </div>
 
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 

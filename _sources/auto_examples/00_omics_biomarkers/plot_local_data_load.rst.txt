@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_auto_examples_00_omics_biomarkers_plot_local_data_load.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -162,19 +162,19 @@ Metadata is loaded if available
       <tbody>
         <tr>
           <th>GSM3074480</th>
-          <td>1</td>
+          <td>0</td>
           <td>25.2</td>
           <td>None</td>
         </tr>
         <tr>
           <th>GSM3074481</th>
-          <td>1</td>
+          <td>0</td>
           <td>29.5</td>
           <td>COVID</td>
         </tr>
         <tr>
           <th>GSM3074482</th>
-          <td>2</td>
+          <td>1</td>
           <td>39.7</td>
           <td>None</td>
         </tr>
@@ -224,9 +224,9 @@ You can now use it like any other Biolearn dataset
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.482 seconds)
+   **Total running time of the script:** (0 minutes 0.560 seconds)
 
-**Estimated memory usage:**  78 MB
+**Estimated memory usage:**  218 MB
 
 
 .. _sphx_glr_download_auto_examples_00_omics_biomarkers_plot_local_data_load.py:
@@ -238,7 +238,7 @@ You can now use it like any other Biolearn dataset
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.7.0?urlpath=lab/tree/notebooks/auto_examples/00_omics_biomarkers/plot_local_data_load.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/main?urlpath=lab/tree/notebooks/auto_examples/00_omics_biomarkers/plot_local_data_load.ipynb
         :alt: Launch binder
         :width: 150 px
 
@@ -249,6 +249,10 @@ You can now use it like any other Biolearn dataset
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_local_data_load.py <plot_local_data_load.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: plot_local_data_load.zip <plot_local_data_load.zip>`
 
 
 .. only:: html

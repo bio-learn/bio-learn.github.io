@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_auto_examples_00_omics_biomarkers_plot_transcriptomic_clock.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -113,9 +113,9 @@ Plot the results against the chronological age using seaborn
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 5.081 seconds)
+   **Total running time of the script:** (0 minutes 3.903 seconds)
 
-**Estimated memory usage:**  393 MB
+**Estimated memory usage:**  473 MB
 
 
 .. _sphx_glr_download_auto_examples_00_omics_biomarkers_plot_transcriptomic_clock.py:
@@ -127,7 +127,7 @@ Plot the results against the chronological age using seaborn
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.7.0?urlpath=lab/tree/notebooks/auto_examples/00_omics_biomarkers/plot_transcriptomic_clock.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/main?urlpath=lab/tree/notebooks/auto_examples/00_omics_biomarkers/plot_transcriptomic_clock.ipynb
         :alt: Launch binder
         :width: 150 px
 
@@ -138,6 +138,10 @@ Plot the results against the chronological age using seaborn
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_transcriptomic_clock.py <plot_transcriptomic_clock.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: plot_transcriptomic_clock.zip <plot_transcriptomic_clock.zip>`
 
 
 .. only:: html

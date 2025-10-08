@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_auto_examples_02_challenge_submissions_plot_challenge_data.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -221,7 +221,7 @@ The challenge data also has proteomic data
 .. code-block:: Python
 
 
-    challenge_data.protein
+    challenge_data.protein_alamar
 
 
 
@@ -248,76 +248,66 @@ The challenge data also has proteomic data
     <table border="1" class="dataframe">
       <thead>
         <tr style="text-align: right;">
-          <th></th>
-          <th>GSM7867173</th>
-          <th>GSM7867127</th>
-          <th>GSM7867083</th>
-          <th>...</th>
-          <th>GSM7867095</th>
-          <th>GSM7867115</th>
-          <th>GSM7867385</th>
-        </tr>
-        <tr>
           <th>AlamarTargetID</th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
+          <th>t10319</th>
+          <th>t10413</th>
+          <th>t10466</th>
+          <th>...</th>
+          <th>t8358</th>
+          <th>t8367</th>
+          <th>t8399</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th>t10319</th>
+          <th>GSM7867173</th>
           <td>13.387778</td>
-          <td>12.948052</td>
-          <td>13.256551</td>
-          <td>...</td>
-          <td>12.062449</td>
-          <td>13.390582</td>
-          <td>13.587867</td>
-        </tr>
-        <tr>
-          <th>t10413</th>
           <td>16.674015</td>
-          <td>15.992939</td>
-          <td>15.547946</td>
+          <td>12.890963</td>
           <td>...</td>
-          <td>14.827118</td>
-          <td>15.872686</td>
-          <td>15.584386</td>
+          <td>12.734120</td>
+          <td>11.062422</td>
+          <td>11.599597</td>
         </tr>
         <tr>
-          <th>t10466</th>
-          <td>12.890963</td>
+          <th>GSM7867127</th>
+          <td>12.948052</td>
+          <td>15.992939</td>
           <td>13.556167</td>
+          <td>...</td>
+          <td>15.238780</td>
+          <td>12.291734</td>
+          <td>14.642498</td>
+        </tr>
+        <tr>
+          <th>GSM7867083</th>
+          <td>13.256551</td>
+          <td>15.547946</td>
           <td>13.528756</td>
           <td>...</td>
-          <td>14.683530</td>
-          <td>13.667331</td>
-          <td>13.483932</td>
+          <td>11.673970</td>
+          <td>12.604654</td>
+          <td>14.590723</td>
         </tr>
         <tr>
-          <th>t10563</th>
-          <td>10.933342</td>
-          <td>8.323690</td>
-          <td>13.271350</td>
+          <th>GSM7867170</th>
+          <td>13.385639</td>
+          <td>15.562234</td>
+          <td>13.437340</td>
           <td>...</td>
-          <td>9.993500</td>
-          <td>11.699095</td>
-          <td>11.860206</td>
+          <td>12.901178</td>
+          <td>12.185173</td>
+          <td>15.815356</td>
         </tr>
         <tr>
-          <th>t10876</th>
-          <td>14.063506</td>
-          <td>15.429302</td>
-          <td>13.582464</td>
+          <th>GSM7867410</th>
+          <td>13.030234</td>
+          <td>15.186056</td>
+          <td>13.350693</td>
           <td>...</td>
-          <td>11.978461</td>
-          <td>6.654607</td>
-          <td>11.931614</td>
+          <td>13.228718</td>
+          <td>15.403618</td>
+          <td>14.379472</td>
         </tr>
         <tr>
           <th>...</th>
@@ -330,58 +320,58 @@ The challenge data also has proteomic data
           <td>...</td>
         </tr>
         <tr>
-          <th>t8333</th>
-          <td>14.725785</td>
-          <td>13.537733</td>
-          <td>14.848917</td>
+          <th>GSM7867364</th>
+          <td>13.668576</td>
+          <td>14.857433</td>
+          <td>13.039565</td>
           <td>...</td>
-          <td>13.729721</td>
-          <td>13.787099</td>
-          <td>14.055526</td>
+          <td>16.680131</td>
+          <td>13.210160</td>
+          <td>14.044917</td>
         </tr>
         <tr>
-          <th>t8334</th>
-          <td>13.503408</td>
-          <td>12.103376</td>
-          <td>13.381374</td>
+          <th>GSM7867179</th>
+          <td>14.941948</td>
+          <td>14.366243</td>
+          <td>13.965880</td>
           <td>...</td>
-          <td>13.070087</td>
-          <td>14.317681</td>
-          <td>14.314627</td>
+          <td>12.575219</td>
+          <td>14.748597</td>
+          <td>15.610305</td>
         </tr>
         <tr>
-          <th>t8358</th>
-          <td>12.734120</td>
-          <td>15.238780</td>
-          <td>11.673970</td>
+          <th>GSM7867095</th>
+          <td>12.062449</td>
+          <td>14.827118</td>
+          <td>14.683530</td>
           <td>...</td>
           <td>13.103683</td>
-          <td>13.949114</td>
-          <td>13.794795</td>
-        </tr>
-        <tr>
-          <th>t8367</th>
-          <td>11.062422</td>
-          <td>12.291734</td>
-          <td>12.604654</td>
-          <td>...</td>
           <td>11.803189</td>
-          <td>14.313347</td>
-          <td>13.830717</td>
+          <td>12.073775</td>
         </tr>
         <tr>
-          <th>t8399</th>
-          <td>11.599597</td>
-          <td>14.642498</td>
-          <td>14.590723</td>
+          <th>GSM7867115</th>
+          <td>13.390582</td>
+          <td>15.872686</td>
+          <td>13.667331</td>
           <td>...</td>
-          <td>12.073775</td>
+          <td>13.949114</td>
+          <td>14.313347</td>
           <td>14.184558</td>
+        </tr>
+        <tr>
+          <th>GSM7867385</th>
+          <td>13.587867</td>
+          <td>15.584386</td>
+          <td>13.483932</td>
+          <td>...</td>
+          <td>13.794795</td>
+          <td>13.830717</td>
           <td>12.040475</td>
         </tr>
       </tbody>
     </table>
-    <p>374 rows × 503 columns</p>
+    <p>503 rows × 374 columns</p>
     </div>
     </div>
     <br />
@@ -574,7 +564,7 @@ Some of the data overlaps while some does not but all the metadata is combined
           <td>Non Hispanic</td>
           <td>White</td>
           <td>...</td>
-          <td>2</td>
+          <td>1</td>
           <td>BoA1</td>
           <td>blood</td>
         </tr>
@@ -584,7 +574,7 @@ Some of the data overlaps while some does not but all the metadata is combined
           <td>Non Hispanic</td>
           <td>Asian</td>
           <td>...</td>
-          <td>1</td>
+          <td>0</td>
           <td>BoA2</td>
           <td>blood</td>
         </tr>
@@ -594,7 +584,7 @@ Some of the data overlaps while some does not but all the metadata is combined
           <td>Non Hispanic</td>
           <td>Asian</td>
           <td>...</td>
-          <td>2</td>
+          <td>1</td>
           <td>BoA3</td>
           <td>blood</td>
         </tr>
@@ -604,7 +594,7 @@ Some of the data overlaps while some does not but all the metadata is combined
           <td>HISPANIC</td>
           <td>White</td>
           <td>...</td>
-          <td>1</td>
+          <td>0</td>
           <td>BoA4</td>
           <td>blood</td>
         </tr>
@@ -614,7 +604,7 @@ Some of the data overlaps while some does not but all the metadata is combined
           <td>Non Hispanic</td>
           <td>White</td>
           <td>...</td>
-          <td>1</td>
+          <td>0</td>
           <td>BoA5</td>
           <td>blood</td>
         </tr>
@@ -634,7 +624,7 @@ Some of the data overlaps while some does not but all the metadata is combined
           <td>NaN</td>
           <td>NaN</td>
           <td>...</td>
-          <td>1</td>
+          <td>0</td>
           <td>NaN</td>
           <td>NaN</td>
         </tr>
@@ -644,7 +634,7 @@ Some of the data overlaps while some does not but all the metadata is combined
           <td>NaN</td>
           <td>NaN</td>
           <td>...</td>
-          <td>1</td>
+          <td>0</td>
           <td>NaN</td>
           <td>NaN</td>
         </tr>
@@ -654,7 +644,7 @@ Some of the data overlaps while some does not but all the metadata is combined
           <td>NaN</td>
           <td>NaN</td>
           <td>...</td>
-          <td>2</td>
+          <td>1</td>
           <td>NaN</td>
           <td>NaN</td>
         </tr>
@@ -664,7 +654,7 @@ Some of the data overlaps while some does not but all the metadata is combined
           <td>NaN</td>
           <td>NaN</td>
           <td>...</td>
-          <td>1</td>
+          <td>0</td>
           <td>NaN</td>
           <td>NaN</td>
         </tr>
@@ -674,7 +664,7 @@ Some of the data overlaps while some does not but all the metadata is combined
           <td>NaN</td>
           <td>NaN</td>
           <td>...</td>
-          <td>1</td>
+          <td>0</td>
           <td>NaN</td>
           <td>NaN</td>
         </tr>
@@ -837,9 +827,9 @@ We can then compare the output from the two models
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 25.779 seconds)
+   **Total running time of the script:** (0 minutes 30.778 seconds)
 
-**Estimated memory usage:**  15006 MB
+**Estimated memory usage:**  15530 MB
 
 
 .. _sphx_glr_download_auto_examples_02_challenge_submissions_plot_challenge_data.py:
@@ -851,7 +841,7 @@ We can then compare the output from the two models
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.7.0?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/plot_challenge_data.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/main?urlpath=lab/tree/notebooks/auto_examples/02_challenge_submissions/plot_challenge_data.ipynb
         :alt: Launch binder
         :width: 150 px
 
@@ -862,6 +852,10 @@ We can then compare the output from the two models
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_challenge_data.py <plot_challenge_data.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: plot_challenge_data.zip <plot_challenge_data.zip>`
 
 
 .. only:: html

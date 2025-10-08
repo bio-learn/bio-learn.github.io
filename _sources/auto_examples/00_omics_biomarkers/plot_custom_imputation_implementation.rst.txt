@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_auto_examples_00_omics_biomarkers_plot_custom_imputation_implementation.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -195,9 +195,9 @@ You get the same results as running the function directly on your dataset
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 30.427 seconds)
+   **Total running time of the script:** (0 minutes 28.274 seconds)
 
-**Estimated memory usage:**  9838 MB
+**Estimated memory usage:**  9921 MB
 
 
 .. _sphx_glr_download_auto_examples_00_omics_biomarkers_plot_custom_imputation_implementation.py:
@@ -209,7 +209,7 @@ You get the same results as running the function directly on your dataset
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/0.7.0?urlpath=lab/tree/notebooks/auto_examples/00_omics_biomarkers/plot_custom_imputation_implementation.ipynb
+        :target: https://mybinder.org/v2/gh/bio-learn/biolearn/main?urlpath=lab/tree/notebooks/auto_examples/00_omics_biomarkers/plot_custom_imputation_implementation.ipynb
         :alt: Launch binder
         :width: 150 px
 
@@ -220,6 +220,10 @@ You get the same results as running the function directly on your dataset
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_custom_imputation_implementation.py <plot_custom_imputation_implementation.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: plot_custom_imputation_implementation.zip <plot_custom_imputation_implementation.zip>`
 
 
 .. only:: html

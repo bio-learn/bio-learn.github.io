@@ -15,10 +15,11 @@ Generate submissions for the biomarkers of aging challenge
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example shows you how to generate a submission for the community warmup using an existing ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows you how to generate a submission for the community warmup using an existing model">
 
 .. only:: html
 
@@ -52,7 +53,7 @@ Generate submissions for the biomarkers of aging challenge
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="This example shows you how to train a simple elasticnet model and use it to submit to the chall...">
+    <div class="sphx-glr-thumbcontainer" tooltip="This example shows you how to train a simple elasticnet model and use it to submit to the challenge">
 
 .. only:: html
 
@@ -66,6 +67,8 @@ Generate submissions for the biomarkers of aging challenge
       <div class="sphx-glr-thumbnail-title">Training an ElasticNet model</div>
     </div>
 
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 
